@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BD7BE6F9548B9AF81E9BCAA /* Pods_pashirin_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */; };
+		8305600625383D0F0024537C /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305600525383D0F0024537C /* StatusViewModel.swift */; };
+		8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326D5332539A9C1007CD60A /* U5_DetailView.swift */; };
+		8326D5382539B921007CD60A /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326D5372539B921007CD60A /* DataViewModel.swift */; };
+		83C89ACA252EDEA2000F72A4 /* TrackingPashiri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */; };
+		83CB321F25358B2C00BCC491 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB321D25358B2C00BCC491 /* Login.swift */; };
+		83CB322025358B2C00BCC491 /* U1SelectUserPashirin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */; };
+		83CB323025358B4200BCC491 /* MessageLogin_ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322525358B4200BCC491 /* MessageLogin_ContentView.swift */; };
+		83CB323125358B4200BCC491 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322625358B4200BCC491 /* MessageListView.swift */; };
+		83CB323225358B4200BCC491 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322725358B4200BCC491 /* MessageRow.swift */; };
+		83CB323325358B4200BCC491 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322825358B4200BCC491 /* MessageViewModel.swift */; };
+		83CB323425358B4200BCC491 /* P1_ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322A25358B4200BCC491 /* P1_ListView.swift */; };
+		83CB323525358B4200BCC491 /* P3_DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322B25358B4200BCC491 /* P3_DetailView.swift */; };
+		83CB323625358B4200BCC491 /* pashirin.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CB322C25358B4200BCC491 /* pashirin.png */; };
+		83CB323725358B4200BCC491 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CB322D25358B4200BCC491 /* profile.png */; };
+		83CB323825358B4200BCC491 /* P3_ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322E25358B4200BCC491 /* P3_ContactsViewModel.swift */; };
+		83CB323925358B4200BCC491 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322F25358B4200BCC491 /* Contact.swift */; };
+		83CB324125358B4D00BCC491 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB323E25358B4D00BCC491 /* Keyboard.swift */; };
+		83CB324225358B4D00BCC491 /* signUP_RegFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */; };
+		83CB32982535B3B400BCC491 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CB32972535B3B300BCC491 /* GoogleService-Info.plist */; };
+		83CB32B12535F22500BCC491 /* U4-Matched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32B02535F22500BCC491 /* U4-Matched.swift */; };
+		83CB32BD2535F26600BCC491 /* U9-Thankyou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */; };
+		83CB32BE2535F26600BCC491 /* P8-TaskComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */; };
+		83CB32BF2535F26600BCC491 /* P7-Deliver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32BC2535F26600BCC491 /* P7-Deliver.swift */; };
+		83DB99532535F51B0099CC75 /* PWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB99522535F51A0099CC75 /* PWait.swift */; };
+		83DB99572535F5250099CC75 /* reqParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB99562535F5250099CC75 /* reqParent.swift */; };
+		83DB995B2535F5330099CC75 /* ReqWant_and_AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */; };
+		83DB99802536EDBF0099CC75 /* WaitingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB997F2536EDBF0099CC75 /* WaitingViewModel.swift */; };
+		83E96C23252D6B4B00E1DB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */; };
+		83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */; };
+		83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C26252D6B4B00E1DB64 /* ContentView.swift */; };
+		83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C28252D6B4B00E1DB64 /* Assets.xcassets */; };
+		83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */; };
+		83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */; };
+		83E96C3A252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C39252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift */; };
+		83E96C45252D992100E1DB64 /* TestGoogleMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */; };
+		83E96C48252DAEEF00E1DB64 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C47252DAEEF00E1DB64 /* LocationManager.swift */; };
+		83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDBB7525389588007EB3E8 /* AfterRequest.swift */; };
+		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83E96C36252D6B4C00E1DB64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83E96C17252D6B4B00E1DB64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83E96C1E252D6B4B00E1DB64;
+			remoteInfo = "pashirin-swiftui";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8305600525383D0F0024537C /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		8326D5332539A9C1007CD60A /* U5_DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U5_DetailView.swift; sourceTree = "<group>"; };
+		8326D5372539B921007CD60A /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPashiri.swift; sourceTree = "<group>"; };
+		83CB321D25358B2C00BCC491 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = U1SelectUserPashirin.swift; sourceTree = "<group>"; };
+		83CB322525358B4200BCC491 /* MessageLogin_ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLogin_ContentView.swift; sourceTree = "<group>"; };
+		83CB322625358B4200BCC491 /* MessageListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		83CB322725358B4200BCC491 /* MessageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
+		83CB322825358B4200BCC491 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		83CB322A25358B4200BCC491 /* P1_ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P1_ListView.swift; sourceTree = "<group>"; };
+		83CB322B25358B4200BCC491 /* P3_DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P3_DetailView.swift; sourceTree = "<group>"; };
+		83CB322C25358B4200BCC491 /* pashirin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pashirin.png; sourceTree = "<group>"; };
+		83CB322D25358B4200BCC491 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		83CB322E25358B4200BCC491 /* P3_ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P3_ContactsViewModel.swift; sourceTree = "<group>"; };
+		83CB322F25358B4200BCC491 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		83CB323E25358B4D00BCC491 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUP_RegFormView.swift; sourceTree = "<group>"; };
+		83CB32972535B3B300BCC491 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83CB32B02535F22500BCC491 /* U4-Matched.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "U4-Matched.swift"; sourceTree = "<group>"; };
+		83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "U9-Thankyou.swift"; sourceTree = "<group>"; };
+		83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "P8-TaskComplete.swift"; sourceTree = "<group>"; };
+		83CB32BC2535F26600BCC491 /* P7-Deliver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "P7-Deliver.swift"; sourceTree = "<group>"; };
+		83DB99522535F51A0099CC75 /* PWait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWait.swift; sourceTree = "<group>"; };
+		83DB99562535F5250099CC75 /* reqParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reqParent.swift; sourceTree = "<group>"; };
+		83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqWant_and_AfterRequest.swift; sourceTree = "<group>"; };
+		83DB997F2536EDBF0099CC75 /* WaitingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewModel.swift; sourceTree = "<group>"; };
+		83E96C1F252D6B4B00E1DB64 /* pashirin-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pashirin-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		83E96C26252D6B4B00E1DB64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		83E96C28252D6B4B00E1DB64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83E96C2E252D6B4B00E1DB64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83E96C30252D6B4B00E1DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E96C35252D6B4C00E1DB64 /* pashirin-swiftuiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pashirin-swiftuiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E96C39252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pashirin_swiftuiTests.swift; sourceTree = "<group>"; };
+		83E96C3B252D6B4C00E1DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGoogleMapsView.swift; sourceTree = "<group>"; };
+		83E96C47252DAEEF00E1DB64 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		83FDBB7525389588007EB3E8 /* AfterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterRequest.swift; sourceTree = "<group>"; };
+		B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.release.xcconfig"; sourceTree = "<group>"; };
+		BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.release.xcconfig"; sourceTree = "<group>"; };
+		CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83E96C1C252D6B4B00E1DB64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83E96C32252D6B4C00E1DB64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD7BE6F9548B9AF81E9BCAA /* Pods_pashirin_swiftuiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CB321C25358B2C00BCC491 /* akina */ = {
+			isa = PBXGroup;
+			children = (
+				83CB321D25358B2C00BCC491 /* Login.swift */,
+			);
+			path = akina;
+			sourceTree = "<group>";
+		};
+		83CB322325358B4200BCC491 /* Eri */ = {
+			isa = PBXGroup;
+			children = (
+				83CB322425358B4200BCC491 /* FirebaseChat */,
+				83CB322925358B4200BCC491 /* Contactview_DetailView */,
+			);
+			path = Eri;
+			sourceTree = "<group>";
+		};
+		83CB322425358B4200BCC491 /* FirebaseChat */ = {
+			isa = PBXGroup;
+			children = (
+				83CB322525358B4200BCC491 /* MessageLogin_ContentView.swift */,
+				83CB322625358B4200BCC491 /* MessageListView.swift */,
+				83CB322725358B4200BCC491 /* MessageRow.swift */,
+				83CB322825358B4200BCC491 /* MessageViewModel.swift */,
+			);
+			path = FirebaseChat;
+			sourceTree = "<group>";
+		};
+		83CB322925358B4200BCC491 /* Contactview_DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				83CB322C25358B4200BCC491 /* pashirin.png */,
+				83CB322D25358B4200BCC491 /* profile.png */,
+				83CB32BC2535F26600BCC491 /* P7-Deliver.swift */,
+				83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */,
+				83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */,
+				83E96C46252DAEB800E1DB64 /* ViewController */,
+			);
+			path = Contactview_DetailView;
+			sourceTree = "<group>";
+		};
+		83DB997D2536EC500099CC75 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83DB997F2536EDBF0099CC75 /* WaitingViewModel.swift */,
+				8305600525383D0F0024537C /* StatusViewModel.swift */,
+				83CB322E25358B4200BCC491 /* P3_ContactsViewModel.swift */,
+				8326D5372539B921007CD60A /* DataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83DB997E2536EC6B0099CC75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83CB322F25358B4200BCC491 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83DB99832536FA180099CC75 /* ChildrenOfHome */ = {
+			isa = PBXGroup;
+			children = (
+				83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */,
+				83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */,
+				83DB99842536FB270099CC75 /* Children_of_selectUserPashirin */,
+			);
+			path = ChildrenOfHome;
+			sourceTree = "<group>";
+		};
+		83DB99842536FB270099CC75 /* Children_of_selectUserPashirin */ = {
+			isa = PBXGroup;
+			children = (
+				83DB99562535F5250099CC75 /* reqParent.swift */,
+				83DB99852536FBBD0099CC75 /* Children_of_reqParent */,
+				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
+				83DB99862536FBDE0099CC75 /* Children_of_P1_ListView */,
+			);
+			path = Children_of_selectUserPashirin;
+			sourceTree = "<group>";
+		};
+		83DB99852536FBBD0099CC75 /* Children_of_reqParent */ = {
+			isa = PBXGroup;
+			children = (
+				83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */,
+				83DB998D2536FD4F0099CC75 /* Children_of_ReqWant */,
+			);
+			path = Children_of_reqParent;
+			sourceTree = "<group>";
+		};
+		83DB99862536FBDE0099CC75 /* Children_of_P1_ListView */ = {
+			isa = PBXGroup;
+			children = (
+				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
+			);
+			path = Children_of_P1_ListView;
+			sourceTree = "<group>";
+		};
+		83DB998D2536FD4F0099CC75 /* Children_of_ReqWant */ = {
+			isa = PBXGroup;
+			children = (
+				83DB99522535F51A0099CC75 /* PWait.swift */,
+				83CB323E25358B4D00BCC491 /* Keyboard.swift */,
+				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
+				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
+				8326D5332539A9C1007CD60A /* U5_DetailView.swift */,
+			);
+			path = Children_of_ReqWant;
+			sourceTree = "<group>";
+		};
+		83E96C16252D6B4B00E1DB64 = {
+			isa = PBXGroup;
+			children = (
+				83E96C21252D6B4B00E1DB64 /* pashirin-swiftui */,
+				83E96C38252D6B4C00E1DB64 /* pashirin-swiftuiTests */,
+				83E96C20252D6B4B00E1DB64 /* Products */,
+				C6BD94E46578B11D253C70C2 /* Pods */,
+				F527C5E0DD4688DB50A99968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83E96C20252D6B4B00E1DB64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83E96C1F252D6B4B00E1DB64 /* pashirin-swiftui.app */,
+				83E96C35252D6B4C00E1DB64 /* pashirin-swiftuiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83E96C21252D6B4B00E1DB64 /* pashirin-swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				83DB997E2536EC6B0099CC75 /* Model */,
+				83DB997D2536EC500099CC75 /* ViewModel */,
+				83CB322325358B4200BCC491 /* Eri */,
+				83E96C26252D6B4B00E1DB64 /* ContentView.swift */,
+				83DB99832536FA180099CC75 /* ChildrenOfHome */,
+				83CB321C25358B2C00BCC491 /* akina */,
+				83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */,
+				83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */,
+				83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */,
+				83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */,
+				83E96C30252D6B4B00E1DB64 /* Info.plist */,
+				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
+				83E96C2A252D6B4B00E1DB64 /* Preview Content */,
+				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
+				83CB32972535B3B300BCC491 /* GoogleService-Info.plist */,
+			);
+			path = "pashirin-swiftui";
+			sourceTree = "<group>";
+		};
+		83E96C2A252D6B4B00E1DB64 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83E96C38252D6B4C00E1DB64 /* pashirin-swiftuiTests */ = {
+			isa = PBXGroup;
+			children = (
+				83E96C39252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift */,
+				83E96C3B252D6B4C00E1DB64 /* Info.plist */,
+			);
+			path = "pashirin-swiftuiTests";
+			sourceTree = "<group>";
+		};
+		83E96C46252DAEB800E1DB64 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83E96C47252DAEEF00E1DB64 /* LocationManager.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C6BD94E46578B11D253C70C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */,
+				BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */,
+				447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */,
+				B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F527C5E0DD4688DB50A99968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */,
+				EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83E96C1E252D6B4B00E1DB64 /* pashirin-swiftui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83E96C3E252D6B4C00E1DB64 /* Build configuration list for PBXNativeTarget "pashirin-swiftui" */;
+			buildPhases = (
+				A28297A9023BBCB36B185D2B /* [CP] Check Pods Manifest.lock */,
+				83E96C1B252D6B4B00E1DB64 /* Sources */,
+				83E96C1C252D6B4B00E1DB64 /* Frameworks */,
+				83E96C1D252D6B4B00E1DB64 /* Resources */,
+				D88DABD11108C292E5DDF861 /* [CP] Copy Pods Resources */,
+				53797F6413C59E9B6FD83F32 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pashirin-swiftui";
+			productName = "pashirin-swiftui";
+			productReference = 83E96C1F252D6B4B00E1DB64 /* pashirin-swiftui.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83E96C34252D6B4C00E1DB64 /* pashirin-swiftuiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83E96C41252D6B4C00E1DB64 /* Build configuration list for PBXNativeTarget "pashirin-swiftuiTests" */;
+			buildPhases = (
+				E387650AC93134DB0DE42398 /* [CP] Check Pods Manifest.lock */,
+				83E96C31252D6B4C00E1DB64 /* Sources */,
+				83E96C32252D6B4C00E1DB64 /* Frameworks */,
+				83E96C33252D6B4C00E1DB64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83E96C37252D6B4C00E1DB64 /* PBXTargetDependency */,
+			);
+			name = "pashirin-swiftuiTests";
+			productName = "pashirin-swiftuiTests";
+			productReference = 83E96C35252D6B4C00E1DB64 /* pashirin-swiftuiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83E96C17252D6B4B00E1DB64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = HONGHYONGGUK;
+				TargetAttributes = {
+					83E96C1E252D6B4B00E1DB64 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					83E96C34252D6B4C00E1DB64 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 83E96C1E252D6B4B00E1DB64;
+					};
+				};
+			};
+			buildConfigurationList = 83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "pashirin-swiftui" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83E96C16252D6B4B00E1DB64;
+			productRefGroup = 83E96C20252D6B4B00E1DB64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83E96C1E252D6B4B00E1DB64 /* pashirin-swiftui */,
+				83E96C34252D6B4C00E1DB64 /* pashirin-swiftuiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83E96C1D252D6B4B00E1DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
+				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
+				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
+				83CB323725358B4200BCC491 /* profile.png in Resources */,
+				83CB32982535B3B400BCC491 /* GoogleService-Info.plist in Resources */,
+				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83E96C33252D6B4C00E1DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53797F6413C59E9B6FD83F32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A28297A9023BBCB36B185D2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pashirin-swiftui-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88DABD11108C292E5DDF861 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E387650AC93134DB0DE42398 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pashirin-swiftuiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83E96C1B252D6B4B00E1DB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB322025358B2C00BCC491 /* U1SelectUserPashirin.swift in Sources */,
+				83CB32BE2535F26600BCC491 /* P8-TaskComplete.swift in Sources */,
+				83CB323825358B4200BCC491 /* P3_ContactsViewModel.swift in Sources */,
+				83CB32BD2535F26600BCC491 /* U9-Thankyou.swift in Sources */,
+				83DB995B2535F5330099CC75 /* ReqWant_and_AfterRequest.swift in Sources */,
+				83CB323225358B4200BCC491 /* MessageRow.swift in Sources */,
+				83CB324125358B4D00BCC491 /* Keyboard.swift in Sources */,
+				8305600625383D0F0024537C /* StatusViewModel.swift in Sources */,
+				8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */,
+				83CB323525358B4200BCC491 /* P3_DetailView.swift in Sources */,
+				83DB99802536EDBF0099CC75 /* WaitingViewModel.swift in Sources */,
+				83CB32BF2535F26600BCC491 /* P7-Deliver.swift in Sources */,
+				83CB323925358B4200BCC491 /* Contact.swift in Sources */,
+				83CB321F25358B2C00BCC491 /* Login.swift in Sources */,
+				83DB99572535F5250099CC75 /* reqParent.swift in Sources */,
+				83DB99532535F51B0099CC75 /* PWait.swift in Sources */,
+				83E96C23252D6B4B00E1DB64 /* AppDelegate.swift in Sources */,
+				83C89ACA252EDEA2000F72A4 /* TrackingPashiri.swift in Sources */,
+				83CB324225358B4D00BCC491 /* signUP_RegFormView.swift in Sources */,
+				83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */,
+				83E96C48252DAEEF00E1DB64 /* LocationManager.swift in Sources */,
+				83E96C45252D992100E1DB64 /* TestGoogleMapsView.swift in Sources */,
+				83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */,
+				83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */,
+				83CB323125358B4200BCC491 /* MessageListView.swift in Sources */,
+				8326D5382539B921007CD60A /* DataViewModel.swift in Sources */,
+				83CB323325358B4200BCC491 /* MessageViewModel.swift in Sources */,
+				83CB323425358B4200BCC491 /* P1_ListView.swift in Sources */,
+				83CB32B12535F22500BCC491 /* U4-Matched.swift in Sources */,
+				83CB323025358B4200BCC491 /* MessageLogin_ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83E96C31252D6B4C00E1DB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E96C3A252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83E96C37252D6B4C00E1DB64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83E96C1E252D6B4B00E1DB64 /* pashirin-swiftui */;
+			targetProxy = 83E96C36252D6B4C00E1DB64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E96C2E252D6B4B00E1DB64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83E96C3C252D6B4C00E1DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83E96C3D252D6B4C00E1DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83E96C3F252D6B4C00E1DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TN57Z484K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83E96C40252D6B4C00E1DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TN57Z484K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83E96C42252D6B4C00E1DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "pashirin-swiftuiTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftuiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pashirin-swiftui.app/pashirin-swiftui";
+			};
+			name = Debug;
+		};
+		83E96C43252D6B4C00E1DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "pashirin-swiftuiTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftuiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pashirin-swiftui.app/pashirin-swiftui";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "pashirin-swiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83E96C3C252D6B4C00E1DB64 /* Debug */,
+				83E96C3D252D6B4C00E1DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83E96C3E252D6B4C00E1DB64 /* Build configuration list for PBXNativeTarget "pashirin-swiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83E96C3F252D6B4C00E1DB64 /* Debug */,
+				83E96C40252D6B4C00E1DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83E96C41252D6B4C00E1DB64 /* Build configuration list for PBXNativeTarget "pashirin-swiftuiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83E96C42252D6B4C00E1DB64 /* Debug */,
+				83E96C43252D6B4C00E1DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83E96C17252D6B4B00E1DB64 /* Project object */;
+}

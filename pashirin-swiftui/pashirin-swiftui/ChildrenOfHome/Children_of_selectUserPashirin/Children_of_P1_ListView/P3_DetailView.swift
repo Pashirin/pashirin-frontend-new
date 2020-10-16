@@ -1,0 +1,161 @@
+//
+//  DetailView.swift
+//  NavView
+//
+//  Created by Eri Koyano on 2020/10/07.
+//
+
+import SwiftUI
+import FirebaseFirestore
+
+struct P3_DetailView: View {
+    
+    let contact: Contact
+    @State var showCongrats = false
+    
+    
+    let db = Firestore.firestore()
+    
+    var body: some View {
+        if showCongrats {
+            P3_Congrats(transactionId: contact.transactionId)
+        } else {
+            VStack {
+                Image("profile")
+                    .resizable()
+                    .clipped()
+                    .cornerRadius(50)
+            }
+            .frame(width: 150, height: 150)
+            
+            Text(contact.name)
+                .font(.title)
+                .fontWeight(.medium)
+            Text(contact.rating)
+            
+            Form{
+                Section{
+                    HStack{
+                        Text("Offer Price")
+                        Spacer()
+                        Text("¥\(contact.price)")
+                            .foregroundColor(.gray)
+                            .font(.callout)
+                    }
+                    HStack{
+                        Text("Rating")
+                        Spacer()
+                        Text(contact.rating)
+                            .foregroundColor(.gray)
+                            .font(.callout)
+                        
+                    }
+                    HStack{
+                        Text("Current Location")
+                        Spacer()
+                        Text(contact.startlocation)
+                            .foregroundColor(.gray)
+                            .font(.callout)
+                    }
+                    HStack{
+                        Text("Delivery")
+                        Spacer()
+                        Text("\(contact.delivery) completed deliveries")
+                            .foregroundColor(.gray)
+                            .font(.callout)
+                    }
+                    HStack{
+                        Text("Message")
+                        Spacer()
+                        Text(contact.detail)
+                            .foregroundColor(.gray)
+                            .font(.callout)
+                    }
+                    
+                }
+                
+                Section{
+                    Button (action : {
+                        print("これがstart Chat")
+                        
+                    }) {
+                        Button ("Confirm to Deliver"){
+                            print("kfjdkfjakdjfkajkj")
+                            db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
+                            self.showCongrats.toggle()
+                            
+                        }
+                        .font(.system(size: 18, weight: .bold, design: .default))
+                        .multilineTextAlignment(.center)
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
+
+
+struct P3_Congrats: View {
+    var transactionId: String
+    @State var didStartTrip = false
+    var body: some View{
+        if didStartTrip {
+            Deliver()
+        } else {
+            
+            ZStack {
+                Color.blue.edgesIgnoringSafeArea(.all)
+                VStack{
+                    Text("Congratulations!")
+                        .padding(.top, 50)
+                        .font(.system(size: 21, weight: .medium, design: .default))
+                    Image("pashirin")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 60, height: 60)
+                    Text("You have a Match!")
+                    HStack{
+                        Button(action: {
+                            print("Button Clicked")
+                        }) {
+                            
+                            Text("Chat Now")
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .padding()
+                                .border(Color.white, width: 5)
+                        }
+                    }
+                    Button(action: {
+                        print(self.transactionId)
+                        Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
+                        didStartTrip = true
+            
+                    }) {
+                        
+                        Text("Begin Trip")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                            .border(Color.white, width: 5)
+                    }
+                    
+                    
+                }
+            }
+            
+        }
+        
+        
+        //struct DetailView_Previews: PreviewProvider {
+        //    static var previews: some View {
+        //        DetailView(contact: contacts[0])
+        //            .padding(.top, 40)
+        //                }
+        //            }
+    }
+}
+
