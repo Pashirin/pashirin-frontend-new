@@ -13,12 +13,15 @@ struct ContentView: View {
     @State var isSignedUp = true
     @State var loginStatus = false
     var body: some View {
+  
         if !isSignedUp {
             RegFormView(isSignedUp: $isSignedUp)
         } else {
-            UserPashirin()
+      UserPashirin()
+           
+           
         }
-    }
+   }
 }
 
 struct ContentView_Previews: PreviewProvider {

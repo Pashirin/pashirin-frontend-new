@@ -31,6 +31,6 @@ struct PWait: View {
 
 //struct PWait_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PWait(true)
+//        PWait()
 //    }
 //}

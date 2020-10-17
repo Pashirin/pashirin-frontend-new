@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import Lottie
 
 struct P3_DetailView: View {
     
@@ -107,27 +108,38 @@ struct P3_Congrats: View {
         } else {
             
             ZStack {
-                Color.blue.edgesIgnoringSafeArea(.all)
+                Spacer()
+               Image("P3Congrats")
+                   .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+
                 VStack{
-                    Text("Congratulations!")
-                        .padding(.top, 50)
-                        .font(.system(size: 21, weight: .medium, design: .default))
-                    Image("pashirin")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 60, height: 60)
-                    Text("You have a Match!")
+                 Text(LocalizedStringKey("Congratulations"))
+                     .padding(.top, 50)
+                     .font(Font.custom("LEMONMILK-Light",size: 30))
+                     .foregroundColor(.white)
+                 
+                 LottieView(filename: "Congrats")
+                     .frame(width: 60, height: 60)
+                     Text(LocalizedStringKey("You have a Match"))
+                         .padding(13.0)
+                         .font(Font.custom("Barlow-Medium",size: 24))
+                         .foregroundColor(.white)
+                    
                     HStack{
                         Button(action: {
-                            print("Button Clicked")
-                        }) {
+                                print("Button Clicked")
+                            }) {
                             
-                            Text("Chat Now")
-                                .foregroundColor(.white)
-                                .font(.title)
-                                .padding()
-                                .border(Color.white, width: 5)
-                        }
+                                Text(LocalizedStringKey("Chat"))
+                                    .foregroundColor(Color(.lightGray))
+                                    .padding()
+                                    .font(Font.custom("LEMONMILK-Light",size: 21))
+                                    .overlay(
+                                    RoundedRectangle(cornerRadius: 26)
+                                        .stroke(Color(.lightGray),lineWidth: 5))
+                            }
                     }
                     Button(action: {
                         print(self.transactionId)
@@ -137,10 +149,12 @@ struct P3_Congrats: View {
                     }) {
                         
                         Text("Begin Trip")
-                            .foregroundColor(.white)
-                            .font(.title)
+                            .foregroundColor(Color(.lightGray))
                             .padding()
-                            .border(Color.white, width: 5)
+                            .font(Font.custom("LEMONMILK-Light",size: 21))
+                            .overlay(
+                            RoundedRectangle(cornerRadius: 26)
+                                .stroke(Color(.lightGray),lineWidth: 5))
                     }
                     
                     
@@ -150,12 +164,13 @@ struct P3_Congrats: View {
         }
         
         
-        //struct DetailView_Previews: PreviewProvider {
-        //    static var previews: some View {
-        //        DetailView(contact: contacts[0])
-        //            .padding(.top, 40)
-        //                }
-        //            }
+//        struct P3_DetailView_Previews: PreviewProvider {
+//            static var previews: some View {
+//                P3_DetailView(contact: contacts[0])
+//
+//                        }
+//                    }
     }
 }
+
 
