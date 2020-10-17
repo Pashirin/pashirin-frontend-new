@@ -35,7 +35,7 @@ struct P3_DetailView: View {
                     .frame(width: 150, height: 150)
                 
                 Text("ERI")
-                    .font(.title)
+                    .font(Font.custom("LEMONMILK-Light",size: 30))
                     .fontWeight(.medium)
                 Text(contact.rating)
            
@@ -43,14 +43,14 @@ struct P3_DetailView: View {
         Form{
                 Section{
                     HStack{
-                        Text("Offer Price")
+                        Text(LocalizedStringKey("Offer Price"))
                         Spacer()
                         Text("¥\(contact.price)")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
-                        Text("Rating")
+                        Text(LocalizedStringKey("Rating"))
                         Spacer()
                         Text(contact.rating)
                             .foregroundColor(.gray)
@@ -58,51 +58,46 @@ struct P3_DetailView: View {
                         
                     }
                     HStack{
-                        Text("Current Location")
+                        Text(LocalizedStringKey("Current Location"))
                         Spacer()
                         Text(contact.startlocation)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
-                        Text("Delivery")
+                        Text(LocalizedStringKey("Delivery"))
                         Spacer()
                         Text("\(contact.delivery) completed deliveries")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
-                        Text("Message")
+                        Text(LocalizedStringKey("Message"))
                         Spacer()
                         Text(contact.detail)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
-                }
             }
-        }
-                
-                Section{
-                    Button (action : {
-                        print("これがstart Chat")
+        
+                    Button(action : {
+                        print("Button Clicked")
+                        db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
+                        self.showCongrats.toggle()
                         
                     }) {
-                        Button ("Confirm to Deliver"){
-                            print("kfjdkfjakdjfkajkj")
-                            db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
-                            self.showCongrats.toggle()
-                            
+                        Text("Confirm to Deliver")
+                            .multilineTextAlignment(.center)
                         }
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .multilineTextAlignment(.center)
-                        
+                  //  .font(.system(size: 18, weight: .bold, design: .default))
+                    .font(Font.custom("Barlow-Medium",size: 18))
                         }
                     }
-                }
             }
         }
     }
-    
+}
+
     
 
 
@@ -180,5 +175,6 @@ struct P3_Congrats: View {
 //                    }
     }
 }
+
 
 

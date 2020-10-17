@@ -1,0 +1,141 @@
+/* 
+  Localizabke.strings
+  pashirin-swiftui
+
+  Created by Eri Koyano on 2020/10/17.
+  Copyright © 2020 HONGHYONGGUK. All rights reserved.
+*/
+
+"Registration Form" = "登録フォーム";
+"First Name" = "名前（名）";
+"Last Name" = "苗字(姓)";
+"Address" = "住所";
+"Date of Birth" = "生年月日";
+"Email" = "メールアドレス";
+"Password" = "パスワード";
+"Confirm Password" = "パスワード再入力";
+"Submit" = "完了";
+
+    //ERROR MESSAGES **Please enter your
+
+    "error.name" = "名前を入力してください";
+    "error.lastName" = "苗字を入力してください";
+    "error.address" = "住所を入力してください";
+    "error.email" = "メールアドレスを入力してください";
+    "error.password" = "パスワードを入力してください";
+    "error.confirm" = "パスワードを再入力してください";
+    "error.match" = "パスワードが一致しません";
+    "error.emailInvalid" = "メールアドレスが不正です";
+    "error.emailInUse" = "このメールアドレスは既に登録されています";
+    "error.passwordWeak" = "６文字以上のパスワードを入力してください";
+
+//**Enter**
+"Thank you" = "登録ありがとうございます！";
+"Enter" = "Enter";
+
+
+//**Login**
+"Welcome" = "ようこそ";
+"Start" = "パシリンに頼む";
+"Email" = "メールアドレス";
+"Password" = "パスワード";
+
+//**SelectUser**
+"User" = "ユーザー";
+"Pashiri" = "パシリン";
+
+//**U1**
+
+"Hello" = "ようこそ、 \(User)";
+"What" = "何が必要ですか？";
+"Destination" = "目的地はどこですか？";
+"Where" = "購入店はどこですか？";
+"Offer Price" = "オファー価格";
+"Additional Details" = "詳しいご要望 (時間など)";
+"Submit" = "送信";
+"Required" = "必須";
+
+    //Error message
+
+"error.request" = "ご用件を入力してください";
+"error.destination" = "目的地を入力してください";
+"error.price" = "オファー価格を入力してください";
+
+
+//Placeholder
+"placeholder1" = "食料品, 小物..etc";
+"placeholder2" = "東京都六本木2-1-5, 213-0123";
+"placeholder3" = "駅前のローソン";
+"placeholder4" = "朝日スーパードライ　500ml 3缶...etc";
+
+
+
+//**U2**
+"waiting" = "パシリン検索中・・・";
+
+//**U3**
+"Congratulations" = "おめでとうございます!";
+"You have a Match" = "パシリンが見つかりました";
+"See Details" = "詳細を見る";
+
+//**U4**
+"Chat" = "チャットする";
+
+
+//**U7**
+"Task Complete" = "タスク完了";
+"Rate your PASHIRIN" = "パシリンを評価する";
+"Feedback" = "コメント";
+"Submit" = "送信";
+
+//**U8**
+"Thank You" = "ありがとうごいざいます";
+"We hope" = "またのご利用をお待ちしております!";
+"Back to Request" = "リクエスト画面に戻る";
+
+//**Account Details
+"Account Details" = "アカウント情報";
+"Name" = "名前";
+"DOB" = "生年月日";
+"Address" = "住所";
+"Email" = "メールアドレス";
+"Password" = "パスワード";
+"Edit" = "編集";
+
+//**User History
+"Request History" = "過去のリクエスト";
+"Date" = "日時";
+"Pashirin" = "パシリン";
+"Task" = "タスク";
+"Location" = "目的地";
+"Additional Details" = "詳しい要望";
+"Rating" = "評価";
+"Feedback" = "コメント";
+
+
+////****PASHIRIN******
+
+//P1
+"Hello" = "ようこそ、 \(Pashirin)!";
+"Select Your Task" = "タスクを選択してください";
+
+//P2
+"Confirm" = "決定";
+"Leave Now" = "出発する";
+
+//P3
+"Your Task Has Been Confirmed!" = "タスクが確認されました！";
+
+//P5
+"Currently Delivering" = "現在配達中...";
+"Tap Here Once You Have Completed Your Task" = "タスクが完了したらボタンを押してください";
+"Completed" = "タスク完了";
+"Back to Menu" = "メニューに戻る";
+
+//P6
+"Well Done" = "お疲れ様でした！";
+"You Have Completed Your Task" = "タスクが完了されました";
+
+
+
+

@@ -13,24 +13,21 @@ struct P1_ListView: View {
 @ObservedObject private var viewModel = ContactsViewModel()
     
     var body: some View {
-        //NavigationView{
-   
-
-//            Spacer()
-//           Image("P1")
-//               .resizable()
-//            .scaledToFill()
-//            .edgesIgnoringSafeArea(.all)
-            
-        List(viewModel.contacts) { contact in
-               
-                HStack{
+      
+    ZStack{
+//                Spacer()
+//                    Image("P1")
+//                    .resizable()
+                  //  .scaledToFill()
+                   // .edgesIgnoringSafeArea(.all)
+            VStack{
+                    List(viewModel.contacts) { contact in
                     Image("profile")
                         .resizable()
                         .frame(width: 60, height: 60)
                         .clipped()
                         .cornerRadius(50)
-                    }
+                    
             NavigationLink(destination:P3_DetailView (contact: contact)){
                 
                 VStack(alignment: .leading){
@@ -40,16 +37,25 @@ struct P1_ListView: View {
                         .font(.system(size: 21, weight: .medium, design: .default))
                     Text("Rating: \(contact.rating)")
                         .font(.subheadline)
+
+                    }
+
                 }
+
             }
-          }
-                
-          .navigationBarTitle("Task List")
+
+        }
+          
+            .navigationBarTitle("Task List")
             .onAppear(){
                 self.viewModel.fetchData()
-                }
             }
-       }
+        }
+    .background(Image("P3Delivering"))
+    }
+
+
+
 
 
 
@@ -58,4 +64,5 @@ struct P1_ListView_Previews: PreviewProvider {
     static var previews: some View {
         P1_ListView()
     }
+}
 }

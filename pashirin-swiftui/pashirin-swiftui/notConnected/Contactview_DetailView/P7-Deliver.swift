@@ -17,7 +17,7 @@ struct Deliver: View {
             .scaledToFill()
             .edgesIgnoringSafeArea(.all)
             VStack{
-                Text(LocalizedStringKey("Currently Delivering..."))
+                Text(LocalizedStringKey("Currently Delivering"))
                     .padding(.top, 50)
                     .font(Font.custom("LEMONMILK-Light",size: 28))
                     

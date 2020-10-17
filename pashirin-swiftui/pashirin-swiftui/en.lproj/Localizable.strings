@@ -1,0 +1,148 @@
+/* 
+  Localizabke.strings
+  pashirin-swiftui
+
+  Created by Eri Koyano on 2020/10/17.
+  Copyright © 2020 HONGHYONGGUK. All rights reserved.
+*/
+
+//**REGISTRATION FORM**
+
+"Registration Form" = "Registration Form";
+"First Name" = "First Name";
+"Last Name" = "Last Name";
+"Address" = "Address";
+"Date of Birth" = "Date of Birth";
+"Email" = "Email";
+"Password" = "Password";
+"Confirm Password" = "Confirm Password";
+"Submit" = "Submit";
+
+
+
+    //ERROR MESSAGES **Please enter your
+
+    "error.name" = "Please enter your first name";
+    "error.lastName" = "Please enter your last name";
+    "error.address" = "Please enter your address";
+    "error.email" = "Please enter your email";
+    "error.password" = "Please enter your password";
+    "error.confirm" = "Please confirm your password";
+    "error.match" = "Password does not match";
+    "error.emailInvalid" = "Not a valid Email format";
+    "error.emailInUse" = "This email is already in use";
+    "error.passwordWeak" = "Please enter more than six letters";
+
+//**Enter**
+"Thank you" = "Thank you for signing up";
+"Enter" = "Enter";
+
+
+//**Login**
+"Welcome" = "Welcome";
+"Start" = "Start using PASHIRIN";
+"Email" = "Email";
+"Password" = "Password";
+
+ 
+//**SelectUser**
+"User" = "User";
+"Pashiri" = "Pashirin";
+
+//**U1**
+"Hello" = "Hello \(User)";
+"What" = "What do you need?";
+"Destination" = "Destination?";
+"Where" = "Where can I find this?";
+"Offer Price" = "Offer Price?";
+"Additional Details" = "Additional Details (Time Needed)";
+"Submit" = "Submit";
+"Required" = "Required";
+    // Error
+    "error.request" = "Please enter your request";
+    "error.destination" = "Please enter your destination";
+    "error.price" = "Please enter your offer price";
+
+//Placeholder
+"placeholder1" = "Beer, grocery...etc";
+"placeholder2" = "2-1-5 Roppongi Hills, Tokyo 123-9123";
+"placeholder3" = "Lawson convienent store";
+"placeholder4" = "3x Asahi Super Dry 500ml..etc";
+
+
+
+//**U2**
+"waiting" = "Waiting for Pashirin...";
+
+//**U3**
+"Congratulations" = "Congratulations!";
+"You have a Match" = "You Have a Match!";
+"See Details" = "See Details";
+
+//**U4**
+"Chat" = "Chat Now";
+
+
+//**U7**
+"Task Complete" = "Task Complete";
+"Rate your PASHIRIN" = "Rate your PASHIRIN";
+"Feedback" = "Feedback";
+"Submit" = "Submit";
+
+//**U8**
+"Thank You" = "Thank You";
+"We hope" = "We Hope You Enjoyed the Service!";
+"Back to Request" = "Back to Request";
+
+//**Account Details
+"Account Details" = "Account Details";
+"Name" = "Name";
+"DOB" = "DOB";
+"Address" = "Address";
+"Email" = "Email";
+"Password" = "Password";
+"Edit" = "Edit";
+
+//**User History
+"Request History" = "Request History";
+"Date" = "Date";
+"Pashirin" = "Pashirin";
+"Task" = "Task";
+"Location" = "Location";
+"Additional Details" = "Additional Details";
+"Rating" = "Rating";
+"Feedback" = "Feedback";
+
+
+
+////****PASHIRIN******
+
+//P1
+"Hello" = "Hello \(Pashirin)!";
+"Select Your Task" = "Select Your Task";
+
+//P2
+"Confirm" = "Confirm";
+"Leave Now" = "Leave Now";
+
+//P3
+"Your Task Has Been Confirmed!" = "Your Task Has Been Confirmed!";
+
+//P5
+"Currently Delivering" = "Currently Delivering...";
+"Tap Here Once You Have Completed Your Task" = "Tap Here Once You Have Completed Your Task";
+"Completed" = "Completed";
+"Back to Menu" = "Back to Menu";
+
+//P6
+"Well Done" = "Well Done!";
+"You Have Completed Your Task" = "You Have Completed Your Task!";
+
+
+
+
+
+
+
+
+
