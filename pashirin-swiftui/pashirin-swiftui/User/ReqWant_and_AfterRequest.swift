@@ -26,6 +26,8 @@ struct ReqWant_and_AfterRequest: View {
 //    @Binding var status: Int
     init() {
         UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
+//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
+//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
     }
     
     var body: some View {

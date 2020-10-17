@@ -41,7 +41,6 @@ class DataViewModel: ObservableObject {
             self.detail = data["detail"] as? String ?? ""
             self.price = data["price"] as? Int ?? 0
             self.rating = data["rating"] as? String ?? ""
-            print("これが", self.transactionId!)
             
             
 //            self.pashiriContact = Contact(transactionId: transactionId, delivery: delivery, startlocation: startlocation, destination: destination, detail: detail, name: name, price: price, rating: rating)
