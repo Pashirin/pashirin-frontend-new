@@ -23,7 +23,7 @@ class DataViewModel: ObservableObject {
     private var db = Firestore.firestore()
     //これだと全てのトランズアクションを取得してしまう
     func fetchData(){
-        db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")as! String).addSnapshotListener {
+        db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).addSnapshotListener {
             documentSnapshot, error in
             guard let document = documentSnapshot else {
                 print("No documents")
@@ -33,15 +33,14 @@ class DataViewModel: ObservableObject {
             }
             //transactionの
             let data = ((document.data())!)
-            let transactionId = UserDefaults.standard.string(forKey: "transactionId")as! String
-            let delivery = data["delivery"] as? Int ?? 0
-            let name = data["name"] as? String ?? ""
-            let startlocation = data["startlocation"] as? String ?? ""
-            let destination = data["destination"] as? String ?? ""
-            let detail = data["detail"] as? String ?? ""
-            let price = data["price"] as? Int ?? 0
-            let rating = data["rating"] as? String ?? ""
-            print("これが", transactionId)
+            self.transactionId = UserDefaults.standard.string(forKey: "transactionId")!
+            self.delivery = data["delivery"] as? Int ?? 0
+            self.name = data["name"] as? String ?? ""
+            self.startlocation = data["startlocation"] as? String ?? ""
+            self.destination = data["destination"] as? String ?? ""
+            self.detail = data["detail"] as? String ?? ""
+            self.price = data["price"] as? Int ?? 0
+            self.rating = data["rating"] as? String ?? ""
             
             
 //            self.pashiriContact = Contact(transactionId: transactionId, delivery: delivery, startlocation: startlocation, destination: destination, detail: detail, name: name, price: price, rating: rating)
