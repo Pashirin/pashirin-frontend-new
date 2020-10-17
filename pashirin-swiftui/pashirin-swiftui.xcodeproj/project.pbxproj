@@ -128,21 +128,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		83CB321C25358B2C00BCC491 /* akina */ = {
+		831F55A7253A7E46003FC968 /* Pashirin */ = {
 			isa = PBXGroup;
 			children = (
-				83CB321D25358B2C00BCC491 /* Login.swift */,
+				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
+				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
 			);
-			path = akina;
+			path = Pashirin;
 			sourceTree = "<group>";
 		};
-		83CB322325358B4200BCC491 /* Eri */ = {
+		831F55A8253A7E5A003FC968 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				83DB99562535F5250099CC75 /* reqParent.swift */,
+				83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */,
+				83DB99522535F51A0099CC75 /* PWait.swift */,
+				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
+				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
+				8326D5332539A9C1007CD60A /* U5_DetailView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		831F55A9253A7EF2003FC968 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				83E96C26252D6B4B00E1DB64 /* ContentView.swift */,
+				83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */,
+				83CB321D25358B2C00BCC491 /* Login.swift */,
+				83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		83CB322325358B4200BCC491 /* notConnected */ = {
 			isa = PBXGroup;
 			children = (
 				83CB322425358B4200BCC491 /* FirebaseChat */,
 				83CB322925358B4200BCC491 /* Contactview_DetailView */,
 			);
-			path = Eri;
+			path = notConnected;
 			sourceTree = "<group>";
 		};
 		83CB322425358B4200BCC491 /* FirebaseChat */ = {
@@ -176,6 +201,7 @@
 				8305600525383D0F0024537C /* StatusViewModel.swift */,
 				83CB322E25358B4200BCC491 /* P3_ContactsViewModel.swift */,
 				8326D5372539B921007CD60A /* DataViewModel.swift */,
+				83CB323E25358B4D00BCC491 /* Keyboard.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,56 +212,6 @@
 				83CB322F25358B4200BCC491 /* Contact.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		83DB99832536FA180099CC75 /* ChildrenOfHome */ = {
-			isa = PBXGroup;
-			children = (
-				83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */,
-				83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */,
-				83DB99842536FB270099CC75 /* Children_of_selectUserPashirin */,
-			);
-			path = ChildrenOfHome;
-			sourceTree = "<group>";
-		};
-		83DB99842536FB270099CC75 /* Children_of_selectUserPashirin */ = {
-			isa = PBXGroup;
-			children = (
-				83DB99562535F5250099CC75 /* reqParent.swift */,
-				83DB99852536FBBD0099CC75 /* Children_of_reqParent */,
-				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
-				83DB99862536FBDE0099CC75 /* Children_of_P1_ListView */,
-			);
-			path = Children_of_selectUserPashirin;
-			sourceTree = "<group>";
-		};
-		83DB99852536FBBD0099CC75 /* Children_of_reqParent */ = {
-			isa = PBXGroup;
-			children = (
-				83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */,
-				83DB998D2536FD4F0099CC75 /* Children_of_ReqWant */,
-			);
-			path = Children_of_reqParent;
-			sourceTree = "<group>";
-		};
-		83DB99862536FBDE0099CC75 /* Children_of_P1_ListView */ = {
-			isa = PBXGroup;
-			children = (
-				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
-			);
-			path = Children_of_P1_ListView;
-			sourceTree = "<group>";
-		};
-		83DB998D2536FD4F0099CC75 /* Children_of_ReqWant */ = {
-			isa = PBXGroup;
-			children = (
-				83DB99522535F51A0099CC75 /* PWait.swift */,
-				83CB323E25358B4D00BCC491 /* Keyboard.swift */,
-				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
-				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
-				8326D5332539A9C1007CD60A /* U5_DetailView.swift */,
-			);
-			path = Children_of_ReqWant;
 			sourceTree = "<group>";
 		};
 		83E96C16252D6B4B00E1DB64 = {
@@ -261,20 +237,20 @@
 		83E96C21252D6B4B00E1DB64 /* pashirin-swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				83DB997E2536EC6B0099CC75 /* Model */,
-				83DB997D2536EC500099CC75 /* ViewModel */,
-				83CB322325358B4200BCC491 /* Eri */,
-				83E96C26252D6B4B00E1DB64 /* ContentView.swift */,
-				83DB99832536FA180099CC75 /* ChildrenOfHome */,
-				83CB321C25358B2C00BCC491 /* akina */,
 				83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */,
 				83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */,
+				83DB997E2536EC6B0099CC75 /* Model */,
+				83DB997D2536EC500099CC75 /* ViewModel */,
+				831F55A9253A7EF2003FC968 /* Common */,
+				831F55A7253A7E46003FC968 /* Pashirin */,
+				831F55A8253A7E5A003FC968 /* User */,
+				83CB322325358B4200BCC491 /* notConnected */,
 				83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */,
+				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
 				83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */,
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				83E96C2A252D6B4B00E1DB64 /* Preview Content */,
-				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
 				83CB32972535B3B300BCC491 /* GoogleService-Info.plist */,
 			);
 			path = "pashirin-swiftui";
