@@ -21,23 +21,26 @@ struct P3_DetailView: View {
         if showCongrats {
             P3_Congrats(transactionId: contact.transactionId)
         } else {
-       
-            VStack {
+        ZStack{
+                Image("P5Delivering")
+                    .resizable()
+                 .scaledToFill()
+                 .edgesIgnoringSafeArea(.all)
+                
+        VStack {
                 Image("profile")
                     .resizable()
                     .clipped()
                     .cornerRadius(50)
-            }
-            .frame(width: 150, height: 150)
-            .background(Color.red)
-         
+                    .frame(width: 150, height: 150)
+                
+                Text("ERI")
+                    .font(.title)
+                    .fontWeight(.medium)
+                Text(contact.rating)
+           
             
-            Text(contact.name)
-                .font(.title)
-                .fontWeight(.medium)
-            Text(contact.rating)
-            
-            Form{
+        Form{
                 Section{
                     HStack{
                         Text("Offer Price")
@@ -75,8 +78,9 @@ struct P3_DetailView: View {
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
-                    
                 }
+            }
+        }
                 
                 Section{
                     Button (action : {
@@ -95,10 +99,10 @@ struct P3_DetailView: View {
                         }
                     }
                 }
-         
-        }
+            }
         }
     }
+    
     
 
 
