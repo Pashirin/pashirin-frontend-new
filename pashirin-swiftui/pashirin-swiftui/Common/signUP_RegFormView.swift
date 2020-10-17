@@ -139,7 +139,7 @@ struct RegFormView: View {
                     "address": self.address
                 ] as [String : Any]
                 //putting userinfo into cloud firestore
-                let docRef = Firestore.firestore().document("users/\(authResult!.user.uid))")
+                let docRef = Firestore.firestore().document("users/\(authResult!.user.uid)")
                 print("setting userInfo")
                 docRef.setData(userInfo) { (error) in
                     if let error = error {
