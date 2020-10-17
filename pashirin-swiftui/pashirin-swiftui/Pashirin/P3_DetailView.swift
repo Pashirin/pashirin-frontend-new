@@ -12,21 +12,22 @@ struct P3_DetailView: View {
     
     let contact: Contact
     @State var showCongrats = false
-    
-    
     let db = Firestore.firestore()
+    let transactionId = UserDefaults.standard.string(forKey: "transactionId")
+    let pashiri_id = UserDefaults.standard.string(forKey: "current_user_id")
+
     
     var body: some View {
         if showCongrats {
             P3_Congrats(transactionId: contact.transactionId)
         } else {
-            VStack {
-                Image("profile")
-                    .resizable()
-                    .clipped()
-                    .cornerRadius(50)
-            }
-            .frame(width: 150, height: 150)
+//            VStack {
+//                Image("profile")
+//                    .resizable()
+//                    .clipped()
+//                    .cornerRadius(50)
+//            }
+//            .frame(width: 150, height: 150)
             
             Text(contact.name)
                 .font(.title)
@@ -80,8 +81,12 @@ struct P3_DetailView: View {
                         
                     }) {
                         Button ("Confirm to Deliver"){
-                            print("kfjdkfjakdjfkajkj")
+                            print("transactionIdは　　　", self.transactionId)
+                            print("pashiri_id は　　　", self.pashiri_id)
                             db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
+                            print(UserDefaults.standard.string(forKey: "transactionId"))
+                            
+                            db.collection("transactions").document(contact.transactionId).setData(["pashiri_id": UserDefaults.standard.string(forKey:"current_user_id")], merge: true)
                             self.showCongrats.toggle()
                             
                         }
@@ -91,6 +96,7 @@ struct P3_DetailView: View {
                     }
                 }
             }
+            
             
         }
     }

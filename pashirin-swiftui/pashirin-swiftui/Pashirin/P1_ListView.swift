@@ -10,19 +10,20 @@ import SwiftUI
 
 struct P1_ListView: View {
     
-@ObservedObject private var viewModel = ContactsViewModel()
+    @ObservedObject private var viewModel = ContactsViewModel()
+    //後で消す
     
     var body: some View {
         //NavigationView{
             List(viewModel.contacts) { contact in
                
-                HStack{
-                    Image("profile")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .clipped()
-                        .cornerRadius(50)
-                    }
+//                HStack{
+//                    Image("profile")
+//                        .resizable()
+//                        .frame(width: 60, height: 60)
+//                        .clipped()
+//                        .cornerRadius(50)
+//                    }
             NavigationLink(destination:P3_DetailView (contact: contact)){
                 
                 VStack(alignment: .leading){
@@ -39,7 +40,11 @@ struct P1_ListView: View {
             .navigationBarTitle("PashiList")
             .onAppear(){
                 self.viewModel.fetchData()
+                print("onApearに入りました")
+                UserDefaults.standard.set("67rCkmZExMNqquAJdCDShUfGF5f1", forKey: "current_user_id")
+                print(UserDefaults.standard.string(forKey: "current_user_id")!)
                 }
+                
             }
        // }
     }

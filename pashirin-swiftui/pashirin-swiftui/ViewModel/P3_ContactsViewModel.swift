@@ -32,7 +32,6 @@ class ContactsViewModel: ObservableObject {
                 let detail = data["detail"] as? String ?? ""
                 let price = data["price"] as? Int ?? 0
                 let rating = data["rating"] as? String ?? ""
-                print("これが", transactionId)
                 
                 return Contact (transactionId: transactionId, delivery: delivery,startlocation: startlocation, destination: destination, detail: detail, name: name, price: price, rating: rating)
             }
