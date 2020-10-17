@@ -14,7 +14,15 @@ struct P1_ListView: View {
     
     var body: some View {
         //NavigationView{
-            List(viewModel.contacts) { contact in
+   
+
+//            Spacer()
+//           Image("P1")
+//               .resizable()
+//            .scaledToFill()
+//            .edgesIgnoringSafeArea(.all)
+            
+        List(viewModel.contacts) { contact in
                
                 HStack{
                     Image("profile")
@@ -36,13 +44,12 @@ struct P1_ListView: View {
             }
           }
                 
-            .navigationBarTitle("PashiList")
+          .navigationBarTitle("Task List")
             .onAppear(){
                 self.viewModel.fetchData()
                 }
             }
-       // }
-    }
+       }
 
 
 

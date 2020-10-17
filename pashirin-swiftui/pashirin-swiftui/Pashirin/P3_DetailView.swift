@@ -21,6 +21,7 @@ struct P3_DetailView: View {
         if showCongrats {
             P3_Congrats(transactionId: contact.transactionId)
         } else {
+       
             VStack {
                 Image("profile")
                     .resizable()
@@ -28,6 +29,8 @@ struct P3_DetailView: View {
                     .cornerRadius(50)
             }
             .frame(width: 150, height: 150)
+            .background(Color.red)
+         
             
             Text(contact.name)
                 .font(.title)
@@ -89,14 +92,15 @@ struct P3_DetailView: View {
                         .font(.system(size: 18, weight: .bold, design: .default))
                         .multilineTextAlignment(.center)
                         
+                        }
                     }
                 }
-            }
-            
+         
+        }
         }
     }
     
-}
+
 
 
 struct P3_Congrats: View {
