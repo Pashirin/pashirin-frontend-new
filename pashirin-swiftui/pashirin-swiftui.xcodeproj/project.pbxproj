@@ -133,6 +133,8 @@
 			children = (
 				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
 				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
+				83CB32BC2535F26600BCC491 /* P7-Deliver.swift */,
+				83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */,
 			);
 			path = Pashirin;
 			sourceTree = "<group>";
@@ -186,8 +188,6 @@
 			children = (
 				83CB322C25358B4200BCC491 /* pashirin.png */,
 				83CB322D25358B4200BCC491 /* profile.png */,
-				83CB32BC2535F26600BCC491 /* P7-Deliver.swift */,
-				83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */,
 				83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */,
 				83E96C46252DAEB800E1DB64 /* ViewController */,
 			);
