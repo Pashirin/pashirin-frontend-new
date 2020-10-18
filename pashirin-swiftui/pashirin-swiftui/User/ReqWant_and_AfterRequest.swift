@@ -24,7 +24,11 @@ struct ReqWant_and_AfterRequest: View {
     //@Binding var transactionId: String
 //    @Binding var showWaitForP: Bool
 //    @Binding var status: Int
-    
+    init() {
+        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
+//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
+//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
+    }
     
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
@@ -161,7 +165,8 @@ struct ReqWant_and_AfterRequest: View {
             "startlocation": self.whereIs,
             "destination": self.whereTo,
             "detail": self.moreInfo,
-            "price": Int(self.price) ?? 0
+            "price": Int(self.price) ?? 0,
+            "user_id": UserDefaults.standard.string(forKey:"current_user_id")
         ] as [String : Any]
 
         //transactionIdを生成する

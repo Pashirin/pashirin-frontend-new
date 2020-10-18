@@ -18,6 +18,7 @@ struct ContentView: View {
             RegFormView(isSignedUp: $isSignedUp)
         } else {
       UserPashirin()
+        
            
            
         }

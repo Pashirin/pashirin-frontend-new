@@ -47,7 +47,6 @@
 		83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDBB7525389588007EB3E8 /* AfterRequest.swift */; };
 		B5488B39253AB488005AE076 /* Congrats.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B32253AB488005AE076 /* Congrats.json */; };
 		B5488B3A253AB488005AE076 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B33253AB488005AE076 /* Delivery.json */; };
-		B5488B3B253AB488005AE076 /* thumbsup.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B34253AB488005AE076 /* thumbsup.json */; };
 		B5488B3C253AB488005AE076 /* runOrange.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B35253AB488005AE076 /* runOrange.json */; };
 		B5488B3D253AB488005AE076 /* deliver.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B36253AB488005AE076 /* deliver.json */; };
 		B5488B3E253AB488005AE076 /* welldone.json in Resources */ = {isa = PBXBuildFile; fileRef = B5488B37253AB488005AE076 /* welldone.json */; };
@@ -56,6 +55,7 @@
 		B5488B47253AB7D2005AE076 /* Barlow-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5488B11253AB2DE005AE076 /* Barlow-Medium.ttf */; };
 		B571DA7F253AE77700BDB2E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B571DA81253AE77700BDB2E8 /* Localizable.strings */; };
 		B5729009253AC07D009B899E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5729008253AC07D009B899E /* LottieView.swift */; };
+		B5C6C937253C150C00614A2C /* thumbsup.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C936253C150C00614A2C /* thumbsup.json */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +118,6 @@
 		B5488B12253AB2DE005AE076 /* LEMONMILK-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LEMONMILK-Light.otf"; sourceTree = "<group>"; };
 		B5488B32253AB488005AE076 /* Congrats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Congrats.json; sourceTree = "<group>"; };
 		B5488B33253AB488005AE076 /* Delivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
-		B5488B34253AB488005AE076 /* thumbsup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbsup.json; sourceTree = "<group>"; };
 		B5488B35253AB488005AE076 /* runOrange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = runOrange.json; sourceTree = "<group>"; };
 		B5488B36253AB488005AE076 /* deliver.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deliver.json; sourceTree = "<group>"; };
 		B5488B37253AB488005AE076 /* welldone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welldone.json; sourceTree = "<group>"; };
@@ -127,6 +126,7 @@
 		B571DA80253AE77700BDB2E8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B571DA84253AE77E00BDB2E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5729008253AC07D009B899E /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		B5C6C936253C150C00614A2C /* thumbsup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbsup.json; sourceTree = "<group>"; };
 		BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.release.xcconfig"; sourceTree = "<group>"; };
 		CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +157,8 @@
 			children = (
 				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
 				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
+				83CB32BC2535F26600BCC491 /* P7-Deliver.swift */,
+				83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */,
 			);
 			path = Pashirin;
 			sourceTree = "<group>";
@@ -210,8 +212,6 @@
 			children = (
 				83CB322C25358B4200BCC491 /* pashirin.png */,
 				83CB322D25358B4200BCC491 /* profile.png */,
-				83CB32BC2535F26600BCC491 /* P7-Deliver.swift */,
-				83CB32BB2535F26600BCC491 /* P8-TaskComplete.swift */,
 				83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */,
 				83E96C46252DAEB800E1DB64 /* ViewController */,
 			);
@@ -323,9 +323,9 @@
 			children = (
 				B5488B32253AB488005AE076 /* Congrats.json */,
 				B5488B33253AB488005AE076 /* Delivery.json */,
-				B5488B34253AB488005AE076 /* thumbsup.json */,
 				B5488B35253AB488005AE076 /* runOrange.json */,
 				B5488B36253AB488005AE076 /* deliver.json */,
+				B5C6C936253C150C00614A2C /* thumbsup.json */,
 				B5488B37253AB488005AE076 /* welldone.json */,
 				B5488B38253AB488005AE076 /* load.json */,
 			);
@@ -442,8 +442,8 @@
 				B5488B44253AB7CD005AE076 /* LEMONMILK-Light.otf in Resources */,
 				B5488B39253AB488005AE076 /* Congrats.json in Resources */,
 				B5488B3A253AB488005AE076 /* Delivery.json in Resources */,
-				B5488B3B253AB488005AE076 /* thumbsup.json in Resources */,
 				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
+				B5C6C937253C150C00614A2C /* thumbsup.json in Resources */,
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
 				B5488B3C253AB488005AE076 /* runOrange.json in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,

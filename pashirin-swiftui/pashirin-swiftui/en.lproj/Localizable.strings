@@ -139,9 +139,11 @@
 "You Have Completed Your Task" = "You Have Completed Your Task!";
 
 
-
-
-
+// Nav bar
+"Request" = "Request";
+"Detail" = "Detail";
+"History" = "History";
+"Account" = "Account";
 
 
 
