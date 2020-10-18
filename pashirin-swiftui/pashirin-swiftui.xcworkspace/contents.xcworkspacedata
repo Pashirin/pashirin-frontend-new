@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:pashirin-swiftui.xcodeproj">
+      location = "group:/Users/erikoyano/pashirin-frontend-new/pashirin-swiftui/Pashirin.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

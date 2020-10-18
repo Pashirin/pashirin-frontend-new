@@ -15,11 +15,12 @@ struct P1_ListView: View {
     var body: some View {
       
     ZStack{
-//                Spacer()
-//                    Image("P1")
-//                    .resizable()
-                  //  .scaledToFill()
-                   // .edgesIgnoringSafeArea(.all)
+        Spacer()
+        Image("P1")
+            .resizable()
+            .scaledToFit()
+            .edgesIgnoringSafeArea(.all)
+        
             VStack{
                     List(viewModel.contacts) { contact in
                     Image("profile")
@@ -41,18 +42,17 @@ struct P1_ListView: View {
                     }
 
                 }
-
             }
-
         }
-          
+
             .navigationBarTitle("Task List")
             .onAppear(){
                 self.viewModel.fetchData()
             }
         }
-    .background(Image("P3Delivering"))
+   
     }
+
 
 
 

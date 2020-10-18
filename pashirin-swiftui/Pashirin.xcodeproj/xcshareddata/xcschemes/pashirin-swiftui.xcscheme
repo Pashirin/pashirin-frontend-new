@@ -17,7 +17,7 @@
                BlueprintIdentifier = "83E96C1E252D6B4B00E1DB64"
                BuildableName = "pashirin-swiftui.app"
                BlueprintName = "pashirin-swiftui"
-               ReferencedContainer = "container:pashirin-swiftui.xcodeproj">
+               ReferencedContainer = "container:Pashirin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "83E96C34252D6B4C00E1DB64"
                BuildableName = "pashirin-swiftuiTests.xctest"
                BlueprintName = "pashirin-swiftuiTests"
-               ReferencedContainer = "container:pashirin-swiftui.xcodeproj">
+               ReferencedContainer = "container:Pashirin.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,7 +57,7 @@
             BlueprintIdentifier = "83E96C1E252D6B4B00E1DB64"
             BuildableName = "pashirin-swiftui.app"
             BlueprintName = "pashirin-swiftui"
-            ReferencedContainer = "container:pashirin-swiftui.xcodeproj">
+            ReferencedContainer = "container:Pashirin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "83E96C1E252D6B4B00E1DB64"
             BuildableName = "pashirin-swiftui.app"
             BlueprintName = "pashirin-swiftui"
-            ReferencedContainer = "container:pashirin-swiftui.xcodeproj">
+            ReferencedContainer = "container:Pashirin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

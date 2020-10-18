@@ -400,9 +400,10 @@
 		83E96C17252D6B4B00E1DB64 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = HONGHYONGGUK;
+				ORGANIZATIONNAME = Pashirin;
 				TargetAttributes = {
 					83E96C1E252D6B4B00E1DB64 = {
 						CreatedOnToolsVersion = 11.5;
@@ -413,7 +414,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "pashirin-swiftui" */;
+			buildConfigurationList = 83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "Pashirin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -748,7 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -772,7 +773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -837,7 +838,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "pashirin-swiftui" */ = {
+		83E96C1A252D6B4B00E1DB64 /* Build configuration list for PBXProject "Pashirin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E96C3C252D6B4C00E1DB64 /* Debug */,

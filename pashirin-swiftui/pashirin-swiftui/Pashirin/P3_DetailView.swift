@@ -22,8 +22,8 @@ struct P3_DetailView: View {
             P3_Congrats(transactionId: contact.transactionId)
         } else {
         ZStack{
-                Image("P5Delivering")
-                    .resizable()
+                Image("P2")
+                .resizable()
                  .scaledToFill()
                  .edgesIgnoringSafeArea(.all)
                 
@@ -78,6 +78,7 @@ struct P3_DetailView: View {
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
+                }
             }
         
                     Button(action : {
@@ -93,10 +94,11 @@ struct P3_DetailView: View {
                     .font(Font.custom("Barlow-Medium",size: 18))
                         }
                     }
+                }
             }
         }
-    }
-}
+
+
 
     
 
