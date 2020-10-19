@@ -113,6 +113,8 @@ struct P3_DetailView: View {
 struct P3_Congrats: View {
     var transactionId = UserDefaults.standard.string(forKey:"transactionId")!
     @State var didStartTrip = false
+    @State private var showHome = false
+    
     var body: some View{
         if didStartTrip {
             Deliver()
@@ -129,7 +131,7 @@ struct P3_Congrats: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 60, height: 60)
                     Text("You have a Match!")
-                    HStack{
+//                    HStack{
 //                        Button(action: {
 //                            print("Button Clicked")
 //                        }) {
@@ -140,12 +142,13 @@ struct P3_Congrats: View {
 //                                .padding()
 //                                .border(Color.white, width: 5)
 //                        }
-                        NavigationView {
-                            NavigationLink(destination: Home()){
-                                Text("Chat juyjyu Now")
-                            }
-                        }
-                    }
+//                        NavigationView {
+//                            NavigationLink(destination: Home()){
+//                                Text("Chat juyjyu Now")
+//                            }
+//                        }
+//                    }
+                    
                     Button(action: {
                         print(self.transactionId)
                         Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
@@ -158,6 +161,18 @@ struct P3_Congrats: View {
                             .font(.title)
                             .padding()
                             .border(Color.white, width: 5)
+                    }
+                    
+                    Button (action: {
+                        self.showHome.toggle()
+                    }) {
+                        Text("Chat with Customer")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                            .border(Color.white, width: 5)
+                    }.sheet(isPresented: $showHome) {
+                        Home()
                     }
                     
                     
