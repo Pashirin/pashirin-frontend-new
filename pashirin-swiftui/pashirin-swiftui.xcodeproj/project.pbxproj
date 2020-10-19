@@ -106,8 +106,8 @@
 		83E96C3B252D6B4C00E1DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGoogleMapsView.swift; sourceTree = "<group>"; };
 		83E96C47252DAEEF00E1DB64 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		83FA1A09253C600500F001B9 /* P7-Deliver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "P7-Deliver.swift"; path = "../../../../../../../Desktop/pashirin-frontend-newのコピー/pashirin-swiftui/pashirin-swiftui/Pashirin/P7-Deliver.swift"; sourceTree = "<group>"; };
-		83FA1A0D253C601000F001B9 /* P8-TaskComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "P8-TaskComplete.swift"; path = "../../../../../../../Desktop/pashirin-frontend-newのコピー/pashirin-swiftui/pashirin-swiftui/Pashirin/P8-TaskComplete.swift"; sourceTree = "<group>"; };
+		83FA1A09253C600500F001B9 /* P7-Deliver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "P7-Deliver.swift"; sourceTree = "<group>"; };
+		83FA1A0D253C601000F001B9 /* P8-TaskComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "P8-TaskComplete.swift"; sourceTree = "<group>"; };
 		83FA1A2D253C6FEB00F001B9 /* pageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageController.swift; sourceTree = "<group>"; };
 		83FA1A32253C799B00F001B9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		83FA1A36253C79CC00F001B9 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
