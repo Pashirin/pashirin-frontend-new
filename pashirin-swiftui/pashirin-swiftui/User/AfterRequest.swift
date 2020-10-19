@@ -11,10 +11,13 @@ import SwiftUI
 struct AfterRequest: View {
     @ObservedObject var waitingViewModel = WaitingViewModel()
     var body: some View {
-        if waitingViewModel.status == 2 {
-            U5_DetailView()
-        } else  {
+        if waitingViewModel.status == 1 {
             PWait()
+        } else if waitingViewModel.status == 4  {
+            Thankyou()
+        } else {
+            U5_DetailView()
+            
         }
     }
 }

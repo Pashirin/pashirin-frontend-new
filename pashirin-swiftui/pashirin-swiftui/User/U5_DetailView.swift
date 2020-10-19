@@ -12,7 +12,10 @@ import FirebaseFirestore
 struct U5_DetailView: View {
     //Pashiriの情報を取ってくる
     @ObservedObject var pashiriData = DataViewModel()
+    @ObservedObject var waitingViewModel = WaitingViewModel()
+
     @State var showCongrats = true
+    
     
     
     let db = Firestore.firestore()
@@ -20,6 +23,8 @@ struct U5_DetailView: View {
     var body: some View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
+        } else if self.waitingViewModel.status == 4{
+            Thankyou()
         } else {
             VStack {
                 Image("profile")
@@ -29,24 +34,24 @@ struct U5_DetailView: View {
             }
             .frame(width: 150, height: 150)
             
-            Text(pashiriData.name as! String)
-                .font(.title)
-                .fontWeight(.medium)
-            Text(pashiriData.rating as! String)
+//            Text(pashiriData.name as! String)
+//                .font(.title)
+//                .fontWeight(.medium)
+//            Text(pashiriData.rating as! String)
             
             Form{
                 Section{
                     HStack{
                         Text("Offer Price")
                         Spacer()
-                        Text("¥\(pashiriData.price as! Int)")
+                        Text("¥\(self.pashiriData.price as! Int)")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Rating")
                         Spacer()
-                        Text(pashiriData.rating as! String)
+                        Text(self.pashiriData.rating as! String)
                             .foregroundColor(.gray)
                             .font(.callout)
                         
@@ -54,21 +59,21 @@ struct U5_DetailView: View {
                     HStack{
                         Text("Current Location")
                         Spacer()
-                        Text(pashiriData.startlocation as! String)
+                        Text(self.pashiriData.startlocation as! String)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Delivery")
                         Spacer()
-                        Text("\(pashiriData.delivery as! Int) completed deliveries")
+                        Text("\(self.pashiriData.delivery as! Int) completed deliveries")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Message")
                         Spacer()
-                        Text(pashiriData.detail as! String)
+                        Text(self.pashiriData.detail as! String)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
@@ -76,14 +81,15 @@ struct U5_DetailView: View {
                 }
                 
                 Section{
+//                    NavigationLink(destination: Home()){
+//                        Text("Start Chat")
+//                    }
                     Button (action : {
                         print("これがstart Chat")
                         
                     }) {
-                        Button ("Confirm to Deliver"){
+                        Button ("Chat Now"){
                             print("kfjdkfjakdjfkajkj")
-                            db.collection("transactions").document(pashiriData.transactionId as! String).setData(["status": 2], merge: true)
-                            self.showCongrats.toggle()
                             
                         }
                         .font(.system(size: 18, weight: .bold, design: .default))

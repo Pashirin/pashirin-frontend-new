@@ -14,7 +14,7 @@ struct P1_ListView: View {
     //後で消す
     
     var body: some View {
-        //NavigationView{
+       // NavigationView{
             List(viewModel.contacts) { contact in
                
 //                HStack{
@@ -36,7 +36,7 @@ struct P1_ListView: View {
                 }
             }
           }
-                
+        //}
             .navigationBarTitle("PashiList")
             .onAppear(){
                 self.viewModel.fetchData()

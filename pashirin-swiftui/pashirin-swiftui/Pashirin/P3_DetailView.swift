@@ -19,8 +19,9 @@ struct P3_DetailView: View {
     
     var body: some View {
         if showCongrats {
-            P3_Congrats(transactionId: contact.transactionId)
+            ContainerForStatus()
         } else {
+           
 //            VStack {
 //                Image("profile")
 //                    .resizable()
@@ -76,6 +77,11 @@ struct P3_DetailView: View {
                 }
                 
                 Section{
+//                    NavigationView{
+//                        NavigationLink(destination: Home()){
+//                            Text("Start Chat")
+//                        }
+//                    }
                     Button (action : {
                         print("これがstart Chat")
                         
@@ -84,6 +90,7 @@ struct P3_DetailView: View {
                             print("transactionIdは　　　", self.transactionId)
                             print("pashiri_id は　　　", self.pashiri_id)
                             db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
+                            UserDefaults.standard.set(contact.transactionId, forKey: "transactionId")
                             print(UserDefaults.standard.string(forKey: "transactionId"))
                             
                             db.collection("transactions").document(contact.transactionId).setData(["pashiri_id": UserDefaults.standard.string(forKey:"current_user_id")], merge: true)
@@ -103,9 +110,8 @@ struct P3_DetailView: View {
     
 }
 
-
 struct P3_Congrats: View {
-    var transactionId: String
+    var transactionId = UserDefaults.standard.string(forKey:"transactionId")!
     @State var didStartTrip = false
     var body: some View{
         if didStartTrip {
