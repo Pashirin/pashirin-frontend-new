@@ -98,7 +98,7 @@ struct P3_DetailView: View {
                             
                         }
                         .font(.system(size: 18, weight: .bold, design: .default))
-                        .multilineTextAlignment(.center)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                         
                     }
                 }
