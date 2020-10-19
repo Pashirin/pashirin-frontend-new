@@ -130,15 +130,20 @@ struct P3_Congrats: View {
                         .frame(width: 60, height: 60)
                     Text("You have a Match!")
                     HStack{
-                        Button(action: {
-                            print("Button Clicked")
-                        }) {
-                            
-                            Text("Chat Now")
-                                .foregroundColor(.white)
-                                .font(.title)
-                                .padding()
-                                .border(Color.white, width: 5)
+//                        Button(action: {
+//                            print("Button Clicked")
+//                        }) {
+//
+//                            Text("Chat Now")
+//                                .foregroundColor(.white)
+//                                .font(.title)
+//                                .padding()
+//                                .border(Color.white, width: 5)
+//                        }
+                        NavigationView {
+                            NavigationLink(destination: Home()){
+                                Text("Chat juyjyu Now")
+                            }
                         }
                     }
                     Button(action: {

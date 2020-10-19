@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     //デフォルトではfalse
-    @State var isSignedUp = true
+    @State var isSignedUp = false
     @State var loginStatus = false
     var body: some View {
         if !isSignedUp {

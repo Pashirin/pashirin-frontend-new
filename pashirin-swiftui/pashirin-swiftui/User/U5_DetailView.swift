@@ -12,7 +12,7 @@ import FirebaseFirestore
 struct U5_DetailView: View {
     //Pashiriの情報を取ってくる
     @ObservedObject var pashiriData = DataViewModel()
-    @ObservedObject var waitingViewModel = WaitingViewModel()
+   //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
 
     @State var showCongrats = true
     
@@ -23,8 +23,6 @@ struct U5_DetailView: View {
     var body: some View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
-        } else if self.waitingViewModel.status == 4{
-            Thankyou()
         } else {
             VStack {
                 Image("profile")
@@ -81,20 +79,21 @@ struct U5_DetailView: View {
                 }
                 
                 Section{
-//                    NavigationLink(destination: Home()){
-//                        Text("Start Chat")
-//                    }
-                    Button (action : {
-                        print("これがstart Chat")
-                        
-                    }) {
-                        Button ("Chat Now"){
-                            print("kfjdkfjakdjfkajkj")
-                            
-                        }
-                        .font(.system(size: 18, weight: .bold, design: .default))
-                        .multilineTextAlignment(.center)
-                        
+                    NavigationLink(destination: Home()){
+//                        Button (action : {
+//                            print("これがstart Chat")
+//
+//                        }) {
+//                            Button ("Chat Now"){
+//                                print("kfjdkfjakdjfkajkj")
+//
+//                            }
+//                            .font(.system(size: 18, weight: .bold, design: .default))
+//                            .multilineTextAlignment(.center)
+//
+//                        }
+                        Text("Start Chat")
+
                     }
                 }
             }
