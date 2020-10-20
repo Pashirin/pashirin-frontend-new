@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D51010253F5CA700A53198 /* GoogleService-Info.plist */; };
 		6BD7BE6F9548B9AF81E9BCAA /* Pods_pashirin_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */; };
 		8305600625383D0F0024537C /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305600525383D0F0024537C /* StatusViewModel.swift */; };
 		8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326D5332539A9C1007CD60A /* U5_DetailView.swift */; };
@@ -26,7 +27,6 @@
 		83CB323925358B4200BCC491 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB322F25358B4200BCC491 /* Contact.swift */; };
 		83CB324125358B4D00BCC491 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB323E25358B4D00BCC491 /* Keyboard.swift */; };
 		83CB324225358B4D00BCC491 /* signUP_RegFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */; };
-		83CB32982535B3B400BCC491 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CB32972535B3B300BCC491 /* GoogleService-Info.plist */; };
 		83CB32B12535F22500BCC491 /* U4-Matched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32B02535F22500BCC491 /* U4-Matched.swift */; };
 		83CB32BD2535F26600BCC491 /* U9-Thankyou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */; };
 		83DB99532535F51B0099CC75 /* PWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB99522535F51A0099CC75 /* PWait.swift */; };
@@ -67,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D51010253F5CA700A53198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8305600525383D0F0024537C /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		83CB322F25358B4200BCC491 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		83CB323E25358B4D00BCC491 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUP_RegFormView.swift; sourceTree = "<group>"; };
-		83CB32972535B3B300BCC491 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83CB32B02535F22500BCC491 /* U4-Matched.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "U4-Matched.swift"; sourceTree = "<group>"; };
 		83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "U9-Thankyou.swift"; sourceTree = "<group>"; };
 		83DB99522535F51A0099CC75 /* PWait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWait.swift; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 				83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */,
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
+				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
 				83E96C2A252D6B4B00E1DB64 /* Preview Content */,
-				83CB32972535B3B300BCC491 /* GoogleService-Info.plist */,
 			);
 			path = "pashirin-swiftui";
 			sourceTree = "<group>";
@@ -422,8 +422,8 @@
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
-				83CB32982535B3B400BCC491 /* GoogleService-Info.plist in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
+				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
