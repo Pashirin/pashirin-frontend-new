@@ -52,6 +52,7 @@
 		83FA1A43253C7A1400F001B9 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A42253C7A1400F001B9 /* MsgModel.swift */; };
 		83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */; };
 		83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDBB7525389588007EB3E8 /* AfterRequest.swift */; };
+		E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.release.xcconfig"; sourceTree = "<group>"; };
 		CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.debug.xcconfig"; sourceTree = "<group>"; };
+		E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U5_Congrats.swift; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
 				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
 				8326D5332539A9C1007CD60A /* U5_DetailView.swift */,
+				E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */,
 				83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */,
 			);
 			path = User;
@@ -535,6 +538,7 @@
 				83FA1A2E253C6FEB00F001B9 /* pageController.swift in Sources */,
 				83DB99802536EDBF0099CC75 /* WaitingViewModel.swift in Sources */,
 				83CB323925358B4200BCC491 /* Contact.swift in Sources */,
+				E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */,
 				83FA1A33253C799B00F001B9 /* Home.swift in Sources */,
 				83CB321F25358B2C00BCC491 /* Login.swift in Sources */,
 				83DB99572535F5250099CC75 /* reqParent.swift in Sources */,
