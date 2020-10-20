@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 
 class DataViewModel: ObservableObject {
-    @Published var transactionId : String? = nil
+    //@Published var transactionId : String? = nil
     @Published var delivery : Int? = nil
     @Published var name : String? = nil
     @Published var startlocation: String? = nil
@@ -26,6 +26,7 @@ class DataViewModel: ObservableObject {
     private var db = Firestore.firestore()
     //これだと全てのトランズアクションを取得してしまう
     func fetchData(){
+        
         print("これがpashiriからの変更ステータス4  ", UserDefaults.standard.string(forKey: "transactionId")!)
         db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).addSnapshotListener {
             documentSnapshot, error in
@@ -35,11 +36,10 @@ class DataViewModel: ObservableObject {
                 return
                 
             }
-            print("kokonikiterukarna?")
             //transactionの
             let data = ((document.data())!)
             print(data)
-            self.transactionId = UserDefaults.standard.string(forKey: "transactionId")!
+            //self.transactionId = UserDefaults.standard.string(forKey: "transactionId")!
             self.delivery = data["delivery"] as? Int ?? 0
             self.name = data["name"] as? String ?? ""
             self.startlocation = data["startlocation"] as? String ?? ""

@@ -23,18 +23,24 @@ struct TaskComplete: View {
                 .frame(width: 60, height: 60)
                 Text("You Have Completed your Task!")
                     .padding(13.0)
+            
                 
-            Button(action: {
-                    print("Button Clicked")
-                }) {
+                NavigationLink(destination: P1_ListView()){
+//                    Button(action: {
+//                        print("Button Clicked")
+//                    }) {
+                        
+                        Text("Back to Menu")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                            .border(Color.white, width: 5)
+//                    }
                 
-                    Text("Back to Menu")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .padding()
-                        .border(Color.white, width: 5)
+                    
                 }
             }
+                
         }
     }
 }

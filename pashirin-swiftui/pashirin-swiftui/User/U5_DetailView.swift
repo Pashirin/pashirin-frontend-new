@@ -11,7 +11,14 @@ import FirebaseFirestore
 
 struct U5_DetailView: View {
     //Pashiriの情報を取ってくる
-    @ObservedObject var pashiriData = DataViewModel()
+    //@ObservedObject var pashiriData = DataViewModel()
+    @State var name: String = "名無し"
+    @State var price: Int = 2000
+    @State var rating: Int = 0
+    @State var startlocation: String = "不明"
+    @State var delivery: Int = 50000
+    @State var detail: String = ""
+    
    //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
 
     @State var showCongrats = true
@@ -40,14 +47,14 @@ struct U5_DetailView: View {
                     HStack{
                         Text("Offer Price")
                         Spacer()
-                        Text("¥\(self.pashiriData.price as! Int)")
+                        Text("¥\(self.price as! Int)")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Rating")
                         Spacer()
-                        Text(self.pashiriData.rating as! String)
+                        Text("¥\(self.rating as! Int)")
                             .foregroundColor(.gray)
                             .font(.callout)
                         
@@ -55,21 +62,21 @@ struct U5_DetailView: View {
                     HStack{
                         Text("Current Location")
                         Spacer()
-                        Text(self.pashiriData.startlocation as! String)
+                        Text(self.startlocation as! String)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Delivery")
                         Spacer()
-                        Text("\(self.pashiriData.delivery as! Int) completed deliveries")
+                        Text("\(self.delivery as! Int) completed deliveries")
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
                     HStack{
                         Text("Message")
                         Spacer()
-                        Text(self.pashiriData.detail as! String)
+                        Text(self.detail as! String)
                             .foregroundColor(.gray)
                             .font(.callout)
                     }
@@ -102,6 +109,23 @@ struct U5_DetailView: View {
                 Text("Chat with a Pashiri")
             }.sheet(isPresented: $showHome){
                 Home()
+            }
+            .onAppear{
+                getPashiriInfo()
+            }
+            
+        }
+    }
+    func getPashiriInfo(){
+        self.db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).getDocument{ (document, err) in
+            if let document = document, document.exists {
+                
+                self.price = document.get("price")as! Int
+                //self.name
+                self.startlocation = document.get("startlocation")as! String
+                self.detail = document.get("detail")as! String
+            } else {
+                print("Document does not exist")
             }
             
         }

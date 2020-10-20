@@ -24,9 +24,11 @@ struct Thankyou: View {
                 Text("We Hope You Enjoyed the Service!")
                     .padding(13.0)
                 
-                
+            
             Button(action: {
                     print("Button Clicked")
+                
+                    
                 }) {
                 
                     Text("Back to Menu")
