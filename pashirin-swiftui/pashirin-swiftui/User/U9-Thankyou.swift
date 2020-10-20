@@ -25,17 +25,31 @@ struct Thankyou: View {
                     .padding(13.0)
                 
             
-            Button(action: {
-                    print("Button Clicked")
+//            Button(action: {
+//                    print("Button Clicked")
+//
+//
+//                }) {
+//
+//                    Text("Back to Menu")
+//                        .foregroundColor(.white)
+//                        .font(.title)
+//                        .padding()
+//                        .border(Color.white, width: 5)
+//                }
+                NavigationLink(destination: UserPashirin()){
+//                    Button(action: {
+//                        print("Button Clicked")
+//                    }) {
+                        
+                        Text("Back to Menu")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                            .border(Color.white, width: 5)
+//                    }
                 
                     
-                }) {
-                
-                    Text("Back to Menu")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .padding()
-                        .border(Color.white, width: 5)
                 }
             }
         }

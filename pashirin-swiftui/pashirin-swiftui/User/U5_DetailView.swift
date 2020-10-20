@@ -22,7 +22,7 @@ struct U5_DetailView: View {
    //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
 
     @State var showCongrats = true
-    
+    @State private var showHome = false
     let db = Firestore.firestore()
     
     var body: some View {
@@ -83,24 +83,32 @@ struct U5_DetailView: View {
                     
                 }
                 
-                Section{
-                    NavigationLink(destination: Home()){
-//                        Button (action : {
-//                            print("これがstart Chat")
+//                Section{
+//                    NavigationLink(destination: Home()){
+////                        Button (action : {
+////                            print("これがstart Chat")
+////
+////                        }) {
+////                            Button ("Chat Now"){
+////                                print("kfjdkfjakdjfkajkj")
+////
+////                            }
+////                            .font(.system(size: 18, weight: .bold, design: .default))
+////                            .multilineTextAlignment(.center)
+////
+////                        }
+//                        Text("Start Chat")
 //
-//                        }) {
-//                            Button ("Chat Now"){
-//                                print("kfjdkfjakdjfkajkj")
-//
-//                            }
-//                            .font(.system(size: 18, weight: .bold, design: .default))
-//                            .multilineTextAlignment(.center)
-//
-//                        }
-                        Text("Start Chat")
-
-                    }
-                }
+//                    }
+//                }
+            }
+            
+            Button(action: {
+                self.showHome.toggle()
+            }){
+                Text("Chat with a Pashiri")
+            }.sheet(isPresented: $showHome){
+                Home()
             }
             .onAppear{
                 getPashiriInfo()

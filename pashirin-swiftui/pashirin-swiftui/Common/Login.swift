@@ -25,15 +25,20 @@ struct LoginView: View {
     @State private var userfirstname  = ""
     @State private var userlastsname  = ""
     
+    //state from contentView
+    @Binding var isSignedUp: Bool
+    @Binding var hasAccount: Bool
+    @Binding var signedIn: Bool
+    
     
     
     var body: some View {
         
-        HStack{
-            Spacer().frame(width: 50)
+//        HStack{
+//            Spacer().frame(width: 50)
             VStack(spacing: 16){
                 if self.isSignedIn {
-                    Text("Welcome, \(self.userlastsname) \(self.userfirstname) ")
+                    Text("Welcome,　\(self.userlastsname) \(self.userfirstname) ")
                 } else {
                     Text("Start using PASHIRIN")
                 }
@@ -80,10 +85,10 @@ struct LoginView: View {
                 .alert(isPresented: $isShowAlert) {
                     if self.isError {
                         
-                        return Alert(title: Text(""), message: Text(self.errorMessage),dismissButton: .destructive(Text("OK")))
+                        return Alert(title: Text("Account does not exist\n Please try again."), message: Text(self.errorMessage),dismissButton: .destructive(Text("OK")))
                         
                     } else {
-                        return Alert(title: Text(""), message: Text("Succeed to Sign up!"), dismissButton: .default(Text("OK")))
+                        return Alert(title: Text("Success!"), message: Text("Signing you in!"), dismissButton: .default(Text("OK"), action: { self.signedIn.toggle() }))
                     }
                     
                 }
@@ -98,13 +103,28 @@ struct LoginView: View {
                     Alert(title: Text(""), message:Text("LogOut succeed"),dismissButton: .destructive(Text("OK")) )
                     
                 }
+                
+                Text("Hello")
+                Button(action: {
+                    withAnimation {
+                        self.isSignedUp.toggle()
+                        self.hasAccount.toggle()
+                    }
+
+                }, label: {
+                    Text("Go back to Registration Form")
+                })
+                
+                
+            
+                
                 Spacer().frame(width: 50)
             }
             .onAppear(){
                 self.getCurrentUser()
             }
             
-        }
+//        }
 //        .onAppear { // setting for when connect database
 //            let settings = FirestoreSettings()
 //
@@ -151,6 +171,7 @@ struct LoginView: View {
 //                        self.userlastsname = querySnapshot!.documents[0].get("lastname") as! String
 //                    }
 //                }
+                
                 
             } else {
                 
