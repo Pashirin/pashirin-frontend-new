@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 //userdefaulに保存されているtrasactionIdを使ってfirestoreから最新のstatusを取得するコントローラー
 class StatusViewModel: ObservableObject{
     var transactionId: String
