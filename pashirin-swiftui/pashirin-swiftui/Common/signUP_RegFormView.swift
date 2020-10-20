@@ -131,6 +131,8 @@ struct RegFormView: View {
                 let formatter1 = DateFormatter()
                 formatter1.dateFormat = "MMM d y"
                 let stringDateOfBirth = formatter1.string(from: dateOfBirth)
+                //setting firstName into UserDefaults with key "current_user"
+                UserDefaults.standard.set(self.firstName, forKey: "current_user")
                 //putting userinfo into an array
                 let userInfo = [
                     "firstName": self.firstName,
