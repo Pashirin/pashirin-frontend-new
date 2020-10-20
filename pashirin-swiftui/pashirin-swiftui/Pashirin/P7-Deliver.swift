@@ -7,8 +7,10 @@
 
 import Foundation
 import SwiftUI
+import FirebaseFirestore
 // to be overlayed on top of 
 struct Deliver: View {
+    let db = Firestore.firestore()
     var body: some View{
         ZStack {
             Color.gray.edgesIgnoringSafeArea(.all)
@@ -25,7 +27,8 @@ struct Deliver: View {
                     .padding(13.0)
                 
             Button(action: {
-                    print("Button Clicked")
+                print("Button Clicked")
+                db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).setData(["status":4], merge: true)
                 }) {
                 
                     Text("Completed")

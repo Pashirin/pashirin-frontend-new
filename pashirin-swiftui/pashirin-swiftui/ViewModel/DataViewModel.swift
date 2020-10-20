@@ -26,6 +26,7 @@ class DataViewModel: ObservableObject {
     private var db = Firestore.firestore()
     //これだと全てのトランズアクションを取得してしまう
     func fetchData(){
+        
         print("これがpashiriからの変更ステータス4  ", UserDefaults.standard.string(forKey: "transactionId")!)
         db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).addSnapshotListener {
             documentSnapshot, error in
