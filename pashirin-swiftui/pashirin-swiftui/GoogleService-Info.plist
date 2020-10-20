@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:953438188267:ios:d1dd4ddd8cfeb2ba9c04ae</string>
+	<string>1:953438188267:ios:35ae984bef2a81b69c04ae</string>
 	<key>DATABASE_URL</key>
 	<string>https://pashirin-swiftui.firebaseio.com</string>
 </dict>
