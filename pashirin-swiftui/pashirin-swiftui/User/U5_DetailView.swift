@@ -29,18 +29,19 @@ struct U5_DetailView: View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
         } else {
+            VStack{
+                
+            
             VStack {
-                Image("profile")
+                
+                Image(systemName: "face.smiling")
                     .resizable()
                     .clipped()
                     .cornerRadius(50)
+                    .foregroundColor(Color.gray)
             }
             .frame(width: 150, height: 150)
-            
-//            Text(pashiriData.name as! String)
-//                .font(.title)
-//                .fontWeight(.medium)
-//            Text(pashiriData.rating as! String)
+        
             
             Form{
                 Section{
@@ -113,9 +114,12 @@ struct U5_DetailView: View {
             .onAppear{
                 getPashiriInfo()
             }
+        }
             
         }
     }
+    
+    
     func getPashiriInfo(){
         self.db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).getDocument{ (document, err) in
             if let document = document, document.exists {
@@ -134,65 +138,3 @@ struct U5_DetailView: View {
 }
 
 
-struct U5_Congrats: View {
-    //var transactionId: String
-    @Binding var showCongrats: Bool
-    var body: some View{
-        //        if didStartTrip {
-        //                    Deliver()
-        //                } else {
-        
-        ZStack {
-            Color.blue.edgesIgnoringSafeArea(.all)
-            VStack{
-                Text("Congratulations!")
-                    .padding(.top, 50)
-                    .font(.system(size: 21, weight: .medium, design: .default))
-                Image("pashirin")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 60)
-                Text("You have a Match!")
-                HStack{
-                    Button(action: {
-                        print("Button Clicked")
-                        self.showCongrats.toggle()
-                        
-                    }) {
-                        
-                        Text("SEE DETAILS")
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .padding()
-                            .border(Color.white, width: 5)
-                    }
-                }
-                //                    Button(action: {
-                //                        print(self.transactionId)
-                //                        Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
-                //                        didStartTrip = true
-                //
-                //                    }) {
-                //
-                //                        Text("Begin Trip")
-                //                            .foregroundColor(.white)
-                //                            .font(.title)
-                //                            .padding()
-                //                            .border(Color.white, width: 5)
-                //                    }
-                
-                
-            }
-            
-            
-        }
-        
-        
-        //struct DetailView_Previews: PreviewProvider {
-        //    static var previews: some View {
-        //        DetailView(contact: contacts[0])
-        //            .padding(.top, 40)
-        //                }
-        //            }
-    }
-}
