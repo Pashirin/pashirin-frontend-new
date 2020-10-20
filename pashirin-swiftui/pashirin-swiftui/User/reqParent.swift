@@ -20,8 +20,53 @@ struct reqParent: View {
     var body: some View {
         
         //もし取引statusが1(リクエストのみ）の場合PWaitviewに移動
-        
-        ReqWant_and_AfterRequest()
+        TabView{
+            //Request page
+            ReqWant_and_AfterRequest()
+                
+            .tabItem{
+                Image(systemName: "figure.walk")
+    
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                Text("Request")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
+                
+            }
+            
+            Text("History")
+                .tabItem{
+                Image(systemName: "clock")
+                
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                    
+                Text("History")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
+            }
+            
+            Text("AccountDetail")
+                .tabItem{
+                Image(systemName: "person.fill")
+                    
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                
+                Text("Account")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
+                }
+            
+        }
+        .font(.headline)
+        // chage color when tap button
+        .accentColor(Color(red: 254/255, green: 139/255, blue: 93/255))
+        // make background white
+        .onAppear() {
+            UITabBar.appearance().barTintColor = .white
+        }
             
         
         

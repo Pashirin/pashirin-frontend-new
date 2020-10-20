@@ -15,6 +15,7 @@ struct P1_ListView: View {
     
     var body: some View {
        // NavigationView{
+        TabView{
             List(viewModel.contacts) { contact in
                
 //                HStack{
@@ -36,7 +37,6 @@ struct P1_ListView: View {
                 }
             }
           }
-        //}
             .navigationBarTitle("PashiList")
             .onAppear(){
                 self.viewModel.fetchData()
@@ -44,10 +44,51 @@ struct P1_ListView: View {
                 UserDefaults.standard.set("67rCkmZExMNqquAJdCDShUfGF5f1", forKey: "current_user_id")
                 print(UserDefaults.standard.string(forKey: "current_user_id")!)
                 }
-                
+            
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+    
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                Text("Request")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
             }
-       // }
+        
+        
+            Text("History")
+                .tabItem{
+                Image(systemName: "clock")
+                
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                    
+                Text("History")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
+            }
+            
+            Text("Account Detail")
+                .tabItem{
+                Image(systemName: "person.fill")
+                    
+                    .font(.system(size: 40))
+                    .foregroundColor(Color.gray)
+                
+                Text("Account")
+                    .font(.system(size: 15))
+                    .foregroundColor(Color.gray)
+                }
+        }
+        .font(.headline)
+        // chage color when tap button
+        .accentColor(Color(red: 254/255, green: 139/255, blue: 93/255))
+        // make background white
+        .onAppear() {
+            UITabBar.appearance().barTintColor = .white
+        }
     }
+}
 
 
 
