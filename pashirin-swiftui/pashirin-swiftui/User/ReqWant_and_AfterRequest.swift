@@ -33,8 +33,10 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack {
-                Color(red: 0.00, green: 0.42, blue: 0.44)
+//               Image("U1_background")
+                Color(red: 6/255, green: 91/255, blue: 148/255)
                     .edgesIgnoringSafeArea(.all)
+//                .offset(y: -100)
                 ScrollView(.vertical) {
                     VStack(alignment: .center, spacing: 15) {
                         Group {
@@ -127,19 +129,18 @@ struct ReqWant_and_AfterRequest: View {
                                     self.status = 1
                                 }
                             }) {
+                                
+                                Image(systemName: "checkmark")
                                 Text("Confirm")
                                     .fontWeight(.bold)
-                                    .font(.system(size: 25))
-                                    .padding()
-                                    .background(Color(red: 0.93, green: 0.99, blue: 0.84))
-                                    .cornerRadius(40)
-                                    .foregroundColor(Color(red: 0.00, green: 0.42, blue: 0.44))
-                                    .padding(10)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 40)
-                                            .stroke(Color(red: 0.93, green: 0.99, blue: 0.84), lineWidth: 5)
-                                    )
+                                
                             }
+                            .background(Color(red: 6/255, green: 91/255, blue: 158/255))
+                            .padding(20)
+                            .foregroundColor(Color.white)
+//                            .font(.system(size: 18))
+                            .cornerRadius(20)
+                            .frame(width: 275, height: 50)
                             .alert(isPresented: $confirm, content: {
                                 if self.isError {
                                     return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
