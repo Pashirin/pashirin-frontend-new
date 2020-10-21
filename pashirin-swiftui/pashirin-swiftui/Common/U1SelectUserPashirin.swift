@@ -18,18 +18,51 @@ struct UserPashirin : View{
     
     var body : some View {
         NavigationView{
-            ScrollView{
-                VStack {
+                VStack(alignment: .center, spacing: 50) {
                     NavigationLink(destination: reqParent()){
-                        Text("USER")
+                        VStack{
+                            Text("namaken")
+                                .fontWeight(.bold)
+                                .font(.system(size: 21))
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
+                            Image("namaken")
+                            
+                        }
+                        .frame(width: 180, height: 150)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)) , radius: 7, x: 4, y: 4)
+                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)), radius: 7, x: -5, y: -5)
+                        
                     }
-                    
-                    .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .edgesIgnoringSafeArea(.all)
+                                        
+                
                     
                     NavigationLink(destination: P1_ListView()){
-                        Text("PAHIRI")
+                        VStack{
+                            Text("pashirin")
+                                .fontWeight(.bold)
+                                .font(.system(size: 21))
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                            Image(systemName: "figure.walk")
+                                .foregroundColor(Color(red: 254/255, green: 139/255, blue: 93/255))
+                                .font(.system(size: 40))
+                        }
+                        .frame(width: 180, height: 150)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)) , radius: 7, x: 4, y: 4)
+                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)), radius: 7, x: -5, y: -5)
+
+                        
                     }
-                    .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .edgesIgnoringSafeArea(.all)
                 }
 //                .onAppear {
 //
@@ -41,6 +74,7 @@ struct UserPashirin : View{
 //                }
             }
         }
+        .edgesIgnoringSafeArea(.all)
         
         
     }
