@@ -48,6 +48,7 @@ struct UserPashirin : View{
                                 .font(.system(size: 21))
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                        
                             Image(systemName: "figure.walk")
                                 .foregroundColor(Color(red: 254/255, green: 139/255, blue: 93/255))
                                 .font(.system(size: 40))
@@ -60,7 +61,6 @@ struct UserPashirin : View{
 
                         
                     }
-//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.white)
                     .edgesIgnoringSafeArea(.all)
                 }
