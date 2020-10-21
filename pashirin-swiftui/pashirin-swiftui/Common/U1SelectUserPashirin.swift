@@ -73,11 +73,10 @@ struct UserPashirin : View{
 //
 //                }
             }
-        }
         .edgesIgnoringSafeArea(.all)
-        
-        
+
     }
 }
+//}
 
 
