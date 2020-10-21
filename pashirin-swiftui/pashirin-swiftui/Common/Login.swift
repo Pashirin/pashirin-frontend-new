@@ -22,8 +22,11 @@ struct LoginView: View {
     // Authefication of use uid (unigue id)
     @State private var userId : String? = nil
     
-    @State private var userfirstname  = ""
-    @State private var userlastsname  = ""
+    //State of logged in userInfo
+    @State private var userFirstName  = ""
+    @State private var userLastName  = ""
+    @State private var userDateOfBirth = ""
+    @State private var userAddress = ""
     
     //state from contentView
     @Binding var isSignedUp: Bool
@@ -37,15 +40,16 @@ struct LoginView: View {
 //        HStack{
 //            Spacer().frame(width: 50)
             VStack(spacing: 16){
-                if self.isSignedIn {
-                    Text("Welcome,　\(self.userlastsname) \(self.userfirstname) ")
-                } else {
-                    Text("Start using PASHIRIN")
-                }
+//                if self.isSignedIn {
+//                    Text("Welcome,　\(self.userlastsname) \(self.userfirstname) ")
+//                } else {
+//                    Text("Start using PASHIRIN")
+//                }
+                Text("Welcome! Please Sign In")
                 
                 TextField("Email" , text: $mailAdress).textFieldStyle(RoundedBorderTextFieldStyle())
                 SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Confirm password",text: $passwordConfirm ).textFieldStyle(RoundedBorderTextFieldStyle())
+//                SecureField("Confirm password",text: $passwordConfirm ).textFieldStyle(RoundedBorderTextFieldStyle())
             
                 
                 //login button
@@ -54,28 +58,27 @@ struct LoginView: View {
                     self.errorMessage = ""
                     
                     if self.mailAdress.isEmpty {
-                        self.errorMessage = "Email adress is empty"
+                        self.errorMessage = "Please enter an email address"
                         self.isError = true
                         self.isShowAlert = true
                     } else if self.password.isEmpty {
-                        self.errorMessage = "Email adress is"
+                        self.errorMessage = "Please enter password"
                         self.isError = true
                         self.isShowAlert = true
+                    
                         
-                    } else if self.passwordConfirm.isEmpty {
-                        self.errorMessage = "Confirm password is empty"
-                        self.isError = true
-                        self.isShowAlert = true
-                        
-                    } else if self.password.compare(self.passwordConfirm) != .orderedSame {
-                        
-                        self.errorMessage = "Password dose not match"
-                        self.isError = true
-                        self.isShowAlert = true
-                        
+//                    } else if self.passwordConfirm.isEmpty {
+//                        self.errorMessage = "Confirm password is empty"
+//                        self.isError = true
+//                        self.isShowAlert = true
+//
+//                    } else if self.password.compare(self.passwordConfirm) != .orderedSame {
+//
+//                        self.errorMessage = "Password dose not match"
+//                        self.isError = true
+//                        self.isShowAlert = true
+//
                     } else {
-                        
-                        
                        logIn()
                     }}) {
                     
@@ -104,7 +107,6 @@ struct LoginView: View {
                     
                 }
                 
-                Text("Hello")
                 Button(action: {
                     withAnimation {
                         self.isSignedUp.toggle()
@@ -155,6 +157,8 @@ struct LoginView: View {
                 self.isSignedIn = true
                 self.isShowAlert = true
                 self.isError = false
+                
+                getUserData()
         
                 // get data user uid
 //                let userID = authResult?.user.uid
@@ -198,7 +202,65 @@ struct LoginView: View {
             print("SignOut Error : %@", signOutError)
         }
     }
+    
+    
+    private func getUserData()  {
+//        var db: Firestore!
+        // [START setup]
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // Get current login user uid
+        userId = Auth.auth().currentUser?.uid
+        // Get all information from current user
+        let _: Void = db.collection("users").document(userId ?? "").getDocument() { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                // document.data --> [fistname:"name", lastname : "lastname"] Object with String
+                // Cheking type as String
+                if let firstname = dataDescription?["firstName"] as? String {
+                    self.userFirstName = firstname
+                    //Setting user firstname to UserDefaults with key: current_user
+                    UserDefaults.standard.set(self.userFirstName, forKey: "current_user")
+                    print(self.userFirstName)
+                }
+                else {
+                    print("This not string.")
+                }
+                if let lastname = dataDescription?["lastName"] as? String {
+                    self.userLastName = lastname
+                    print(self.userLastName)
+                }
+                else {
+                    print("This not string.")
+                }
+                if let birthday = dataDescription?["dateOfBirth"] as? String {
+                    self.userDateOfBirth = birthday
+                    print(self.userDateOfBirth)
+                }
+                else {
+                    print("This not string.")
+                }
+                if let  address = dataDescription?["address"] as? String {
+                    self.userAddress = address
+                    print(userAddress)
+                }
+                else {
+                    print("This not string.")
+                }
+                //                    if let  email = dataDescription?["email"] as? String {
+                //                        self.email = email
+                //                    }
+                //                    else {
+                //                        print("This not string.")
+                //                    }
+                //
+            }
+        }
+    }
 }
+
 
 
 struct Login_Previews: PreviewProvider {
@@ -206,3 +268,4 @@ struct Login_Previews: PreviewProvider {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
+

@@ -64,20 +64,19 @@ struct UserPashirin : View{
                     .background(Color.white)
                     .edgesIgnoringSafeArea(.all)
                 }
-                .onAppear {
-                    
-                    let domain = Bundle.main.bundleIdentifier!
-                    UserDefaults.standard.removePersistentDomain(forName: domain)
-                    UserDefaults.standard.synchronize()
-                    UserDefaults.standard.set("タダモン", forKey: "name")
-                    
-                }
-            
-        }
+//                .onAppear {
+//
+//                    let domain = Bundle.main.bundleIdentifier!
+//                    UserDefaults.standard.removePersistentDomain(forName: domain)
+//                    UserDefaults.standard.synchronize()
+//                    UserDefaults.standard.set("タダモン", forKey: "name")
+//
+//                }
+            }
         .edgesIgnoringSafeArea(.all)
-        
-        
+
     }
 }
+//}
 
 
