@@ -47,7 +47,7 @@ struct reqParent: View {
                     .foregroundColor(Color.gray)
             }
             
-            Text("AccountDetail")
+            AccountDetail()
                 .tabItem{
                 Image(systemName: "person.fill")
                     

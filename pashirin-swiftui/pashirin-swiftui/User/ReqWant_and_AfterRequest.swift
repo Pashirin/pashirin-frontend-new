@@ -33,78 +33,107 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack {
-//               Image("U1_background")
-                Color(red: 6/255, green: 91/255, blue: 148/255)
+               Image("U1_background")
+//                Color(red: 6/255, green: 91/255, blue: 148/255)
                     .edgesIgnoringSafeArea(.all)
-//                .offset(y: -100)
+                .offset(y: -100)
                 ScrollView(.vertical) {
-                    VStack(alignment: .center, spacing: 15) {
-                        Group {
+                    VStack(alignment: .center, spacing: 30) {
+                        VStack(alignment: .leading,spacing: 10){
                             Text("What would you like to ask?")
                                 .foregroundColor(.white)
-                                .font(.system(size: 25))
-                                .padding(.top, 20)
-                            TextField("", text: $what)
+                                .font(.system(size: 18))
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                            TextField("Beer, Snack", text: $what)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
                                 .background(Color.white)
-                                .cornerRadius(15)
+                                .cornerRadius(20)
                                 .foregroundColor(Color.black)
-                                .padding(.horizontal, 40)
-                                .frame(width: 380, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            Spacer()
+                                .frame(width: 327, height: 58)
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
+                               
+                            
+                            }
+                        
+                        
                             
                             
-                            Text("Where is the place?")
+                        VStack(alignment: .leading,spacing: 10){
+                            Text("Where can I find?")
                                 .foregroundColor(.white)
-                                .font(.system(size: 25))
-                            TextField("", text: $whereTo)
-                                .padding(10)
+                                .font(.system(size: 18))
+                            TextField("Ginza Matsuya", text: $whereTo)
+                                .padding(.vertical, 30)
+                                .padding(.leading, 10)
                                 .background(Color.white)
-                                .cornerRadius(15)
+                                .cornerRadius(20)
                                 .foregroundColor(Color.black)
-                                .padding(.horizontal, 40)
-                                .frame(width: 380, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            Spacer()
-                            
-                            Text("Where to bring?")
-                                .foregroundColor(.white)
-                                .font(.system(size: 25))
-                            TextField("", text: $whereIs)
-                                .padding(10)
-                                .background(Color.white)
-                                .cornerRadius(15)
-                                .foregroundColor(Color.black)
-                                .padding(.horizontal, 40)
-                                .frame(width: 380, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            Spacer()
+                                .frame(width: 327, height: 58)
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
+                                
                         }
-                        Group {
-                            Text("More details")
+                            
+                            
+                        VStack(alignment: .leading,spacing: 10){
+                            Text("Where to bring?")
+                               
                                 .foregroundColor(.white)
-                                .font(.system(size: 25))
-                            TextField("", text: $moreInfo)
+                                .font(.system(size: 18))
+                            TextField("1-1-1 Azabu, Roppongi", text: $whereIs)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
                                 .background(Color.white)
-                                .cornerRadius(15)
+                                .cornerRadius(20)
                                 .foregroundColor(Color.black)
-                                .padding(.horizontal, 40)
-                                .frame(width: 380, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            Spacer()
+                                .frame(width: 327, height: 58)
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
+                        
+                        }
                             
-                            Text("How much?")
-                                .foregroundColor(.white)
-                                .font(.system(size: 25))
-                            TextField("", text: $price)
-                                .padding(10)
+        
+                        VStack(alignment:.leading,spacing: 10){
+                            Text("More details")
+                             
+                                .foregroundColor(.gray)
+                                .font(.system(size: 18))
+//                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                            TextField("bring untill 8pm", text: $moreInfo)
+                                .padding(.vertical, 30)
+                                .padding(.leading, 10)
                                 .background(Color.white)
-                                .cornerRadius(15)
+                                .cornerRadius(20)
                                 .foregroundColor(Color.black)
-                                .padding(.horizontal, 40)
-                                .frame(width: 380, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .frame(width: 327, height: 58)
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
+                               
+                            
+                        }
+                            
+                            
+                        VStack(alignment:.leading,spacing: 10){
+                            Text("How much?")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 18))
+                            TextField("1000", text: $price)
+                                .padding(.vertical, 30)
+                                .padding(.leading, 10)
+                                .background(Color.white)
+                                .cornerRadius(20)
+                                .foregroundColor(Color.black)
+                                .frame(width: 327, height: 58)
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
+                               
                                 .keyboardType(.decimalPad)
-                            Spacer()
+                        }
+                        .padding(.bottom)
+            
+                            
                             
                             Button(action: {
                                 //Toggle submit button
@@ -129,18 +158,22 @@ struct ReqWant_and_AfterRequest: View {
                                     self.status = 1
                                 }
                             }) {
-                                
-                                Image(systemName: "checkmark")
-                                Text("Confirm")
-                                    .fontWeight(.bold)
-                                
+                                HStack{
+                                    Image(systemName: "checkmark")
+                                    Text("Confirm")
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 16))
+                                }
+                                .foregroundColor(Color.white)
+                                .frame(width: 275, height: 50)
+                                .background(Color(red: 6/255, green: 91/255, blue: 148/255))
+                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
+                                .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
                             }
-                            .background(Color(red: 6/255, green: 91/255, blue: 158/255))
-                            .padding(20)
-                            .foregroundColor(Color.white)
-//                            .font(.system(size: 18))
-                            .cornerRadius(20)
-                            .frame(width: 275, height: 50)
+                            .background(Color.white)
+                            .edgesIgnoringSafeArea(.all)
+                            
                             .alert(isPresented: $confirm, content: {
                                 if self.isError {
                                     return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
@@ -149,9 +182,12 @@ struct ReqWant_and_AfterRequest: View {
                                 }
                             })
                         }
-                    }
+                }
+                Image("userIcon")
+                    .offset(x: 130,y: -350)
                 }.KeyboardResponsive()
-            }
+
+            
             
         } else {
             AfterRequest()

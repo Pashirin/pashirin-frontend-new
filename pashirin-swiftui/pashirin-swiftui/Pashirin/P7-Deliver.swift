@@ -19,12 +19,12 @@ struct Deliver: View {
             Text("Currently Delivering...")
                 .padding(.top, 50)
                 .font(.title)
-            Image("running")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 60, height: 60)
-                Text("Tap Here Once You Have Completed Your Task")
-                    .padding(13.0)
+//            Image("running")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 60, height: 60)
+//                Text("Tap Here Once You Have Completed Your Task")
+//                    .padding(13.0)
                 
             Button(action: {
                 print("Button Clicked")

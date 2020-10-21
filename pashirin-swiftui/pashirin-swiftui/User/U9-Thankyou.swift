@@ -17,12 +17,12 @@ struct Thankyou: View {
             Text("Thank You!")
                 .padding(.top, 50)
                 .font(.title)
-            Image("running")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 60, height: 60)
-                Text("We Hope You Enjoyed the Service!")
-                    .padding(13.0)
+//            Image("running")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 60, height: 60)
+//                Text("We Hope You Enjoyed the Service!")
+//                    .padding(13.0)
                 
             
 //            Button(action: {

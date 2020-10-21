@@ -68,7 +68,7 @@ struct P1_ListView: View {
                     .foregroundColor(Color.gray)
             }
             
-            Text("Account Detail")
+            AccountDetail()
                 .tabItem{
                 Image(systemName: "person.fill")
                     
