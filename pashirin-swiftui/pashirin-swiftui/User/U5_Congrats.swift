@@ -51,8 +51,10 @@ struct U5_Congrats: View {
                         .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)) , radius: 5, x: 5, y: 5)
                         .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)), radius: 5, x: -5, y: -5)
                 }
-                
+            
             }
+            Image("userIcon")
+                .offset(x: 130,y: -350)
             
         }
     }
