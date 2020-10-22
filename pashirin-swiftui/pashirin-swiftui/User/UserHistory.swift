@@ -19,7 +19,7 @@ struct UserHistory: View {
             Color(red: 6/255, green: 91/255, blue:148/255).edgesIgnoringSafeArea(.all)
             VStack{
                 Image("history")
-                    .offset(y: -250)
+                    .offset(y: -230)
                 VStack{
                     // show list from history
                 }.frame(width:334 , height:180)
