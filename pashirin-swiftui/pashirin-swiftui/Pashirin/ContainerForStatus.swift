@@ -15,7 +15,7 @@ struct ContainerForStatus: View {
             P3_Congrats()
         } else if waitingViewModel.status == 3 {
             Deliver()
-        } else {
+        } else if waitingViewModel.status == 4 {
             TaskComplete()
         }
     }

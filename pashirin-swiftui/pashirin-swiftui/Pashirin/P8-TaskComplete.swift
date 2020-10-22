@@ -41,6 +41,14 @@ struct TaskComplete: View {
                 }
             }
                 
+        }.onAppear {
+            print("Hi This is P8")
+            var transactionId = UserDefaults.standard.string(forKey: "transactionId")
+            print(transactionId ?? "Transaction ID has been cleared")
+            UserDefaults.standard.removeObject(forKey: "transactionId")
+            transactionId = UserDefaults.standard.string(forKey: "transactionId")
+            print(transactionId ?? "Transaction ID has been cleared")
+            print("done")
         }
     }
 }

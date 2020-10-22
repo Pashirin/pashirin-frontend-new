@@ -13,6 +13,7 @@ class WaitingViewModel: ObservableObject{
     @Published var status: Int?=0
     private var db = Firestore.firestore()
     init(){
+        print("This is the WaitingViewModel and the statusCode is \(String(describing: status)) now")
         fetchStatusFromFB()
     }
     
@@ -28,7 +29,7 @@ class WaitingViewModel: ObservableObject{
                 return
             }
             self.status = ((document.data()!["status"])! as!Int)
-            print("self.statusは：", self.status ?? 0)
+            print("WaitingViewModel line31の self.statusは：", self.status ?? 0)
             
             
             //            let h = document.metadata.hasPendingWrites ? "Local" : "Server"
