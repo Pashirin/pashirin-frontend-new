@@ -33,6 +33,9 @@ struct P3_DetailView: View {
             Text(contact.name)
                 .font(.title)
                 .fontWeight(.medium)
+                .onAppear {
+                    print("This is P3_DetailView and tID is \(String(describing: self.transactionId))")
+                }
             Text(contact.rating)
             
             Form{
@@ -152,7 +155,7 @@ struct P3_Congrats: View {
                     Button(action: {
                         print(self.transactionId)
                         Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
-                        didStartTrip = true
+                        self.didStartTrip.toggle()
             
                     }) {
                         
