@@ -14,47 +14,45 @@ struct U5_Congrats: View {
     @Binding var showCongrats: Bool
     var body: some View{
         ZStack {
-            Color.blue.edgesIgnoringSafeArea(.all)
-            VStack{
-                Text("Congratulations!")
-                    .padding(.top, 50)
-                    .font(.system(size: 21, weight: .medium, design: .default))
-                Image("pashirin")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 60)
-                Text("You have a Match!")
-                HStack{
-                    Button(action: {
-                        print("Button Clicked")
-                        self.showCongrats.toggle()
-                        
-                    }) {
-                        
-                        Text("SEE DETAILS")
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .padding()
-                            .border(Color.white, width: 5)
-                    }
+            Image("congratsUser")
+                .offset(y:200)
+                .edgesIgnoringSafeArea(.all)
+    
+            VStack(spacing: 300){
+                VStack(spacing: 10){
+                    Text("CONGRATULATIONS!")
+                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                        .font(.system(size: 20))
+                        .fontWeight(.heavy)
+                    Text("You have a Match.")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                    
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(Color(red: 254/255, green:139/255, blue: 93/255))
+                        .font(.system(size: 60))
                 }
-                //                    Button(action: {
-                //                        print(self.transactionId)
-                //                        Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
-                //                        didStartTrip = true
-                //
-                //                    }) {
-                //
-                //                        Text("Begin Trip")
-                //                            .foregroundColor(.white)
-                //                            .font(.title)
-                //                            .padding()
-                //                            .border(Color.white, width: 5)
-                //                    }
                 
+                
+            
+                Button(action: {
+                   
+                    self.showCongrats.toggle()
+                    
+                }) {
+                    
+                    Text("See details")
+                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                        .font(.system(size: 16))
+                        .fontWeight(.bold)
+                        .frame(width: 275, height: 50)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)) , radius: 5, x: 5, y: 5)
+                        .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)), radius: 5, x: -5, y: -5)
+                }
                 
             }
-            
             
         }
     }
