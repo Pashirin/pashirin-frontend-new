@@ -29,91 +29,84 @@ struct U5_DetailView: View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
         } else {
-            VStack{
+            ZStack{
+                Image("congratsUser")
+                    .offset(y:100)
+                    .edgesIgnoringSafeArea(.all)
                 
+//                VStack {
+//
+//                    // map view
+//                }
+//                .frame(width: 325, height: 260)
+//
             
-            VStack {
-                
-                Image(systemName: "face.smiling")
-                    .resizable()
-                    .clipped()
-                    .cornerRadius(50)
-                    .foregroundColor(Color.gray)
-            }
-            .frame(width: 150, height: 150)
-        
+                VStack(spacing: 50){
+                    VStack(spacing: 20){
+
+                        HStack{
+                            Image(systemName: "face.smiling")
+                                .foregroundColor(.gray)
+                            Text("pashirin Name")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 20, weight: .bold))
             
-            Form{
-                Section{
-                    HStack{
-                        Text("Offer Price")
-                        Spacer()
-                        Text("¥\(self.price as! Int)")
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
-                    HStack{
-                        Text("Rating")
-                        Spacer()
-                        Text("¥\(self.rating as! Int)")
-                            .foregroundColor(.gray)
-                            .font(.callout)
+                        }
                         
-                    }
-                    HStack{
-                        Text("Current Location")
-                        Spacer()
-                        Text(self.startlocation as! String)
+                        HStack{
+                            Image(systemName: "yensign.square")
+                                .foregroundColor(.gray)
+                            Text("¥\(self.price as! Int)")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                       
+                        HStack{
+                            Image(systemName: "cart")
+                                .foregroundColor(.gray)
+                            Text("¥\(self.rating as! Int)")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                        
+                        HStack{
+                           Image(systemName: "mappin")
                             .foregroundColor(.gray)
-                            .font(.callout)
-                    }
-                    HStack{
-                        Text("Delivery")
-                        Spacer()
-                        Text("\(self.delivery as! Int) completed deliveries")
+                            Text(self.startlocation as! String)
+                                .foregroundColor(.gray)
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                        
+                        HStack{
+                          Image(systemName: "doc.plaintext")
                             .foregroundColor(.gray)
-                            .font(.callout)
+                            Text("\(self.delivery as! Int) completed deliveries")
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                        }
                     }
-                    HStack{
-                        Text("Message")
-                        Spacer()
-                        Text(self.detail as! String)
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
+                    .frame(width: 300, height: 500)
+                    .background(Color.white)
                     
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                    .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)) , radius: 5, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)), radius: 5, x: -5, y: -5)
+                            
+                
+                    Button(action: {
+                        self.showHome.toggle()
+                    }){
+                        Text("Chat with a Pashirin")
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundColor(.white)
+                    }.sheet(isPresented: $showHome){
+                        Home()
+                    }
+                    .onAppear{
+                        getPashiriInfo()
+                    }
                 }
                 
-//                Section{
-//                    NavigationLink(destination: Home()){
-////                        Button (action : {
-////                            print("これがstart Chat")
-////
-////                        }) {
-////                            Button ("Chat Now"){
-////                                print("kfjdkfjakdjfkajkj")
-////
-////                            }
-////                            .font(.system(size: 18, weight: .bold, design: .default))
-////                            .multilineTextAlignment(.center)
-////
-////                        }
-//                        Text("Start Chat")
-//
-//                    }
-//                }
-            }
-            
-            Button(action: {
-                self.showHome.toggle()
-            }){
-                Text("Chat with a Pashiri")
-            }.sheet(isPresented: $showHome){
-                Home()
-            }
-            .onAppear{
-                getPashiriInfo()
-            }
         }
             
         }
