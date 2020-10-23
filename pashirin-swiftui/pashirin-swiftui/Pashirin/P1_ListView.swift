@@ -56,7 +56,7 @@ struct P1_ListView: View {
             }
         
         
-            Text("History")
+            PashirinHistory()
                 .tabItem{
                 Image(systemName: "clock")
                 

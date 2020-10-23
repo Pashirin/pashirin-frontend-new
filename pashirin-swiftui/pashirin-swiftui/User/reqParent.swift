@@ -35,7 +35,7 @@ struct reqParent: View {
                 
             }
             
-            Text("History")
+            UserHistory()
                 .tabItem{
                 Image(systemName: "clock")
                 
