@@ -56,6 +56,8 @@
 		E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */; };
 		E734E117254044DD004941B8 /* AccoutDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E116254044DD004941B8 /* AccoutDetail.swift */; };
 		E734E11D2540641B004941B8 /* animations in Resources */ = {isa = PBXBuildFile; fileRef = E734E11C2540641B004941B8 /* animations */; };
+		E734E12725412287004941B8 /* PashirinHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12625412287004941B8 /* PashirinHistory.swift */; };
+		E734E12B2541857D004941B8 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12A2541857D004941B8 /* UserHistory.swift */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U5_Congrats.swift; sourceTree = "<group>"; };
 		E734E116254044DD004941B8 /* AccoutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccoutDetail.swift; sourceTree = "<group>"; };
 		E734E11C2540641B004941B8 /* animations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = animations; sourceTree = SOURCE_ROOT; };
+		E734E12625412287004941B8 /* PashirinHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PashirinHistory.swift; sourceTree = "<group>"; };
+		E734E12A2541857D004941B8 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +163,7 @@
 				83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */,
 				83FA1A09253C600500F001B9 /* P7-Deliver.swift */,
 				83FA1A0D253C601000F001B9 /* P8-TaskComplete.swift */,
+				E734E12625412287004941B8 /* PashirinHistory.swift */,
 			);
 			path = Pashirin;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				8326D5332539A9C1007CD60A /* U5_DetailView.swift */,
 				E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */,
 				83CB32BA2535F26500BCC491 /* U9-Thankyou.swift */,
+				E734E12A2541857D004941B8 /* UserHistory.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -557,9 +563,11 @@
 				83FA1A3B253C79E000F001B9 /* ChatBubble.swift in Sources */,
 				83E96C23252D6B4B00E1DB64 /* AppDelegate.swift in Sources */,
 				E734E117254044DD004941B8 /* AccoutDetail.swift in Sources */,
+				E734E12725412287004941B8 /* PashirinHistory.swift in Sources */,
 				83C89ACA252EDEA2000F72A4 /* TrackingPashiri.swift in Sources */,
 				83CB324225358B4D00BCC491 /* signUP_RegFormView.swift in Sources */,
 				83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */,
+				E734E12B2541857D004941B8 /* UserHistory.swift in Sources */,
 				83E96C48252DAEEF00E1DB64 /* LocationManager.swift in Sources */,
 				83E96C45252D992100E1DB64 /* TestGoogleMapsView.swift in Sources */,
 				83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */,
