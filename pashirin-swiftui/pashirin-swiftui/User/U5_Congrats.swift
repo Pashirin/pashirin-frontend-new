@@ -57,6 +57,10 @@ struct U5_Congrats: View {
                 .offset(x: 130,y: -350)
             
         }
+//        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            print("this is U5_Congrats at line 60")
+        }
     }
 }
 

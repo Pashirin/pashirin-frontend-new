@@ -33,10 +33,10 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack {
-               Image("U1_background")
-//                Color(red: 6/255, green: 91/255, blue: 148/255)
+                Image("U1_background")
+                    //                Color(red: 6/255, green: 91/255, blue: 148/255)
                     .edgesIgnoringSafeArea(.all)
-                .offset(y: -100)
+                    .offset(y: -100)
                 ScrollView(.vertical) {
                     VStack(alignment: .center, spacing: 30) {
                         VStack(alignment: .leading,spacing: 10){
@@ -53,13 +53,13 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
-                               
                             
-                            }
+                            
+                        }
                         
                         
-                            
-                            
+                        
+                        
                         VStack(alignment: .leading,spacing: 10){
                             Text("Where can I find?")
                                 .foregroundColor(.white)
@@ -73,13 +73,13 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
-                                
+                            
                         }
-                            
-                            
+                        
+                        
                         VStack(alignment: .leading,spacing: 10){
                             Text("Where to bring?")
-                               
+                                
                                 .foregroundColor(.white)
                                 .font(.system(size: 18))
                             TextField("1-1-1 Azabu, Roppongi", text: $whereIs)
@@ -91,16 +91,16 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
-                        
-                        }
                             
-        
+                        }
+                        
+                        
                         VStack(alignment:.leading,spacing: 10){
                             Text("More details")
-                             
+                                
                                 .foregroundColor(.gray)
                                 .font(.system(size: 18))
-//                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                            //                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                             TextField("bring untill 8pm", text: $moreInfo)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
@@ -110,11 +110,11 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
-                               
+                            
                             
                         }
-                            
-                            
+                        
+                        
                         VStack(alignment:.leading,spacing: 10){
                             Text("How much?")
                                 .foregroundColor(.gray)
@@ -128,69 +128,73 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
-                               
+                                
                                 .keyboardType(.decimalPad)
                         }
                         .padding(.bottom)
-            
-                            
-                            
-                            Button(action: {
-                                //Toggle submit button
-                                self.confirm.toggle()
-                                //Error message handle for each item
-                                self.errorMessage = ""
-                                if self.what.isEmpty {
-                                    self.errorMessage = "Please enter your request"
-                                    self.isError = true
-                                    self.isShowAlert = true
-                                } else if self.whereTo.isEmpty {
-                                    self.errorMessage = "Please enter destination"
-                                    self.isError = true
-                                    self.isShowAlert = true
-                                } else if self.price.isEmpty {
-                                    self.errorMessage = "Please enter your desired price"
-                                    self.isError = true
-                                    self.isShowAlert = true
-                                } else {
-                                    self.postTask()
-                                    //self.showWaitForP.toggle()
-                                    self.status = 1
-                                }
-                            }) {
-                                HStack{
-                                    Image(systemName: "checkmark")
-                                    Text("Confirm")
-                                        .fontWeight(.bold)
-                                        .font(.system(size: 16))
-                                }
-                                .foregroundColor(Color.white)
-                                .frame(width: 275, height: 50)
-                                .background(Color(red: 6/255, green: 91/255, blue: 148/255))
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
-                                .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
+                        
+                        
+                        
+                        Button(action: {
+                            //Toggle submit button
+                            self.confirm.toggle()
+                            //Error message handle for each item
+                            self.errorMessage = ""
+                            if self.what.isEmpty {
+                                self.errorMessage = "Please enter your request"
+                                self.isError = true
+                                self.isShowAlert = true
+                            } else if self.whereTo.isEmpty {
+                                self.errorMessage = "Please enter destination"
+                                self.isError = true
+                                self.isShowAlert = true
+                            } else if self.price.isEmpty {
+                                self.errorMessage = "Please enter your desired price"
+                                self.isError = true
+                                self.isShowAlert = true
+                            } else {
+                                self.postTask()
+                                //self.showWaitForP.toggle()
+                                self.status = 1
                             }
-                            .background(Color.white)
-                            .edgesIgnoringSafeArea(.all)
-                            
-                            .alert(isPresented: $confirm, content: {
-                                if self.isError {
-                                    return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
-                                } else {
-                                    return Alert(title: Text("Awesome! We'll start looking for a Pashiri!"), dismissButton: .default(Text("OK")))
-                                }
-                            })
+                        }) {
+                            HStack{
+                                Image(systemName: "checkmark")
+                                Text("Confirm")
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 16))
+                            }
+                            .foregroundColor(Color.white)
+                            .frame(width: 275, height: 50)
+                            .background(Color(red: 6/255, green: 91/255, blue: 148/255))
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
+                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
                         }
+                        .background(Color.white)
+                        .edgesIgnoringSafeArea(.all)
+                        
+                        .alert(isPresented: $confirm, content: {
+                            if self.isError {
+                                return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
+                            } else {
+                                return Alert(title: Text("Awesome! We'll start looking for a Pashiri!"), dismissButton: .default(Text("OK")))
+                            }
+                        })
+                    }
                 }
                 Image("userIcon")
                     .offset(x: 130,y: -350)
-                }.KeyboardResponsive()
+            }
+//            .navigationBarBackButtonHidden(true)
+            
+//                .KeyboardResponsive()
 
             
             
         } else {
             AfterRequest()
+//                .navigationBarBackButtonHidden(true)
         }
         
     }

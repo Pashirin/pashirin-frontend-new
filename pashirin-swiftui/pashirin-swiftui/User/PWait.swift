@@ -34,6 +34,7 @@ struct PWait: View {
                     .multilineTextAlignment(.center)
             }
         }
+//        .navigationBarBackButtonHidden(true)
     }
 }
 
