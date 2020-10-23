@@ -12,12 +12,14 @@ import FirebaseFirestore
 struct U5_DetailView: View {
     //Pashiriの情報を取ってくる
     //@ObservedObject var pashiriData = DataViewModel()
-    @State var name: String = "Beer"
+    @State var name: String = "Pashirin"
     @State var price: Int = 2000
     @State var rating: Int = 0
     @State var startlocation: String = "不明"
     @State var delivery: Int = 50000
     @State var detail: String = ""
+    
+    @State var item : String = ""
     
    //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
 
@@ -33,6 +35,7 @@ struct U5_DetailView: View {
                     print("This is U5_DetailView at line 32")
                 }
         } else {
+            
             ZStack{
                 Image("userIcon")
                     .offset(x: 130,y: -350)
@@ -40,24 +43,16 @@ struct U5_DetailView: View {
                     .offset(y:100)
                     .edgesIgnoringSafeArea(.all)
                 
-                Button(action: {
-                    self.showHome.toggle()
-                }){
-                    Text("Chat with a Pashiri")
-                }.sheet(isPresented: $showHome){
-                    Home()
-                }
-                .onAppear{
-                    getPashiriInfo()
-                }
-            }
-//            .navigationBarBackButtonHidden(true)
+                VStack(alignment:.center,spacing: 30){
+                    VStack(alignment: .leading, spacing: 10){
+                        
+                        HStack{
+                            Image(systemName: "face.smiling")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))
-                            Text("pashirin Name")
+                            Text("\(self.name as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
-            
                         }
                         
                         HStack{
@@ -68,12 +63,12 @@ struct U5_DetailView: View {
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
-                       
+                        
                         HStack{
                             Image(systemName: "cart")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))
-                            Text("\(self.name as! String)")
+                            Text("\(self.item as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
@@ -96,13 +91,12 @@ struct U5_DetailView: View {
                                 .font(.system(size: 20, weight: .bold))
                         }
                     }
-                    .frame(width: 310, height: 300)
+                    .frame(width: 300, height: 300)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                     .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)) , radius: 3, x: -3, y: -3)
-                    .shadow(color:Color(#colorLiteral(red: 0.1710229017, green: 0.2530072083, blue: 0.4812738117, alpha: 1)), radius: 5, x: 5, y: 5)
-                            
-                
+                    .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)), radius: 5, x: 5, y: 5)
+                    
                     Button(action: {
                         self.showHome.toggle()
                     }){
@@ -123,9 +117,8 @@ struct U5_DetailView: View {
                     }
                 }
                 .offset(y: 100)
-                
-        }
-            
+            }
+        
         }
     }
     
@@ -133,7 +126,7 @@ struct U5_DetailView: View {
     func getPashiriInfo(){
         self.db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).getDocument{ (document, err) in
             if let document = document, document.exists {
-                
+                self.item = document.get("item") as! String
                 self.price = document.get("price")as! Int
                 //self.name
                 self.startlocation = document.get("startlocation")as! String
@@ -144,7 +137,4 @@ struct U5_DetailView: View {
             
         }
     }
-    
 }
-
-
