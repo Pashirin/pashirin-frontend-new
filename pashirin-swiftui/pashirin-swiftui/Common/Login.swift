@@ -4,6 +4,7 @@ import SwiftUI
 import FirebaseAuth
 import FirebaseAnalytics
 import FirebaseFirestore
+import Lottie
 
 struct LoginView: View {
     
@@ -36,8 +37,8 @@ struct LoginView: View {
     
     
     var body: some View {
+     
         
-
             VStack(spacing: 20){
                 Image("user-8")
                 TextField("Email" , text: $mailAdress)
@@ -94,7 +95,7 @@ struct LoginView: View {
                         return Alert(title: Text("Account does not exist\n Please try again."), message: Text(self.errorMessage),dismissButton: .destructive(Text("OK")))
                         
                     } else {
-                        return Alert(title: Text("Success!"), message: Text("Signing you in!"), dismissButton: .default(Text("OK"), action: { self.signedIn.toggle() }))
+                        return Alert(title: Text("Success!"), message: Text("Signing you in."), dismissButton: .default(Text("OK"), action: { self.signedIn.toggle() }))
                     }
                     
                 }
