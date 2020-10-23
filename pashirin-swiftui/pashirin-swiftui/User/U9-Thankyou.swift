@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Thankyou: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View{
         ZStack {
             Color.yellow.edgesIgnoringSafeArea(.all)
@@ -37,20 +38,27 @@ struct Thankyou: View {
 //                        .padding()
 //                        .border(Color.white, width: 5)
 //                }
-                NavigationLink(destination: UserPashirin()){
-//                    Button(action: {
-//                        print("Button Clicked")
-//                    }) {
-                        
-                        Text("Back to Menu")
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .padding()
-                            .border(Color.white, width: 5)
-//                    }
+//                NavigationLink(destination: UserPashirin()){
+////                    Button(action: {
+////                        print("Button Clicked")
+////                    }) {
+//
+//                        Text("Back to Menu")
+//                            .foregroundColor(.white)
+//                            .font(.title)
+//                            .padding()
+//                            .border(Color.white, width: 5)
+////                    }
+//
+//
+//                }.navigationBarBackButtonHidden(true)
                 
-                    
-                }
+                Button("Go Back", action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                })
+                .navigationBarTitle("")
+                .navigationBarBackButtonHidden(true)
+                
             }
         }.onAppear {
             print("Hello This is U9")

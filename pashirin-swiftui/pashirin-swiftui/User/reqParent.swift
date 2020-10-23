@@ -60,6 +60,7 @@ struct reqParent: View {
                 }
             
         }
+        .navigationBarBackButtonHidden(true)
         .font(.headline)
         // chage color when tap button
         .accentColor(Color(red: 254/255, green: 139/255, blue: 93/255))

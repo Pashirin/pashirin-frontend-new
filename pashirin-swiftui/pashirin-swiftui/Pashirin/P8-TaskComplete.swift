@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TaskComplete: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View{
         ZStack {
             Color.green.edgesIgnoringSafeArea(.all)
@@ -25,20 +26,26 @@ struct TaskComplete: View {
                     .padding(13.0)
             
                 
-                NavigationLink(destination: P1_ListView()){
-//                    Button(action: {
-//                        print("Button Clicked")
-//                    }) {
-                        
-                        Text("Back to Menu")
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .padding()
-                            .border(Color.white, width: 5)
-//                    }
+//                NavigationLink(destination: UserPashirin()){
+////                    Button(action: {
+////                        print("Button Clicked")
+////                    }) {
+//
+//                        Text("Back to Menu")
+//                            .foregroundColor(.white)
+//                            .font(.title)
+//                            .padding()
+//                            .border(Color.white, width: 5)
+////                    }
+//
+//
+//                }.navigationBarBackButtonHidden(true)
                 
-                    
-                }
+                Button("Go Back", action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                })
+                .navigationBarBackButtonHidden(true)
+                
             }
                 
         }.onAppear {

@@ -36,6 +36,7 @@ struct P1_ListView: View {
                         .font(.subheadline)
                 }
             }
+            .navigationBarBackButtonHidden(true)
           }
             .navigationBarTitle("PashiList")
             .onAppear(){

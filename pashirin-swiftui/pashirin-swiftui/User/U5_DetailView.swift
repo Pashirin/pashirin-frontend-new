@@ -28,93 +28,98 @@ struct U5_DetailView: View {
     var body: some View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
+//                .navigationBarBackButtonHidden(true)
+                .onAppear {
+                    print("This is U5_DetailView at line 32")
+                }
         } else {
             VStack{
                 
-            
-            VStack {
                 
-                Image(systemName: "face.smiling")
-                    .resizable()
-                    .clipped()
-                    .cornerRadius(50)
-                    .foregroundColor(Color.gray)
-            }
-            .frame(width: 150, height: 150)
-        
-            
-            Form{
-                Section{
-                    HStack{
-                        Text("Offer Price")
-                        Spacer()
-                        Text("¥\(self.price as! Int)")
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
-                    HStack{
-                        Text("Rating")
-                        Spacer()
-                        Text("¥\(self.rating as! Int)")
-                            .foregroundColor(.gray)
-                            .font(.callout)
+                VStack {
+                    
+                    Image(systemName: "face.smiling")
+                        .resizable()
+                        .clipped()
+                        .cornerRadius(50)
+                        .foregroundColor(Color.gray)
+                }
+                .frame(width: 150, height: 150)
+                
+                
+                Form{
+                    Section{
+                        HStack{
+                            Text("Offer Price")
+                            Spacer()
+                            Text("¥\(self.price as! Int)")
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                        }
+                        HStack{
+                            Text("Rating")
+                            Spacer()
+                            Text("¥\(self.rating as! Int)")
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                            
+                        }
+                        HStack{
+                            Text("Current Location")
+                            Spacer()
+                            Text(self.startlocation as! String)
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                        }
+                        HStack{
+                            Text("Delivery")
+                            Spacer()
+                            Text("\(self.delivery as! Int) completed deliveries")
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                        }
+                        HStack{
+                            Text("Message")
+                            Spacer()
+                            Text(self.detail as! String)
+                                .foregroundColor(.gray)
+                                .font(.callout)
+                        }
                         
                     }
-                    HStack{
-                        Text("Current Location")
-                        Spacer()
-                        Text(self.startlocation as! String)
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
-                    HStack{
-                        Text("Delivery")
-                        Spacer()
-                        Text("\(self.delivery as! Int) completed deliveries")
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
-                    HStack{
-                        Text("Message")
-                        Spacer()
-                        Text(self.detail as! String)
-                            .foregroundColor(.gray)
-                            .font(.callout)
-                    }
                     
+                    //                Section{
+                    //                    NavigationLink(destination: Home()){
+                    ////                        Button (action : {
+                    ////                            print("これがstart Chat")
+                    ////
+                    ////                        }) {
+                    ////                            Button ("Chat Now"){
+                    ////                                print("kfjdkfjakdjfkajkj")
+                    ////
+                    ////                            }
+                    ////                            .font(.system(size: 18, weight: .bold, design: .default))
+                    ////                            .multilineTextAlignment(.center)
+                    ////
+                    ////                        }
+                    //                        Text("Start Chat")
+                    //
+                    //                    }
+                    //                }
                 }
                 
-//                Section{
-//                    NavigationLink(destination: Home()){
-////                        Button (action : {
-////                            print("これがstart Chat")
-////
-////                        }) {
-////                            Button ("Chat Now"){
-////                                print("kfjdkfjakdjfkajkj")
-////
-////                            }
-////                            .font(.system(size: 18, weight: .bold, design: .default))
-////                            .multilineTextAlignment(.center)
-////
-////                        }
-//                        Text("Start Chat")
-//
-//                    }
-//                }
+                Button(action: {
+                    self.showHome.toggle()
+                }){
+                    Text("Chat with a Pashiri")
+                }.sheet(isPresented: $showHome){
+                    Home()
+                }
+                .onAppear{
+                    getPashiriInfo()
+                }
             }
-            
-            Button(action: {
-                self.showHome.toggle()
-            }){
-                Text("Chat with a Pashiri")
-            }.sheet(isPresented: $showHome){
-                Home()
-            }
-            .onAppear{
-                getPashiriInfo()
-            }
-        }
+//            .navigationBarBackButtonHidden(true)
             
         }
     }

@@ -25,6 +25,7 @@ struct PWait: View {
                     .cornerRadius(10)
             }
         }
+//        .navigationBarBackButtonHidden(true)
     }
 }
 
