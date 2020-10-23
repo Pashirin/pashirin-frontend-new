@@ -35,6 +35,7 @@ struct UserPashirin : View{
                         .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)), radius: 7, x: -5, y: -5)
                         
                     }
+                    .navigationBarBackButtonHidden(true)
 //                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.white)
                     .edgesIgnoringSafeArea(.all)

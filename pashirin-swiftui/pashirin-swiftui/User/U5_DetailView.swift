@@ -28,6 +28,10 @@ struct U5_DetailView: View {
     var body: some View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
+//                .navigationBarBackButtonHidden(true)
+                .onAppear {
+                    print("This is U5_DetailView at line 32")
+                }
         } else {
             ZStack{
                 Image("userIcon")
@@ -36,18 +40,18 @@ struct U5_DetailView: View {
                     .offset(y:100)
                     .edgesIgnoringSafeArea(.all)
                 
-//                VStack {
-//
-//                    // map view
-//                }
-//                .frame(width: 350, height: 250)
-//
-            
-                VStack(spacing: 20){
-                    VStack(alignment: .leading, spacing: 20){
-
-                        HStack{
-                            Image(systemName: "face.smiling")
+                Button(action: {
+                    self.showHome.toggle()
+                }){
+                    Text("Chat with a Pashiri")
+                }.sheet(isPresented: $showHome){
+                    Home()
+                }
+                .onAppear{
+                    getPashiriInfo()
+                }
+            }
+//            .navigationBarBackButtonHidden(true)
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))
                             Text("pashirin Name")
