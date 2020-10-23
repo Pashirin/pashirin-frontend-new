@@ -12,7 +12,7 @@ import FirebaseFirestore
 struct U5_DetailView: View {
     //Pashiriの情報を取ってくる
     //@ObservedObject var pashiriData = DataViewModel()
-    @State var name: String = "名無し"
+    @State var name: String = "Beer"
     @State var price: Int = 2000
     @State var rating: Int = 0
     @State var startlocation: String = "不明"
@@ -30,6 +30,8 @@ struct U5_DetailView: View {
             U5_Congrats(showCongrats: $showCongrats)
         } else {
             ZStack{
+                Image("userIcon")
+                    .offset(x: 130,y: -350)
                 Image("congratsUser")
                     .offset(y:100)
                     .edgesIgnoringSafeArea(.all)
@@ -38,15 +40,16 @@ struct U5_DetailView: View {
 //
 //                    // map view
 //                }
-//                .frame(width: 325, height: 260)
+//                .frame(width: 350, height: 250)
 //
             
-                VStack(spacing: 50){
-                    VStack(spacing: 20){
+                VStack(spacing: 20){
+                    VStack(alignment: .leading, spacing: 20){
 
                         HStack{
                             Image(systemName: "face.smiling")
                                 .foregroundColor(.gray)
+                                .font(.system(size: 30))
                             Text("pashirin Name")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -56,7 +59,8 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "yensign.square")
                                 .foregroundColor(.gray)
-                            Text("¥\(self.price as! Int)")
+                                .font(.system(size: 30))
+                            Text("\(self.price as! Int)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
@@ -64,7 +68,8 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "cart")
                                 .foregroundColor(.gray)
-                            Text("¥\(self.rating as! Int)")
+                                .font(.system(size: 30))
+                            Text("\(self.name as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
@@ -72,6 +77,7 @@ struct U5_DetailView: View {
                         HStack{
                            Image(systemName: "mappin")
                             .foregroundColor(.gray)
+                            .font(.system(size: 30))
                             Text(self.startlocation as! String)
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -80,17 +86,17 @@ struct U5_DetailView: View {
                         HStack{
                           Image(systemName: "doc.plaintext")
                             .foregroundColor(.gray)
-                            Text("\(self.delivery as! Int) completed deliveries")
+                            .font(.system(size: 30))
+                            Text("\(self.detail as! String) ")
                                 .foregroundColor(.gray)
-                                .font(.callout)
+                                .font(.system(size: 20, weight: .bold))
                         }
                     }
-                    .frame(width: 300, height: 500)
+                    .frame(width: 310, height: 300)
                     .background(Color.white)
-                    
                     .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                    .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)) , radius: 5, x: 5, y: 5)
-                    .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)), radius: 5, x: -5, y: -5)
+                    .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)) , radius: 3, x: -3, y: -3)
+                    .shadow(color:Color(#colorLiteral(red: 0.1710229017, green: 0.2530072083, blue: 0.4812738117, alpha: 1)), radius: 5, x: 5, y: 5)
                             
                 
                     Button(action: {
@@ -98,14 +104,21 @@ struct U5_DetailView: View {
                     }){
                         Text("Chat with a Pashirin")
                             .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(.white)
-                    }.sheet(isPresented: $showHome){
+                            .foregroundColor(.gray)
+                    }
+                    .frame(width: 275, height: 50)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                    .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)) , radius: 3, x: -3, y: -3)
+                    .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)), radius: 5, x: 5, y: 5)
+                    .sheet(isPresented: $showHome){
                         Home()
                     }
                     .onAppear{
                         getPashiriInfo()
                     }
                 }
+                .offset(y: 100)
                 
         }
             
