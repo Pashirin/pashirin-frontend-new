@@ -11,13 +11,13 @@ import SwiftUI
 struct ContainerForStatus: View {
     @ObservedObject var waitingViewModel = WaitingViewModel()
     var body: some View {
-        if waitingViewModel.status == 2 {
-            P3_Congrats()
-        } else if waitingViewModel.status == 3 {
-            Deliver()
-        } else if waitingViewModel.status == 4 {
-            TaskComplete()
-        }
+            if waitingViewModel.status == 2 {
+                P3_Congrats()
+            } else if waitingViewModel.status == 3 {
+                Deliver()
+            } else if waitingViewModel.status == 4 {
+                TaskComplete()
+            }
     }
 }
 

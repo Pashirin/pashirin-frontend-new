@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16BF1CB42541B21600B18DC2 /* P3_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */; };
+		16BF1CFD2543F87D00B18DC2 /* ListParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CFC2543F87D00B18DC2 /* ListParent.swift */; };
+		16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */; };
 		16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D51010253F5CA700A53198 /* GoogleService-Info.plist */; };
 		6BD7BE6F9548B9AF81E9BCAA /* Pods_pashirin_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */; };
 		8305600625383D0F0024537C /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305600525383D0F0024537C /* StatusViewModel.swift */; };
@@ -73,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Congrats.swift; sourceTree = "<group>"; };
+		16BF1CFC2543F87D00B18DC2 /* ListParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParent.swift; sourceTree = "<group>"; };
+		16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Interim.swift; sourceTree = "<group>"; };
 		16D51010253F5CA700A53198 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +161,9 @@
 		831F55A7253A7E46003FC968 /* Pashirin */ = {
 			isa = PBXGroup;
 			children = (
+				16BF1CFC2543F87D00B18DC2 /* ListParent.swift */,
 				83CB322A25358B4200BCC491 /* P1_ListView.swift */,
+				16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */,
 				83CB322B25358B4200BCC491 /* P3_DetailView.swift */,
 				16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */,
 				83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */,
@@ -539,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CB322025358B2C00BCC491 /* U1SelectUserPashirin.swift in Sources */,
+				16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */,
 				83FA1A0E253C601000F001B9 /* P8-TaskComplete.swift in Sources */,
 				83FA1A37253C79CC00F001B9 /* HomeModel.swift in Sources */,
 				83CB323825358B4200BCC491 /* P3_ContactsViewModel.swift in Sources */,
@@ -567,6 +574,7 @@
 				83C89ACA252EDEA2000F72A4 /* TrackingPashiri.swift in Sources */,
 				83CB324225358B4D00BCC491 /* signUP_RegFormView.swift in Sources */,
 				83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */,
+				16BF1CFD2543F87D00B18DC2 /* ListParent.swift in Sources */,
 				E734E12B2541857D004941B8 /* UserHistory.swift in Sources */,
 				83E96C48252DAEEF00E1DB64 /* LocationManager.swift in Sources */,
 				83E96C45252D992100E1DB64 /* TestGoogleMapsView.swift in Sources */,

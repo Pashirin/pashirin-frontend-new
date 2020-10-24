@@ -15,9 +15,9 @@ struct P3_Congrats: View {
     @State private var showHome = false
     
     var body: some View {
-        if didStartTrip {
-            Deliver()
-        } else {
+//        if didStartTrip {
+//            Deliver()
+//        } else {
             
             ZStack {
                 Color.blue.edgesIgnoringSafeArea(.all)
@@ -79,7 +79,7 @@ struct P3_Congrats: View {
             }
             .navigationBarBackButtonHidden(true)
             
-        }
+//        }
         
         
         //struct DetailView_Previews: PreviewProvider {
