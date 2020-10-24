@@ -18,14 +18,17 @@ struct PWait: View {
     @ObservedObject var waiting = WaitingViewModel()
     var body: some View {
         ZStack {
-            Image("watingBackground")
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .offset(y: -172) // この微調整ができない
+            VStack{
+                Color(red: 9/255, green: 91/255, blue: 148/255)
+                .frame(width: 1000, height: 300)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
+            .edgesIgnoringSafeArea(.top)
+
             Image("shelf-2")
                 .offset(y: -100)
                
-            Image("userIcon")
-                .offset(x: 130,y: -350)
+        
             HStack {
                 Text("WAITING FOR \n PASHIRIN...")
                     .foregroundColor(Color(red: 101/255, green: 101/255, blue: 101/255))

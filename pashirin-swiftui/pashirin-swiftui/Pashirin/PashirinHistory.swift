@@ -19,8 +19,8 @@ struct PashirinHistory: View {
         ZStack{
             Color(red: 254/255, green: 139/255, blue:93/255).edgesIgnoringSafeArea(.all)
             VStack{
-                Image("historypasirin")
-                    .offset(y: -230)
+                Image("order")
+                
                 VStack{
                     // show list from history
                 }.frame(width:334 , height:180)

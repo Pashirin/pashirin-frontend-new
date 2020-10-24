@@ -44,6 +44,7 @@ struct ReqWant_and_AfterRequest: View {
             
                 ScrollView(.vertical) {
                     VStack(alignment: .center, spacing: 30) {
+//                        Image("order")
                         VStack(alignment: .leading,spacing: 10){
                             Text("What would you like to ask?")
                                 .foregroundColor(.white)
@@ -188,8 +189,7 @@ struct ReqWant_and_AfterRequest: View {
                         })
                     }
                 }
-                Image("userIcon")
-                    .offset(x: 130,y: -350)
+                
             }
 //            .navigationBarBackButtonHidden(true)
             

@@ -14,9 +14,12 @@ struct U5_Congrats: View {
     @Binding var showCongrats: Bool
     var body: some View{
         ZStack {
-            Image("congratsUser")
-                .offset(y:200)
-                .edgesIgnoringSafeArea(.all)
+            VStack{
+                Color(red: 9/255, green: 91/255, blue: 148/255)
+                .frame(width: 1000, height: 450)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
+            .edgesIgnoringSafeArea(.bottom)
     
             VStack(spacing: 300){
                 VStack(spacing: 10){
@@ -53,9 +56,7 @@ struct U5_Congrats: View {
                 }
             
             }
-            Image("userIcon")
-                .offset(x: 130,y: -350)
-            
+           
         }
 //        .navigationBarBackButtonHidden(true)
         .onAppear {

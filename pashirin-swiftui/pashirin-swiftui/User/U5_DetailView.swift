@@ -37,11 +37,12 @@ struct U5_DetailView: View {
         } else {
             
             ZStack{
-                Image("userIcon")
-                    .offset(x: 130,y: -350)
-                Image("congratsUser")
-                    .offset(y:100)
-                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Color(red: 9/255, green: 91/255, blue: 148/255)
+                    .frame(width: 1000, height: 550)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
+                .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(alignment:.center,spacing: 20){
                     VStack(alignment: .leading, spacing: 10){

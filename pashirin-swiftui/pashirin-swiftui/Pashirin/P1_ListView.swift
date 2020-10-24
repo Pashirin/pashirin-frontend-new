@@ -16,28 +16,25 @@ struct P1_ListView: View {
     var body: some View {
        // NavigationView{
         TabView{
+            VStack{
+            
+                
             List(viewModel.contacts) { contact in
-               
-//                HStack{
-//                    Image("profile")
-//                        .resizable()
-//                        .frame(width: 60, height: 60)
-//                        .clipped()
-//                        .cornerRadius(50)
-//                    }
             NavigationLink(destination:P3_DetailView (contact: contact)){
                 
                 VStack(alignment: .leading){
-                    Text(contact.name)
-                        .font(.system(size: 21, weight: .medium, design: .default))
+
                     Text("Offer Price: ¥\(contact.price)")
-                        .font(.system(size: 21, weight: .medium, design: .default))
-                    Text("Rating: \(contact.rating)")
-                        .font(.subheadline)
+                        .font(.system(size: 20, weight: .medium, design: .default))
+                    Text(contact.destination)
+                        .font(.system(size: 16))
+                                .foregroundColor(Color.gray)
+                    
                 }
             }
             .navigationBarBackButtonHidden(true)
           }
+        }
             .navigationBarTitle("PashiList")
             .onAppear(){
                 self.viewModel.fetchData()
