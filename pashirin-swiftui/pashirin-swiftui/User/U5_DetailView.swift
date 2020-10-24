@@ -43,10 +43,10 @@ struct U5_DetailView: View {
                     .offset(y:100)
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack(alignment:.center,spacing: 30){
+                VStack(alignment:.center,spacing: 20){
                     VStack(alignment: .leading, spacing: 10){
                         
-                        HStack{
+                        HStack(spacing: 10){
                             Image(systemName: "face.smiling")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))

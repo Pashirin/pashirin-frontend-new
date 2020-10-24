@@ -29,7 +29,7 @@ struct RegFormView: View {
     
     var body: some View {
             //Each item for registration form
-        VStack(spacing: 40){
+        VStack(spacing: 30){
             Image("coffee-4")
             VStack(alignment: .leading, spacing: 10){
                 TextField("First Name", text: $firstName)
