@@ -12,54 +12,25 @@ struct Thankyou: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View{
         ZStack {
-            Color.yellow.edgesIgnoringSafeArea(.all)
-                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
-            VStack{
-            Text("Thank You!")
-                .padding(.top, 50)
-                .font(.title)
-//            Image("running")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(width: 60, height: 60)
-//                Text("We Hope You Enjoyed the Service!")
-//                    .padding(13.0)
-                
             
-//            Button(action: {
-//                    print("Button Clicked")
-//
-//
-//                }) {
-//
-//                    Text("Back to Menu")
-//                        .foregroundColor(.white)
-//                        .font(.title)
-//                        .padding()
-//                        .border(Color.white, width: 5)
-//                }
-//                NavigationLink(destination: UserPashirin()){
-////                    Button(action: {
-////                        print("Button Clicked")
-////                    }) {
-//
-//                        Text("Back to Menu")
-//                            .foregroundColor(.white)
-//                            .font(.title)
-//                            .padding()
-//                            .border(Color.white, width: 5)
-////                    }
-//
-//
-//                }.navigationBarBackButtonHidden(true)
+            VStack(spacing: 20){
+                Image("completed-1")
+                    
+                VStack{
+                    Text("Task Completed!")
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    
+                }
                 
-                Button("Go Back", action: {
+                Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
-                })
+                }){
+                    Text("Back to Home")
+                }
                 .navigationBarTitle("")
                 .navigationBarBackButtonHidden(true)
-                
-            }
+                }
         }.onAppear {
             print("Hello This is U9")
             var transactionId = UserDefaults.standard.string(forKey: "transactionId")
