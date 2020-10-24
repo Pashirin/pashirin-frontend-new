@@ -42,7 +42,7 @@ struct UserPashirin : View{
                                         
                 
                     
-                    NavigationLink(destination: P1_ListView()){
+                    NavigationLink(destination: ListParent()){
                         VStack{
                             Text("pashirin")
                                 .fontWeight(.bold)
