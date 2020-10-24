@@ -4,6 +4,7 @@ import SwiftUI
 import FirebaseAuth
 import FirebaseAnalytics
 import FirebaseFirestore
+import Lottie
 
 struct LoginView: View {
     
@@ -36,23 +37,29 @@ struct LoginView: View {
     
     
     var body: some View {
+     
         
-//        HStack{
-//            Spacer().frame(width: 50)
-            VStack(spacing: 16){
-//                if self.isSignedIn {
-//                    Text("Welcome,　\(self.userlastsname) \(self.userfirstname) ")
-//                } else {
-//                    Text("Start using PASHIRIN")
-//                }
-                Text("Welcome! Please Sign In")
+            VStack(spacing: 20){
+                Image("user-8")
+                TextField("Email" , text: $mailAdress)
+                    .frame(width:275 ,height: 50)
+                    .padding(.leading,8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
+                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5 ,x: -5, y: -5)
+                    
                 
-                TextField("Email" , text: $mailAdress).textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
-//                SecureField("Confirm password",text: $passwordConfirm ).textFieldStyle(RoundedBorderTextFieldStyle())
+                SecureField("Password", text: $password)
+                    .frame(width:275 ,height: 50)
+                    .padding(.leading,8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
+                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: -5, y: -5)
+                
             
-                
-                //login button
+            
                 Button(action: {
                     
                     self.errorMessage = ""
@@ -65,24 +72,21 @@ struct LoginView: View {
                         self.errorMessage = "Please enter password"
                         self.isError = true
                         self.isShowAlert = true
-                    
-                        
-//                    } else if self.passwordConfirm.isEmpty {
-//                        self.errorMessage = "Confirm password is empty"
-//                        self.isError = true
-//                        self.isShowAlert = true
-//
-//                    } else if self.password.compare(self.passwordConfirm) != .orderedSame {
-//
-//                        self.errorMessage = "Password dose not match"
-//                        self.isError = true
-//                        self.isShowAlert = true
 //
                     } else {
                        logIn()
                     }}) {
                     
                         Text("Login")
+                            .font(.system(size: 18))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(width:150 ,height: 50)
+                            .padding(.leading,5)
+                            .background(Color(red: 254/255, green: 163/255, blue: 93/255))
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
+                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
                     
                 }
                 .alert(isPresented: $isShowAlert) {
@@ -91,21 +95,21 @@ struct LoginView: View {
                         return Alert(title: Text("Account does not exist\n Please try again."), message: Text(self.errorMessage),dismissButton: .destructive(Text("OK")))
                         
                     } else {
-                        return Alert(title: Text("Success!"), message: Text("Signing you in!"), dismissButton: .default(Text("OK"), action: { self.signedIn.toggle() }))
+                        return Alert(title: Text("Success!"), message: Text("Signing you in."), dismissButton: .default(Text("OK"), action: { self.signedIn.toggle() }))
                     }
                     
                 }
                
-                Button(action: {
-                    self.logout()
-                }){
-                    Text("Logout")
-                        .foregroundColor(.pink)
-                }
-                .alert(isPresented: $isShowSignedOut){
-                    Alert(title: Text(""), message:Text("LogOut succeed"),dismissButton: .destructive(Text("OK")) )
-                    
-                }
+//                Button(action: {
+//                    self.logout()
+//                }){
+//                    Text("Logout")
+//                        .foregroundColor(.pink)
+//                }
+//                .alert(isPresented: $isShowSignedOut){
+//                    Alert(title: Text(""), message:Text("LogOut succeed"),dismissButton: .destructive(Text("OK")) )
+//
+//                }
                 
                 Button(action: {
                     withAnimation {
@@ -114,27 +118,13 @@ struct LoginView: View {
                     }
 
                 }, label: {
-                    Text("Go back to Registration Form")
+                    Text("SignUp")
+                        .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
                 })
-                
-                
-            
-                
-                Spacer().frame(width: 50)
             }
             .onAppear(){
                 self.getCurrentUser()
             }
-            
-//        }
-//        .onAppear { // setting for when connect database
-//            let settings = FirestoreSettings()
-//
-//            Firestore.firestore().settings = settings
-//            // END setup
-//            self.db = Firestore.firestore()
-//        }
-
     }
     
     
@@ -262,10 +252,4 @@ struct LoginView: View {
 }
 
 
-
-struct Login_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
 

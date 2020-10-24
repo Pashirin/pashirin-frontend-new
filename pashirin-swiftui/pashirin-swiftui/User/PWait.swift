@@ -18,12 +18,12 @@ struct PWait: View {
     @ObservedObject var waiting = WaitingViewModel()
     var body: some View {
         ZStack {
-            
             Image("watingBackground")
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 .offset(y: -172) // この微調整ができない
-            Image("watingLogo")
+            Image("shelf-2")
                 .offset(y: -100)
+               
             Image("userIcon")
                 .offset(x: 130,y: -350)
             HStack {

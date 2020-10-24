@@ -48,8 +48,8 @@ struct U5_Congrats: View {
                         .frame(width: 275, height: 50)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)) , radius: 5, x: 5, y: 5)
-                        .shadow(color:Color(#colorLiteral(red: 0.1177307457, green: 0.1739197891, blue: 0.3294346426, alpha: 1)), radius: 5, x: -5, y: -5)
+                        .shadow(color:Color(#colorLiteral(red: 0.1899434371, green: 0.2814861356, blue: 0.5359386339, alpha: 1)) , radius: 5, x: 5, y: 5)
+                        .shadow(color:Color(#colorLiteral(red: 0.1899434371, green: 0.2814861356, blue: 0.5359386339, alpha: 1)), radius: 5, x: -5, y: -5)
                 }
             
             }
