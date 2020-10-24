@@ -22,76 +22,74 @@ struct P3_DetailView: View {
                 ContainerForStatus()
             } else {
                 
-                //            VStack {
-                //                Image("profile")
-                //                    .resizable()
-                //                    .clipped()
-                //                    .cornerRadius(50)
-                //            }
-                //            .frame(width: 150, height: 150)
-                
-//                Text(contact.name)
-//                    .font(.title)
-//                    .fontWeight(.medium)
-//                    
-//                Text(contact.rating)
-                
 
-                Form{
-                    Section{
+                VStack(spacing:50){
+                    Image("spaceships")
+                    VStack(alignment: .leading, spacing: 20){
+                        
                         HStack{
-                            Text("Offer Price")
-                            Spacer()
+                            Image(systemName: "yensign.square")
+                                .font(.system(size: 40))
+                                .foregroundColor(.gray)
+                               
                             Text("¥\(contact.price)")
                                 .foregroundColor(.gray)
-                                .font(.callout)
+                                .fontWeight(.bold)
+                                .font(.system(size: 30))
                                 .onAppear {
                                     print("This is P3_DetailView and tID is \(String(describing: self.transactionId))")
                                 }
                         }
+                        
                         HStack{
-                            Text("Rating")
-                            Spacer()
-                            Text(contact.rating)
+                            Image(systemName: "cart")
+                                .font(.system(size: 40))
                                 .foregroundColor(.gray)
-                                .font(.callout)
-                            
+                                
+                            Text("\(contact.item)")
+                                .foregroundColor(.gray)
+                                .fontWeight(.bold)
+                                .font(.system(size: 30))
                         }
+//
+        
                         HStack{
-                            Text("Current Location")
-                            Spacer()
+                            Image(systemName: "mappin")
+                                .font(.system(size: 40))
+                                .foregroundColor(.gray)
+                               
                             Text(contact.startlocation)
                                 .foregroundColor(.gray)
-                                .font(.callout)
+                                .fontWeight(.bold)
+                                .font(.system(size: 30))
                         }
+                    
+
                         HStack{
-                            Text("Delivery")
-                            Spacer()
-                            Text("\(contact.delivery) completed deliveries")
+                            Image(systemName: "doc.text")
+                                .font(.system(size: 40))
                                 .foregroundColor(.gray)
-                                .font(.callout)
-                        }
-                        HStack{
-                            Text("Message")
-                            Spacer()
                             Text(contact.detail)
                                 .foregroundColor(.gray)
-                                .font(.callout)
+                                .fontWeight(.bold)
+                                .font(.system(size: 30))
+                             
+                           
                         }
-                        
                     }
+                    .frame(width: 300, height: 300)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 10, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), radius: 10, x: -5, y: -5)
                     
-                    Section{
-                        //                    NavigationView{
-                        //                        NavigationLink(destination: Home()){
-                        //                            Text("Start Chat")
-                        //                        }
-                        //                    }
+                    
+                 
                         Button (action : {
                             print("これがstart Chat")
                             
                         }) {
-                            Button ("Confirm to Deliver"){
+                            Button("Confirm to Deliver"){
                                 print("transactionIdは　　　", self.transactionId)
                                 print("pashiri_id は　　　", self.pashiri_id)
                                 db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
@@ -103,13 +101,17 @@ struct P3_DetailView: View {
                                 
                             }
                             .font(.system(size: 18, weight: .bold, design: .default))
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                            .foregroundColor(Color.gray)
+                            .frame(width: 200, height: 50)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                            .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)) , radius: 10, x: 5, y: 5)
+                            .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)), radius: 10, x: -5, y: -5)
+                            .navigationBarBackButtonHidden(true)
                             
                         }
-                    }
                 }
             }
-        
 
     }
     

@@ -12,38 +12,46 @@ struct TaskComplete: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View{
         ZStack {
-            Color.green.edgesIgnoringSafeArea(.all)
-                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             VStack{
-            Text("Well Done!")
-                .padding(.top, 50)
-                .font(.title)
-            Image("running")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 60, height: 60)
-                Text("You Have Completed your Task!")
-                    .padding(13.0)
-            
+                Color(red: 254/255, green: 163/255, blue: 93/255)
+                .frame(width: 1000, height: 400)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
+            .edgesIgnoringSafeArea(.bottom)
+
+       
+        
+            VStack(spacing: 250){
+                VStack(spacing: 30){
+                    VStack(spacing: 5){
+                        Text("Well Done!")
+                            .fontWeight(.bold)
+                            .font(.system(size: 20))
+                            .foregroundColor(.gray)
+                        
+                        Text("You Have Completed your Task!")
+                            .font(.system(size: 16))
+                            .foregroundColor(.gray)
+                    }
+                    
+                    
+                    Image(systemName: "face.smiling") //
+                        .frame(width: 60, height: 60)
+                        .background(Color.gray)
+                    
+                }
+               
                 
-//                NavigationLink(destination: UserPashirin()){
-////                    Button(action: {
-////                        print("Button Clicked")
-////                    }) {
-//
-//                        Text("Back to Menu")
-//                            .foregroundColor(.white)
-//                            .font(.title)
-//                            .padding()
-//                            .border(Color.white, width: 5)
-////                    }
-//
-//
-//                }.navigationBarBackButtonHidden(true)
-                
-                Button("Go Back", action: {
+
+                Button("Back to Home", action: {
                     self.presentationMode.wrappedValue.dismiss()
                 })
+                .foregroundColor(Color.gray)
+                .frame(width: 200, height: 50)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)) , radius: 10, x: 5, y: 5)
+                .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)), radius: 10, x: -5, y: -5)
                 .navigationBarBackButtonHidden(true)
                 
             }
