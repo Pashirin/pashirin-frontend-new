@@ -186,6 +186,9 @@ struct ReqWant_and_AfterRequest: View {
                 Image("userIcon")
                     .offset(x: 130,y: -350)
             }
+            .onTapGesture {
+                self.hideKeyboard()
+            }
 //            .navigationBarBackButtonHidden(true)
             
 //                .KeyboardResponsive()
@@ -234,6 +237,13 @@ struct ReqWant_and_AfterRequest: View {
     }
 }
 
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
 
 //struct ReqWant_Previews: PreviewProvider {
 //    @State static var staticShowWaitForP = true
