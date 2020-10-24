@@ -32,11 +32,16 @@ struct ReqWant_and_AfterRequest: View {
     
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
-            ZStack {
-                Image("U1_background")
-                    //                Color(red: 6/255, green: 91/255, blue: 148/255)
-                    .edgesIgnoringSafeArea(.all)
-                    .offset(y: -100)
+            ZStack{
+                VStack{
+                    Color(red: 9/255, green: 91/255, blue: 148/255)
+                    .frame(width: 1000, height: 500)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
+                .edgesIgnoringSafeArea(.top)
+
+           
+            
                 ScrollView(.vertical) {
                     VStack(alignment: .center, spacing: 30) {
                         VStack(alignment: .leading,spacing: 10){
