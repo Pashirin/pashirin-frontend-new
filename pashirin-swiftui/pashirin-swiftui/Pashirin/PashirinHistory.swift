@@ -31,9 +31,9 @@ struct PashirinHistory: View {
             Firestore.firestore().settings = settings
       
             self.db = Firestore.firestore()
-            
+            let userId = UserDefaults.standard.string(forKey:"current_user_id")
             //transactionsからpashirn_id が一致する全てのデータを持ってくる
-            let useInfo = db.collection("transactions").whereField("pashiri_id", isEqualTo:"67rCkmZExMNqquAJdCDShUfGF5f1")
+            let useInfo = db.collection("transactions").whereField("pashiri_id", isEqualTo:userId ?? "PlaceHolderID")
 //            let useInfo = db.collection("transactions").whereField("pashiri_id", isEqualTo:この部分に現在ログインしてるユーザーのidが入る！)
             useInfo.getDocuments() {
                 (querySnapshot,err) in
