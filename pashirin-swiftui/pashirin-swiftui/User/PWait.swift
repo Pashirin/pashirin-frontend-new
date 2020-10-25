@@ -25,17 +25,23 @@ struct PWait: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
             .edgesIgnoringSafeArea(.top)
 
+            
             Image("shelf-2")
                 .offset(y: -100)
+            
                
         
-            HStack {
+            LottieView(filename: "Animation")
+                .frame(width: 200, height: 200)
+            
+            
                 Text("WAITING FOR \n PASHIRIN...")
                     .foregroundColor(Color(red: 101/255, green: 101/255, blue: 101/255))
                     .fontWeight(.bold)
                     .font(.system(size: 24))
                     .multilineTextAlignment(.center)
-            }
+            
+            
         }
 //        .navigationBarBackButtonHidden(true)
     }

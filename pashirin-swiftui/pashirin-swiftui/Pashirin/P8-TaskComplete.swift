@@ -35,9 +35,8 @@ struct TaskComplete: View {
                     }
                     
                     
-                    Image(systemName: "face.smiling") //
-                        .frame(width: 60, height: 60)
-                        .background(Color.gray)
+                    Image("neko") //
+                        
                     
                 }
                
