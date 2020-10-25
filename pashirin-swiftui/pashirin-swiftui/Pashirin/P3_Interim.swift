@@ -46,8 +46,6 @@ struct P3_Interim: View {
                         .font(.system(size: 15))
                         .foregroundColor(Color.gray)
                 }
-            
-            
         }
         .font(.headline)
         // chage color when tap button
