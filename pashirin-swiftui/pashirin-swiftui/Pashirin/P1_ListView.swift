@@ -23,7 +23,7 @@ struct P1_ListView: View {
                 //                        .clipped()
                 //                        .cornerRadius(50)
                 //                    }
-                NavigationLink(destination:P3_Interim (contact: contact)){
+                NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
                     
                     VStack(alignment: .leading){
                         Text(contact.name)
