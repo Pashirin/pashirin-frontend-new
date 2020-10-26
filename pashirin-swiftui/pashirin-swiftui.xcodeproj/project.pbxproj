@@ -62,7 +62,6 @@
 		E734E12725412287004941B8 /* PashirinHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12625412287004941B8 /* PashirinHistory.swift */; };
 		E734E12B2541857D004941B8 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12A2541857D004941B8 /* UserHistory.swift */; };
 		E734E17225447C0F004941B8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E17125447C0E004941B8 /* LottieView.swift */; };
-		E734E18F2545D6E6004941B8 /* Dare.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E18E2545D6E6004941B8 /* Dare.json */; };
 		E734E197254673A6004941B8 /* Ready.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E196254673A6004941B8 /* Ready.json */; };
 		E734E19D254692CE004941B8 /* Airplane.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E19C254692CE004941B8 /* Airplane.json */; };
 		E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1A225469329004941B8 /* CongratsBirds.json */; };
@@ -148,7 +147,6 @@
 		E734E12A2541857D004941B8 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
 		E734E17125447C0E004941B8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E734E17525447F60004941B8 /* Loading2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading2.json; sourceTree = "<group>"; };
-		E734E18E2545D6E6004941B8 /* Dare.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Dare.json; path = ../../../../Downloads/Dare.json; sourceTree = "<group>"; };
 		E734E196254673A6004941B8 /* Ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ready.json; path = ../../../../Downloads/Ready.json; sourceTree = "<group>"; };
 		E734E19C254692CE004941B8 /* Airplane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Airplane.json; sourceTree = "<group>"; };
 		E734E1A225469329004941B8 /* CongratsBirds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CongratsBirds.json; sourceTree = "<group>"; };
@@ -314,7 +312,6 @@
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
-				E734E18E2545D6E6004941B8 /* Dare.json */,
 				E734E1A8254693B8004941B8 /* Basket.json */,
 				E734E1B42546941C004941B8 /* Wating.json */,
 				E7586DAE2546975000DC14EE /* Ready.json */,
@@ -482,7 +479,6 @@
 				E7586DAF2546975000DC14EE /* Ready.json in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,
-				E734E18F2545D6E6004941B8 /* Dare.json in Resources */,
 				E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */,
 				E734E1A9254693B8004941B8 /* Basket.json in Resources */,
 				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
