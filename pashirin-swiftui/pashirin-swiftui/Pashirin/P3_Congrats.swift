@@ -26,13 +26,13 @@ struct P3_Congrats: View {
                 .edgesIgnoringSafeArea(.top)
                 
                
-                VStack(spacing: 100){
+                VStack(spacing: 80){
                     VStack(spacing: 20){
-                        Text("...on the way!")
-                            .font(.system(size: 18, weight: .bold, design: .default))
+                        Text("...Ready to begin!")
+                            .font(.system(size: 20, weight: .bold, design: .default))
                             .foregroundColor(.gray)
                         Image("lamp")
-                            .frame(width: 60, height: 60)
+                            .frame(width: 200, height: 200)
                     }
                     
                  

@@ -58,8 +58,10 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
-                            
+                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 0, y: 3)
+                            Text("*require")
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
                             
                         }
                         
@@ -78,8 +80,10 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 3, y: 3)
-                            
+                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 0, y: 3)
+                            Text("*require")
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
                         }
                         
                         
@@ -97,7 +101,9 @@ struct ReqWant_and_AfterRequest: View {
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
                                 .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
-                            
+                            Text("*require")
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
                         }
                         
                         
@@ -115,7 +121,7 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
+                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
                             
                             
                         }
@@ -133,9 +139,12 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 3, y: 3)
+                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
                                 
                                 .keyboardType(.decimalPad)
+                            Text("*require")
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
                         }
                         .padding(.bottom)
                         
@@ -164,18 +173,17 @@ struct ReqWant_and_AfterRequest: View {
                                 self.status = 1
                             }
                         }) {
-                            HStack{
-                                Image(systemName: "checkmark")
+                
                                 Text("Confirm")
                                     .fontWeight(.bold)
-                                    .font(.system(size: 16))
-                            }
+                                    .font(.system(size: 18))
+                            
                             .foregroundColor(Color.white)
-                            .frame(width: 275, height: 50)
+                            .frame(width: 200, height: 50)
                             .background(Color(red: 6/255, green: 91/255, blue: 148/255))
                             .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
-                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
+                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 5, x: 0, y: 5)
+                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
                         }
                         .background(Color.white)
                         .edgesIgnoringSafeArea(.all)

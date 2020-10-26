@@ -50,7 +50,7 @@ struct U5_DetailView: View {
                         HStack(spacing: 10){
                             Image(systemName: "face.smiling")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.name as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -59,7 +59,7 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "yensign.square")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.price as! Int)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -68,7 +68,7 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "cart")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.item as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -77,7 +77,7 @@ struct U5_DetailView: View {
                         HStack{
                            Image(systemName: "mappin")
                             .foregroundColor(.gray)
-                            .font(.system(size: 30))
+                            .font(.system(size: 20))
                             Text(self.startlocation as! String)
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -86,7 +86,7 @@ struct U5_DetailView: View {
                         HStack{
                           Image(systemName: "doc.plaintext")
                             .foregroundColor(.gray)
-                            .font(.system(size: 30))
+                            .font(.system(size: 20))
                             Text("\(self.detail as! String) ")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))

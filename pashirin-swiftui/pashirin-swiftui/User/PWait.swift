@@ -26,14 +26,10 @@ struct PWait: View {
             .edgesIgnoringSafeArea(.top)
 
             
-            Image("shelf-2")
-                .offset(y: -100)
-            
-               
         
-            LottieView(filename: "Animation")
+            LottieView(filename: "Wating")
                 .frame(width: 200, height: 200)
-            
+                .offset(y: -100)
             
                 Text("WAITING FOR \n PASHIRIN...")
                     .foregroundColor(Color(red: 101/255, green: 101/255, blue: 101/255))

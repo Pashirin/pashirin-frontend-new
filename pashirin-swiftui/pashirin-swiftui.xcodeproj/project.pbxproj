@@ -62,6 +62,9 @@
 		E734E12B2541857D004941B8 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12A2541857D004941B8 /* UserHistory.swift */; };
 		E734E17225447C0F004941B8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E17125447C0E004941B8 /* LottieView.swift */; };
 		E734E17B254484EA004941B8 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E17A254484EA004941B8 /* Animation.json */; };
+		E734E17F254571E4004941B8 /* Wating.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E17E254571E4004941B8 /* Wating.json */; };
+		E734E1832545BBAB004941B8 /* Shape.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1822545BBAA004941B8 /* Shape.json */; };
+		E734E1872545BF7F004941B8 /* Airplane.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1862545BF7E004941B8 /* Airplane.json */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +143,9 @@
 		E734E17125447C0E004941B8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E734E17525447F60004941B8 /* Loading2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading2.json; sourceTree = "<group>"; };
 		E734E17A254484EA004941B8 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animation.json; path = ../../../../Downloads/Animation.json; sourceTree = "<group>"; };
+		E734E17E254571E4004941B8 /* Wating.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Wating.json; path = ../../../../Downloads/Wating.json; sourceTree = "<group>"; };
+		E734E1822545BBAA004941B8 /* Shape.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Shape.json; path = ../../../../Downloads/Shape.json; sourceTree = "<group>"; };
+		E734E1862545BF7E004941B8 /* Airplane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Airplane.json; path = ../../../../Downloads/Airplane.json; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -297,6 +303,9 @@
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
 				E734E17125447C0E004941B8 /* LottieView.swift */,
+				E734E1862545BF7E004941B8 /* Airplane.json */,
+				E734E1822545BBAA004941B8 /* Shape.json */,
+				E734E17E254571E4004941B8 /* Wating.json */,
 				E734E17525447F60004941B8 /* Loading2.json */,
 				E734E17A254484EA004941B8 /* Animation.json */,
 				E734E11C2540641B004941B8 /* animations */,
@@ -450,11 +459,14 @@
 				E734E11D2540641B004941B8 /* animations in Resources */,
 				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
+				E734E17F254571E4004941B8 /* Wating.json in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
+				E734E1872545BF7F004941B8 /* Airplane.json in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E17B254484EA004941B8 /* Animation.json in Resources */,
 				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
+				E734E1832545BBAB004941B8 /* Shape.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
