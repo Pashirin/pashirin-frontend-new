@@ -64,6 +64,10 @@ struct P1_ListView: View {
         print("Pashirin UID is \(self.userId)")
     }
     
+    func getPashirinFirstName() {
+        let db = Firestore.firestore()
+    }
+    
 }
 
 

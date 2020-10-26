@@ -199,9 +199,9 @@ struct AccountDetail: View {
                         
                         VStack(alignment: .leading){
                             if isEdit {
-//                                TextField("\(self.email)", text: $email)
-//                                    .foregroundColor(Color(red: 139/255, green: 135/255, blue: 135/255))
-//                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                //                                TextField("\(self.email)", text: $email)
+                                //                                    .foregroundColor(Color(red: 139/255, green: 135/255, blue: 135/255))
+                                //                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                             } else {
                                 Text("Email")
                                 Text("\(self.email)")
@@ -348,7 +348,7 @@ struct AccountDetail: View {
     }
     
     
-    func  getData()  {
+    func getData()  {
         var db: Firestore!
         // [START setup]
         let settings = FirestoreSettings()
