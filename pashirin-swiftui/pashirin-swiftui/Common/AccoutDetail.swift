@@ -327,7 +327,9 @@ struct AccountDetail: View {
                                 Text("Done")
                             }
                             .alert(isPresented: $isSubmitted) {
-                                Alert(title: Text("Success!"), message: Text("User Info has successfully been updated"), dismissButton: .default(Text("OK")))
+                                Alert(title: Text("Success!"), message: Text("User Info has successfully been updated"), dismissButton: .default(Text("OK"), action: {
+                                    self.isEdit.toggle()
+                                }))
                             }
                         }
                         
@@ -347,7 +349,6 @@ struct AccountDetail: View {
     
     
     func  getData()  {
-        
         var db: Firestore!
         // [START setup]
         let settings = FirestoreSettings()
@@ -397,25 +398,10 @@ struct AccountDetail: View {
                 else {
                     print("This not string.")
                 }
-                
-                //
-                
-                
             } else {
                 print("Document does not exist")
             }
         }
-        
-        
-        //        userInfo.getDocuments() {
-        //            (querySnapshot,err) in
-        //                if let err = err {
-        //                   print("Error, \(err)")
-        //
-        //                   } else {
-        //
-        //                   }
-        //               }
     }
     
     
@@ -454,7 +440,7 @@ struct AccountDetail: View {
         }
         
         // filedの値を更新して
-        self.isEdit.toggle()
+        
     }
     
     private func logout() {
