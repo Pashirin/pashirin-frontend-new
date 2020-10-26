@@ -36,9 +36,7 @@ struct UserPashirin : View{
                         
                     }
                     .navigationBarBackButtonHidden(true)
-//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.white)
-                    .edgesIgnoringSafeArea(.all)
                                         
                 
                     
@@ -63,18 +61,11 @@ struct UserPashirin : View{
                         
                     }
                     .background(Color.white)
-                    .edgesIgnoringSafeArea(.all)
+                    .edgesIgnoringSafeArea(.top)
                 }
-//                .onAppear {
-//
-//                    let domain = Bundle.main.bundleIdentifier!
-//                    UserDefaults.standard.removePersistentDomain(forName: domain)
-//                    UserDefaults.standard.synchronize()
-//                    UserDefaults.standard.set("タダモン", forKey: "name")
-//
-//                }
+                .frame(minWidth: 0,  maxWidth: .infinity, minHeight:0,  maxHeight: .infinity, alignment: .center)
+
             }
-        .edgesIgnoringSafeArea(.all)
 
     }
 }

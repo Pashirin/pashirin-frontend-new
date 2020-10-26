@@ -37,19 +37,76 @@ struct U5_DetailView: View {
         } else {
             
             ZStack{
-                Image("userIcon")
-                    .offset(x: 130,y: -350)
-                Image("congratsUser")
-                    .offset(y:100)
-                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Color(red: 9/255, green: 91/255, blue: 148/255)
+                    .frame(width: 1000, height: 400)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
+                .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(alignment:.center,spacing: 20){
-                    VStack(alignment: .leading, spacing: 10){
+                    
+                    Image("map")
+                    VStack{
+                        List{
+                            
+                            HStack(spacing: 10){
+                                Image(systemName: "face.smiling")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20))
+                                Text("\(self.name as! String)")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20, weight: .bold))
+                            }
+                            
+                            HStack{
+                                Image(systemName: "yensign.square")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20))
+                                Text("\(self.price as! Int)")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20, weight: .bold))
+                            }
+                            
+                            HStack{
+                                Image(systemName: "cart")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20))
+                                Text("\(self.item as! String)")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20, weight: .bold))
+                            }
+                            
+                            HStack{
+                               Image(systemName: "mappin")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 20))
+                                Text(self.startlocation as! String)
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20, weight: .bold))
+                            }
+                            
+                            HStack{
+                              Image(systemName: "doc.plaintext")
+                                .foregroundColor(.gray)
+                                .frame()
+                                Text("\(self.detail as! String) ")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 20, weight: .bold))
+                            }
+                        }
+                        .frame(width: 300, height: 300)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)) , radius: 3, x: -3, y: -3)
+                        .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)), radius: 5, x: 5, y: 5)
+                    }// Tracking map
+                    List{
                         
                         HStack(spacing: 10){
                             Image(systemName: "face.smiling")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.name as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -58,7 +115,7 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "yensign.square")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.price as! Int)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -67,16 +124,18 @@ struct U5_DetailView: View {
                         HStack{
                             Image(systemName: "cart")
                                 .foregroundColor(.gray)
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                             Text("\(self.item as! String)")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
                         
                         HStack{
+
                             Image(systemName: "mappin")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))
+
                             Text(self.startlocation as! String)
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -86,6 +145,7 @@ struct U5_DetailView: View {
                             Image(systemName: "doc.plaintext")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 30))
+
                             Text("\(self.detail as! String) ")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -104,9 +164,9 @@ struct U5_DetailView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.gray)
                     }
-                    .frame(width: 275, height: 50)
+                    .frame(width: 250, height: 50)
                     .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
                     .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)) , radius: 3, x: -3, y: -3)
                     .shadow(color:Color(#colorLiteral(red: 0.1584876558, green: 0.2344628639, blue: 0.4459985033, alpha: 1)), radius: 5, x: 5, y: 5)
                     .sheet(isPresented: $showHome){

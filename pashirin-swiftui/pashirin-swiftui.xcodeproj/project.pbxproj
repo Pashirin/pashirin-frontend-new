@@ -61,6 +61,15 @@
 		E734E11D2540641B004941B8 /* animations in Resources */ = {isa = PBXBuildFile; fileRef = E734E11C2540641B004941B8 /* animations */; };
 		E734E12725412287004941B8 /* PashirinHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12625412287004941B8 /* PashirinHistory.swift */; };
 		E734E12B2541857D004941B8 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12A2541857D004941B8 /* UserHistory.swift */; };
+		E734E17225447C0F004941B8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E17125447C0E004941B8 /* LottieView.swift */; };
+		E734E17B254484EA004941B8 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E17A254484EA004941B8 /* Animation.json */; };
+		E734E17F254571E4004941B8 /* Wating.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E17E254571E4004941B8 /* Wating.json */; };
+		E734E1832545BBAB004941B8 /* Shape.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1822545BBAA004941B8 /* Shape.json */; };
+		E734E1872545BF7F004941B8 /* Airplane.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1862545BF7E004941B8 /* Airplane.json */; };
+		E734E18B2545CF67004941B8 /* CongratsBirds.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E18A2545CF67004941B8 /* CongratsBirds.json */; };
+		E734E18F2545D6E6004941B8 /* Dare.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E18E2545D6E6004941B8 /* Dare.json */; };
+		E734E1932545D8A5004941B8 /* Basket.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1922545D8A5004941B8 /* Basket.json */; };
+		E734E197254673A6004941B8 /* Ready.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E196254673A6004941B8 /* Ready.json */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +146,16 @@
 		E734E11C2540641B004941B8 /* animations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = animations; sourceTree = SOURCE_ROOT; };
 		E734E12625412287004941B8 /* PashirinHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PashirinHistory.swift; sourceTree = "<group>"; };
 		E734E12A2541857D004941B8 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
+		E734E17125447C0E004941B8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E734E17525447F60004941B8 /* Loading2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading2.json; sourceTree = "<group>"; };
+		E734E17A254484EA004941B8 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animation.json; path = ../../../../Downloads/Animation.json; sourceTree = "<group>"; };
+		E734E17E254571E4004941B8 /* Wating.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Wating.json; path = ../../../../Downloads/Wating.json; sourceTree = "<group>"; };
+		E734E1822545BBAA004941B8 /* Shape.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Shape.json; path = ../../../../Downloads/Shape.json; sourceTree = "<group>"; };
+		E734E1862545BF7E004941B8 /* Airplane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Airplane.json; path = ../../../../Downloads/Airplane.json; sourceTree = "<group>"; };
+		E734E18A2545CF67004941B8 /* CongratsBirds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CongratsBirds.json; path = ../../../../Downloads/CongratsBirds.json; sourceTree = "<group>"; };
+		E734E18E2545D6E6004941B8 /* Dare.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Dare.json; path = ../../../../Downloads/Dare.json; sourceTree = "<group>"; };
+		E734E1922545D8A5004941B8 /* Basket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Basket.json; path = ../../../../Downloads/Basket.json; sourceTree = "<group>"; };
+		E734E196254673A6004941B8 /* Ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ready.json; path = ../../../../Downloads/Ready.json; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -289,11 +308,21 @@
 				83FA1A31253C794A00F001B9 /* Chat */,
 				83CB322325358B4200BCC491 /* notConnected */,
 				83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */,
+				E734E196254673A6004941B8 /* Ready.json */,
 				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
 				83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */,
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
+				E734E18E2545D6E6004941B8 /* Dare.json */,
+				E734E17125447C0E004941B8 /* LottieView.swift */,
+				E734E18A2545CF67004941B8 /* CongratsBirds.json */,
+				E734E1862545BF7E004941B8 /* Airplane.json */,
+				E734E1922545D8A5004941B8 /* Basket.json */,
+				E734E1822545BBAA004941B8 /* Shape.json */,
+				E734E17E254571E4004941B8 /* Wating.json */,
+				E734E17525447F60004941B8 /* Loading2.json */,
+				E734E17A254484EA004941B8 /* Animation.json */,
 				E734E11C2540641B004941B8 /* animations */,
 				83E96C2A252D6B4B00E1DB64 /* Preview Content */,
 			);
@@ -445,10 +474,18 @@
 				E734E11D2540641B004941B8 /* animations in Resources */,
 				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
+				E734E17F254571E4004941B8 /* Wating.json in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
+				E734E1932545D8A5004941B8 /* Basket.json in Resources */,
+				E734E1872545BF7F004941B8 /* Airplane.json in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
+				E734E197254673A6004941B8 /* Ready.json in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
+				E734E18F2545D6E6004941B8 /* Dare.json in Resources */,
+				E734E17B254484EA004941B8 /* Animation.json in Resources */,
 				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
+				E734E1832545BBAB004941B8 /* Shape.json in Resources */,
+				E734E18B2545CF67004941B8 /* CongratsBirds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +586,7 @@
 			files = (
 				83CB322025358B2C00BCC491 /* U1SelectUserPashirin.swift in Sources */,
 				16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */,
+				E734E17225447C0F004941B8 /* LottieView.swift in Sources */,
 				83FA1A0E253C601000F001B9 /* P8-TaskComplete.swift in Sources */,
 				83FA1A37253C79CC00F001B9 /* HomeModel.swift in Sources */,
 				83CB323825358B4200BCC491 /* P3_ContactsViewModel.swift in Sources */,
@@ -659,7 +697,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -721,7 +759,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

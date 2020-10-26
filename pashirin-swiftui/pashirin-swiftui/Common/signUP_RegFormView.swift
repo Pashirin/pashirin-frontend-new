@@ -30,7 +30,8 @@ struct RegFormView: View {
     var body: some View {
             //Each item for registration form
         VStack(spacing: 30){
-            Image("coffee-4")
+            Image("holloween")
+//            Image("coffee-4")
             VStack(alignment: .leading, spacing: 10){
                 TextField("First Name", text: $firstName)
                     .frame(width:300 ,height: 50)
@@ -91,7 +92,7 @@ struct RegFormView: View {
             }
            
                 
-            VStack(spacing: 5){
+            VStack(spacing: 8){
                 Button(action: {
                     //Toggle submit button
                     self.submit.toggle()
