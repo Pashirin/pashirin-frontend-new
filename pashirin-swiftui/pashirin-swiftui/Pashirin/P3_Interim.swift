@@ -10,9 +10,10 @@ import SwiftUI
 
 struct P3_Interim: View {
     let contact: Contact
+    @Binding var pashirinFirstName: String
     var body: some View {
         TabView {
-            P3_DetailView(contact: contact)
+            P3_DetailView(contact: contact, pashirinFirstName: $pashirinFirstName)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                         
@@ -62,3 +63,4 @@ struct P3_Interim: View {
 //        P3_Interim()
 //    }
 //}
+

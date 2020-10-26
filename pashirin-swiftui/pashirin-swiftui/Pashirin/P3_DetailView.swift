@@ -16,6 +16,7 @@ struct P3_DetailView: View {
     let db = Firestore.firestore()
     let transactionId = UserDefaults.standard.string(forKey: "transactionId")
     let pashiri_id = UserDefaults.standard.string(forKey: "current_user_id")
+    @Binding var pashirinFirstName: String
 
     
     var body: some View {
@@ -117,6 +118,9 @@ struct P3_DetailView: View {
                                         print(UserDefaults.standard.string(forKey: "transactionId"))
                                         
                                         db.collection("transactions").document(contact.transactionId).setData(["pashiri_id": UserDefaults.standard.string(forKey:"current_user_id")], merge: true)
+                                        
+                                        db.collection("transactions").document(contact.transactionId).setData(["pashirin_firstName": self.pashirinFirstName], merge: true)
+                                        print(self.pashirinFirstName)
                                         self.showCongrats.toggle()
                                         
                                     }
@@ -149,4 +153,5 @@ struct P3_DetailView: View {
 //        //            }
 //    }
 //}
+
 
