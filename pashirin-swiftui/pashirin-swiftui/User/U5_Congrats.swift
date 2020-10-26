@@ -8,15 +8,19 @@
 
 import SwiftUI
 import FirebaseFirestore
+import Lottie
 
 struct U5_Congrats: View {
     //var transactionId: String
     @Binding var showCongrats: Bool
     var body: some View{
         ZStack {
-            Image("congratsUser")
-                .offset(y:200)
-                .edgesIgnoringSafeArea(.all)
+            VStack{
+                Color(red: 9/255, green: 91/255, blue: 148/255)
+                .frame(width: 1000, height: 300)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
+            .edgesIgnoringSafeArea(.bottom)
     
             VStack(spacing: 300){
                 VStack(spacing: 10){
@@ -28,9 +32,8 @@ struct U5_Congrats: View {
                         .font(.system(size: 16))
                         .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
                     
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(Color(red: 254/255, green:139/255, blue: 93/255))
-                        .font(.system(size: 60))
+                   LottieView(filename: "CongratsBirds")
+                    .frame(width: 200, height: 300)
                 }
                 
                 
@@ -53,9 +56,7 @@ struct U5_Congrats: View {
                 }
             
             }
-            Image("userIcon")
-                .offset(x: 130,y: -350)
-            
+           
         }
 //        .navigationBarBackButtonHidden(true)
         .onAppear {

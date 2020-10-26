@@ -17,6 +17,7 @@ struct Contact: Identifiable {
     var name: String
     var price: Int
     var rating: String
+    var item :String
     
     
 }

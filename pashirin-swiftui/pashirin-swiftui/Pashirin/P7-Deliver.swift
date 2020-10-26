@@ -13,31 +13,34 @@ struct Deliver: View {
     let db = Firestore.firestore()
     var body: some View{
         ZStack {
-            Color.gray.edgesIgnoringSafeArea(.all)
-                .opacity(0.4)
-            VStack{
-            Text("Currently Delivering...")
-                .padding(.top, 50)
-                .font(.title)
-//            Image("running")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(width: 60, height: 60)
-//                Text("Tap Here Once You Have Completed Your Task")
-//                    .padding(13.0)
+            
                 
-            Button(action: {
-                print("Button Clicked")
-                db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).setData(["status":4], merge: true)
-                }) {
-                
-                    Text("Completed")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .padding()
-                        .border(Color.white, width: 5)
+            VStack(spacing: 100){
+                VStack(spacing: 20){
+                    Text("Currently Delivering...")
+                        .fontWeight(.bold)
+                        .font(.system(size: 18))
+                        .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
+                    
+                    LottieView(filename: "Ready")
+                        .frame(width: 350, height: 400)
                 }
-            }
+                
+                Button(action: {
+                    print("Button Clicked")
+                    db.collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).setData(["status":4], merge: true)
+                    }) {
+                    
+                        Text("Completed")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    .frame(width: 275, height: 50)
+                    .background(Color(red: 254/255, green: 163/255, blue: 93/255))
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 7, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 7, x: -5, y: -5)
+                }
         }
     }
 }
