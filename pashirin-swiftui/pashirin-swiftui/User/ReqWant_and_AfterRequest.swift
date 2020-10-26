@@ -16,6 +16,7 @@ struct ReqWant_and_AfterRequest: View {
     @State private var whereTo = ""
     @State private var moreInfo = ""
     @State private var price = ""
+    @State private var now = Date()
     @State private var confirm = false
     @State private var isShowAlert = false
     @State private var isError = false
@@ -72,7 +73,7 @@ struct ReqWant_and_AfterRequest: View {
                             Text("Where can I find?")
                                 .foregroundColor(.white)
                                 .font(.system(size: 18))
-                            TextField("Ginza Matsuya", text: $whereTo)
+                            TextField("Ginza Matsuya", text: $whereIs)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
                                 .background(Color.white)
@@ -92,7 +93,7 @@ struct ReqWant_and_AfterRequest: View {
                                 
                                 .foregroundColor(.white)
                                 .font(.system(size: 18))
-                            TextField("1-1-1 Azabu, Roppongi", text: $whereIs)
+                            TextField("1-1-1 Azabu, Roppongi", text: $whereTo)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
                                 .background(Color.white)
@@ -221,6 +222,12 @@ struct ReqWant_and_AfterRequest: View {
     }
     
     func postTask() {
+        //Converting date format to string
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d y, HH:mm E"
+        let date = formatter.string(from: self.now)
+        
+        //Putting data into an array
         let taskInfo = [
             "status": 1,
             "item": self.what,
@@ -228,7 +235,8 @@ struct ReqWant_and_AfterRequest: View {
             "destination": self.whereTo,
             "detail": self.moreInfo,
             "price": Int(self.price) ?? 0,
-            "user_id": UserDefaults.standard.string(forKey:"current_user_id") ?? "No namaken ID"
+            "user_id": UserDefaults.standard.string(forKey:"current_user_id") ?? "No namaken ID",
+            "timestamp": date
         ] as [String : Any]
 
         //transactionIdを生成する
