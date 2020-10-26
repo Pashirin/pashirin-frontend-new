@@ -20,7 +20,7 @@ struct PWait: View {
         ZStack {
             VStack{
                 Color(red: 9/255, green: 91/255, blue: 148/255)
-                .frame(width: 1000, height: 300)
+                .frame(width: 1000, height: 250)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
             .edgesIgnoringSafeArea(.top)

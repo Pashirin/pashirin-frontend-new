@@ -26,16 +26,16 @@ struct TaskComplete: View {
                     VStack(spacing: 5){
                         Text("Well Done!")
                             .fontWeight(.bold)
-                            .font(.system(size: 20))
-                            .foregroundColor(.gray)
+                            .font(.system(size: 24))
+                            .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                         
                         Text("You Have Completed your Task!")
-                            .font(.system(size: 16))
+                            .font(.system(size: 18))
                             .foregroundColor(.gray)
                     }
                     
                     
-                    Image("neko") //
+                    LottieView(filename: "Basket")
                         
                     
                 }
@@ -45,12 +45,12 @@ struct TaskComplete: View {
                 Button("Back to Home", action: {
                     self.presentationMode.wrappedValue.dismiss()
                 })
-                .foregroundColor(Color.gray)
+                .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                 .frame(width: 200, height: 50)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)) , radius: 10, x: 5, y: 5)
-                .shadow(color:Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)), radius: 10, x: -5, y: -5)
+                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 3, x: 3, y: 3)
+                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 3, x: -3, y: -3)
                 .navigationBarBackButtonHidden(true)
                 
             }

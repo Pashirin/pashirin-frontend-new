@@ -20,9 +20,10 @@ struct Deliver: View {
                     Text("Currently Delivering...")
                         .fontWeight(.bold)
                         .font(.system(size: 18))
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                     
-                    Image("bicycle") // chage to animatin!
+                    LottieView(filename: "Ready")
+                        .frame(width: 350, height: 400)
                 }
                 
                 Button(action: {
@@ -37,8 +38,8 @@ struct Deliver: View {
                     .frame(width: 275, height: 50)
                     .background(Color(red: 254/255, green: 163/255, blue: 93/255))
                     .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 10, x: 5, y: 5)
-                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 10, x: -5, y: -5)
+                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 7, x: 5, y: 5)
+                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 7, x: -5, y: -5)
                 }
         }
     }

@@ -29,10 +29,10 @@ struct P3_Congrats: View {
                 VStack(spacing: 80){
                     VStack(spacing: 20){
                         Text("...Ready to begin!")
-                            .font(.system(size: 20, weight: .bold, design: .default))
-                            .foregroundColor(.gray)
+                            .font(.system(size: 24, weight: .bold, design: .default))
+                            .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
+                        
                         Image("lamp")
-                            .frame(width: 200, height: 200)
                     }
                     
                  
@@ -61,7 +61,7 @@ struct P3_Congrats: View {
                             self.showHome.toggle()
                         }) {
                             Text("Chat with namaken")
-                                .foregroundColor(.gray)
+                                .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
                             

@@ -31,7 +31,10 @@ struct P3_DetailView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
                         .edgesIgnoringSafeArea(.bottom)
                         
+                       
+                        
                         VStack(spacing:50){
+                           
                             LottieView(filename: "Airplane")
                                 .frame(width: 300, height: 300,alignment: .top)
                                 .edgesIgnoringSafeArea(.top)
@@ -118,7 +121,7 @@ struct P3_DetailView: View {
                                         
                                     }
                                     .font(.system(size: 18, weight: .bold, design: .default))
-                                    .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                    .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                                     .frame(width: 200, height: 50)
                                     .background(Color.white)
                                     .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))

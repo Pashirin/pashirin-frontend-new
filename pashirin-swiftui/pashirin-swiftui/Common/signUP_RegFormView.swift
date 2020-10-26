@@ -92,7 +92,7 @@ struct RegFormView: View {
             }
            
                 
-            VStack(spacing: 5){
+            VStack(spacing: 8){
                 Button(action: {
                     //Toggle submit button
                     self.submit.toggle()
