@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162AA58D25459B1200274453 /* EmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AA58C25459B1200274453 /* EmailAndPassword.swift */; };
 		16BF1CB42541B21600B18DC2 /* P3_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */; };
 		16BF1CFD2543F87D00B18DC2 /* ListParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CFC2543F87D00B18DC2 /* ListParent.swift */; };
 		16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		162AA58C25459B1200274453 /* EmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPassword.swift; sourceTree = "<group>"; };
 		16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Congrats.swift; sourceTree = "<group>"; };
 		16BF1CFC2543F87D00B18DC2 /* ListParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParent.swift; sourceTree = "<group>"; };
 		16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Interim.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				83CB321D25358B2C00BCC491 /* Login.swift */,
 				83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */,
 				E734E116254044DD004941B8 /* AccoutDetail.swift */,
+				162AA58C25459B1200274453 /* EmailAndPassword.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */,
 				8326D5382539B921007CD60A /* DataViewModel.swift in Sources */,
 				83CB323325358B4200BCC491 /* MessageViewModel.swift in Sources */,
+				162AA58D25459B1200274453 /* EmailAndPassword.swift in Sources */,
 				83CB323425358B4200BCC491 /* P1_ListView.swift in Sources */,
 				83CB32B12535F22500BCC491 /* U4-Matched.swift in Sources */,
 				83FA1A3F253C79F800F001B9 /* ChatRow.swift in Sources */,

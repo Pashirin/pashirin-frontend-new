@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 
 struct P1_ListView: View {
     
     @ObservedObject private var viewModel = ContactsViewModel()
+    @State private var userId = ""
     //後で消す
     
     var body: some View {
@@ -23,7 +27,7 @@ struct P1_ListView: View {
                 //                        .clipped()
                 //                        .cornerRadius(50)
                 //                    }
-                NavigationLink(destination:P3_Interim (contact: contact)){
+                NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
                     
                     VStack(alignment: .leading){
                         Text(contact.name)
@@ -41,11 +45,25 @@ struct P1_ListView: View {
 
             .onAppear(){
                 self.viewModel.fetchData()
-                print("onApearに入りました")
-                UserDefaults.standard.set("67rCkmZExMNqquAJdCDShUfGF5f1", forKey: "current_user_id")
+                print("onAppearに入りました")
+                getUserId()
+                UserDefaults.standard.set(self.userId, forKey: "current_user_id")
                 print(UserDefaults.standard.string(forKey: "current_user_id")!)
             }
     }
+    
+    func getUserId() {
+        var db: Firestore!
+        // [START setup]
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // Get current login user uid and email
+        self.userId = Auth.auth().currentUser?.uid ?? "no User ID"
+        print("Pashirin UID is \(self.userId)")
+    }
+    
 }
 
 

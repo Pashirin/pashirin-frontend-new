@@ -21,8 +21,8 @@ struct U5_DetailView: View {
     
     @State var item : String = ""
     
-   //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
-
+    //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
+    
     @State var showCongrats = true
     @State private var showHome = false
     let db = Firestore.firestore()
@@ -30,7 +30,7 @@ struct U5_DetailView: View {
     var body: some View {
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
-//                .navigationBarBackButtonHidden(true)
+                //                .navigationBarBackButtonHidden(true)
                 .onAppear {
                     print("This is U5_DetailView at line 32")
                 }
@@ -131,18 +131,21 @@ struct U5_DetailView: View {
                         }
                         
                         HStack{
-                           Image(systemName: "mappin")
-                            .foregroundColor(.gray)
-                            .font(.system(size: 20))
+
+                            Image(systemName: "mappin")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 30))
+
                             Text(self.startlocation as! String)
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
                         }
                         
                         HStack{
-                          Image(systemName: "doc.plaintext")
-                            .foregroundColor(.gray)
-                            .frame()
+                            Image(systemName: "doc.plaintext")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 30))
+
                             Text("\(self.detail as! String) ")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 20, weight: .bold))
@@ -169,13 +172,14 @@ struct U5_DetailView: View {
                     .sheet(isPresented: $showHome){
                         Home()
                     }
-                    .onAppear{
-                        getPashiriInfo()
-                    }
+                    
                 }
                 .offset(y: 100)
             }
-        
+            .onAppear{
+                getPashiriInfo()
+            }
+            
         }
     }
     

@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 import FirebaseFirestore
-
+import FirebaseAuth
 
 struct ReqWant_and_AfterRequest: View {
     @State private var what = ""
@@ -21,14 +21,14 @@ struct ReqWant_and_AfterRequest: View {
     @State private var isError = false
     @State private var errorMessage = ""
     @State private var status: Int = 1
+    @State private var userId = ""
     //@Binding var transactionId: String
 //    @Binding var showWaitForP: Bool
 //    @Binding var status: Int
-    init() {
-        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
-//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
-//        UserDefaults.standard.set("1PdqjXKUVKh43EKrMGyA7zA15BK2",forKey:"current_user_id")
-    }
+//    init() {
+//        getUserId()
+//        UserDefaults.standard.set(self.userId, forKey:"current_user_id")
+//    }
     
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
@@ -199,6 +199,11 @@ struct ReqWant_and_AfterRequest: View {
                 }
                 
             }
+            .onAppear {
+                getUserId()
+                UserDefaults.standard.set(self.userId, forKey: "current_user_id")
+                print(UserDefaults.standard.string(forKey: "current_user_id")!)
+            }
             .onTapGesture {
                 self.hideKeyboard()
             }
@@ -223,7 +228,7 @@ struct ReqWant_and_AfterRequest: View {
             "destination": self.whereTo,
             "detail": self.moreInfo,
             "price": Int(self.price) ?? 0,
-            "user_id": UserDefaults.standard.string(forKey:"current_user_id")
+            "user_id": UserDefaults.standard.string(forKey:"current_user_id") ?? "No namaken ID"
         ] as [String : Any]
 
         //transactionIdを生成する
@@ -247,6 +252,18 @@ struct ReqWant_and_AfterRequest: View {
                 self.price = ""
             }
         }
+    }
+    
+    func getUserId() {
+        var db: Firestore!
+        // [START setup]
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // Get current login user uid and email
+        self.userId = Auth.auth().currentUser?.uid ?? "no User ID"
+        print("Namaken UID is \(self.userId)")
     }
 }
 

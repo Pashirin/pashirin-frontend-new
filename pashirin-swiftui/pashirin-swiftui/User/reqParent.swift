@@ -23,42 +23,40 @@ struct reqParent: View {
         TabView{
             //Request page
             ReqWant_and_AfterRequest()
-                
-            .tabItem{
-                Image(systemName: "figure.walk")
-    
-                    .font(.system(size: 40))
-                    .foregroundColor(Color.gray)
-                Text("Request")
-                    .font(.system(size: 15))
-                    .foregroundColor(Color.gray)
-                
-            }
+                .tabItem{
+                    Image(systemName: "figure.walk")
+                        
+                        .font(.system(size: 40))
+                        .foregroundColor(Color.gray)
+                    Text("Request")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color.gray)
+                    
+                }
             
             UserHistory()
                 .tabItem{
-                Image(systemName: "clock")
-                
-                    .font(.system(size: 40))
-                    .foregroundColor(Color.gray)
+                    Image(systemName: "clock")
+                        
+                        .font(.system(size: 40))
+                        .foregroundColor(Color.gray)
                     
-                Text("History")
-                    .font(.system(size: 15))
-                    .foregroundColor(Color.gray)
-            }
+                    Text("History")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color.gray)
+                }
             
             AccountDetail()
                 .tabItem{
-                Image(systemName: "person.fill")
+                    Image(systemName: "person.fill")
+                        
+                        .font(.system(size: 40))
+                        .foregroundColor(Color.gray)
                     
-                    .font(.system(size: 40))
-                    .foregroundColor(Color.gray)
-                
-                Text("Account")
-                    .font(.system(size: 15))
-                    .foregroundColor(Color.gray)
+                    Text("Account")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color.gray)
                 }
-            
         }
         .navigationBarBackButtonHidden(true)
         .font(.headline)
@@ -68,7 +66,7 @@ struct reqParent: View {
         .onAppear() {
             UITabBar.appearance().barTintColor = .white
         }
-            
+        
         
         
         //        if self.waitingViewModel.status == 2 {

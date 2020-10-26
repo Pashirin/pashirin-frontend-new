@@ -14,7 +14,6 @@ struct ListParent: View {
             P1_ListView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                        
                         .font(.system(size: 40))
                         .foregroundColor(Color.gray)
                     Text("Request")

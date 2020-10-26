@@ -22,6 +22,7 @@ struct LoginView: View {
     @State private var db: Firestore!
     // Authefication of use uid (unigue id)
     @State private var userId : String? = nil
+    @State private var userEmail : String? = nil
     
     //State of logged in userInfo
     @State private var userFirstName  = ""
@@ -203,6 +204,11 @@ struct LoginView: View {
         db = Firestore.firestore()
         // Get current login user uid
         userId = Auth.auth().currentUser?.uid
+        print(userId ?? "SomeID")
+        userEmail = Auth.auth().currentUser?.email
+        print(userEmail ?? "SomeEmail")
+        let userObj = Auth.auth().currentUser
+        print(userObj ?? "something")
         // Get all information from current user
         let _: Void = db.collection("users").document(userId ?? "").getDocument() { (document, error) in
             if let document = document, document.exists {
