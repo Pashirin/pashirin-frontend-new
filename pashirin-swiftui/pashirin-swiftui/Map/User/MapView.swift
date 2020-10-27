@@ -136,8 +136,8 @@ struct MapView: UIViewRepresentable {
         uiView.addAnnotation(goalAnnotation)
         
         
-        
-        db.collection("users").document("r43zdHZpeyD4RRzmKT3Z").addSnapshotListener { (documentSnapshot, error) in
+        //MARK:- ここ直して
+        db.collection("users").document("c9adiSfxI3SF5eUbSCQp0xj0f5y1").addSnapshotListener { (documentSnapshot, error) in
             guard let document = documentSnapshot else {
                 print("No documents")
                 return
@@ -177,7 +177,7 @@ struct MapView: UIViewRepresentable {
                 //新しいのを描く
                 uiView.addOverlay(polyline!)
                 //地図を上塗り
-                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
+//                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
                 uiView.showAnnotations(uiView.annotations, animated: true)
             }
             
@@ -189,9 +189,9 @@ struct MapView: UIViewRepresentable {
             UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
                 print(pashirinAnnotation.coordinate,"これはnilではない")
 
-                //ここで問題発生
+//MARK:-bag so comment temporalily
 
-                let annotationView = uiView.view(for: pashirinAnnotation) as! AnnotationView
+//                let annotationView = uiView.view(for: pashirinAnnotation) as! AnnotationView
                 
 //                annotationView.transform = CGAffineTransform(rotationAngle: CGFloat(2))
 //                annotationView.transform = CGAffineTransform.identity
