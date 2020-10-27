@@ -40,7 +40,6 @@
 		83E96C23252D6B4B00E1DB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */; };
 		83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */; };
 		83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C26252D6B4B00E1DB64 /* ContentView.swift */; };
-		83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C28252D6B4B00E1DB64 /* Assets.xcassets */; };
 		83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */; };
 		83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */; };
 		83E96C3A252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C39252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift */; };
@@ -56,13 +55,13 @@
 		83FA1A43253C7A1400F001B9 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A42253C7A1400F001B9 /* MsgModel.swift */; };
 		83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */; };
 		83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDBB7525389588007EB3E8 /* AfterRequest.swift */; };
+		E712EBF92547FEC80044FA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E712EBF82547FEC80044FA15 /* Assets.xcassets */; };
 		E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */; };
 		E734E117254044DD004941B8 /* AccoutDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E116254044DD004941B8 /* AccoutDetail.swift */; };
 		E734E11D2540641B004941B8 /* animations in Resources */ = {isa = PBXBuildFile; fileRef = E734E11C2540641B004941B8 /* animations */; };
 		E734E12725412287004941B8 /* PashirinHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12625412287004941B8 /* PashirinHistory.swift */; };
 		E734E12B2541857D004941B8 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E12A2541857D004941B8 /* UserHistory.swift */; };
 		E734E17225447C0F004941B8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E17125447C0E004941B8 /* LottieView.swift */; };
-		E734E197254673A6004941B8 /* Ready.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E196254673A6004941B8 /* Ready.json */; };
 		E734E19D254692CE004941B8 /* Airplane.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E19C254692CE004941B8 /* Airplane.json */; };
 		E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1A225469329004941B8 /* CongratsBirds.json */; };
 		E734E1A9254693B8004941B8 /* Basket.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1A8254693B8004941B8 /* Basket.json */; };
@@ -118,7 +117,6 @@
 		83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83E96C26252D6B4B00E1DB64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		83E96C28252D6B4B00E1DB64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83E96C2E252D6B4B00E1DB64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83E96C30252D6B4B00E1DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +138,7 @@
 		B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.release.xcconfig"; sourceTree = "<group>"; };
 		CF65941A51307DAF48C2EF9B /* Pods-pashirin-swiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.debug.xcconfig"; sourceTree = "<group>"; };
+		E712EBF82547FEC80044FA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "pashirin-swiftui/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U5_Congrats.swift; sourceTree = "<group>"; };
 		E734E116254044DD004941B8 /* AccoutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccoutDetail.swift; sourceTree = "<group>"; };
 		E734E11C2540641B004941B8 /* animations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = animations; sourceTree = SOURCE_ROOT; };
@@ -147,7 +146,6 @@
 		E734E12A2541857D004941B8 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
 		E734E17125447C0E004941B8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E734E17525447F60004941B8 /* Loading2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Loading2.json; sourceTree = "<group>"; };
-		E734E196254673A6004941B8 /* Ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ready.json; path = ../../../../Downloads/Ready.json; sourceTree = "<group>"; };
 		E734E19C254692CE004941B8 /* Airplane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Airplane.json; sourceTree = "<group>"; };
 		E734E1A225469329004941B8 /* CongratsBirds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CongratsBirds.json; sourceTree = "<group>"; };
 		E734E1A8254693B8004941B8 /* Basket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Basket.json; sourceTree = "<group>"; };
@@ -225,6 +223,7 @@
 		83CB322325358B4200BCC491 /* notConnected */ = {
 			isa = PBXGroup;
 			children = (
+				E712EBF82547FEC80044FA15 /* Assets.xcassets */,
 				83CB322425358B4200BCC491 /* FirebaseChat */,
 				83CB322925358B4200BCC491 /* Contactview_DetailView */,
 			);
@@ -306,11 +305,9 @@
 				83FA1A31253C794A00F001B9 /* Chat */,
 				83CB322325358B4200BCC491 /* notConnected */,
 				83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */,
-				E734E196254673A6004941B8 /* Ready.json */,
 				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
 				83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */,
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
-				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
 				E734E1A8254693B8004941B8 /* Basket.json */,
 				E734E1B42546941C004941B8 /* Wating.json */,
@@ -474,10 +471,9 @@
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
-				E734E197254673A6004941B8 /* Ready.json in Resources */,
+				E712EBF92547FEC80044FA15 /* Assets.xcassets in Resources */,
 				E734E19D254692CE004941B8 /* Airplane.json in Resources */,
 				E7586DAF2546975000DC14EE /* Ready.json in Resources */,
-				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,
 				E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */,
 				E734E1A9254693B8004941B8 /* Basket.json in Resources */,

@@ -21,7 +21,7 @@ struct TaskComplete: View {
 
        
         
-            VStack(spacing: 250){
+            VStack(spacing: 150){
                 VStack(spacing: 30){
                     VStack(spacing: 5){
                         Text("Well Done!")
@@ -36,8 +36,7 @@ struct TaskComplete: View {
                     
                     
                     LottieView(filename: "Basket")
-                        
-                    
+                        .frame(width: 300, height: 300)
                 }
                
                 
@@ -49,8 +48,7 @@ struct TaskComplete: View {
                 .frame(width: 200, height: 50)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 3, x: 3, y: 3)
-                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 3, x: -3, y: -3)
+                .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                 .navigationBarBackButtonHidden(true)
                 
             }

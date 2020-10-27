@@ -15,7 +15,7 @@ struct Deliver: View {
         ZStack {
             
                 
-            VStack(spacing: 100){
+            VStack(spacing: 80){
                 VStack(spacing: 20){
                     Text("Currently Delivering...")
                         .fontWeight(.bold)
@@ -38,8 +38,7 @@ struct Deliver: View {
                     .frame(width: 275, height: 50)
                     .background(Color(red: 254/255, green: 163/255, blue: 93/255))
                     .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 7, x: 5, y: 5)
-                    .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 7, x: -5, y: -5)
+                    .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                 }
         }
     }
