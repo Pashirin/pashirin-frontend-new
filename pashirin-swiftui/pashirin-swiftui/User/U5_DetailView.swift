@@ -14,6 +14,7 @@ import CoreLocation
 struct U5_DetailView: View {
     //パシリの到着時間
     @State var timeToAlive: String = ""
+    @State var distanceToGoal: String = ""
     //@ObservedObject var pashiriData = DataViewModel()
     @State var name: String = "Pashirin"
     @State var price: Int = 2000
@@ -39,14 +40,6 @@ struct U5_DetailView: View {
                     print("This is U5_DetailView at line 32")
                 }
         } else {
-            if self.watingViewModel.status == 3 {
-                VStack{
-                    //Text(" PASHIRIN \(self.timeToAlive) 分後に到着")
-                    MapView(timeToAlive: self.$timeToAlive)
-                    
-                }
-                
-            }
            
             ZStack{
                 VStack{
@@ -57,7 +50,19 @@ struct U5_DetailView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(alignment:.center,spacing: 20){
-                    Image("map")
+                    if self.watingViewModel.status == 3 {
+                        VStack{
+                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal)
+                                .frame(height:400)
+                            HStack{
+                                Text(" 目的地まであと \(self.distanceToGoal) Km")
+                                Text(" PASHIRIN \(self.timeToAlive) 分後に到着")
+                                
+                            }
+                        }
+                        
+                    }
+                    //Image("map")
                     VStack{
                         List{
                             
@@ -203,6 +208,7 @@ struct U5_DetailView: View {
                 //self.name
                 self.startlocation = document.get("startlocation")as! String
                 self.detail = document.get("detail")as! String
+                
             } else {
                 print("Document does not exist")
             }

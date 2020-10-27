@@ -17,6 +17,8 @@ import FirebaseFirestore
 
 struct MapView: UIViewRepresentable {
     @Binding var timeToAlive: String
+    @Binding var distanceToGoal: String
+
     //var pashiriLocation: CLLocationCoordinate2D
     var mapView = MKMapView()
     class Coordinator: NSObject, MKMapViewDelegate, CLLocationManagerDelegate{
@@ -120,6 +122,7 @@ struct MapView: UIViewRepresentable {
     //    class Coordinator : NSObject,MKMapViewDelegate,CLLocationManagerDelegate {
     //    }
     func updateAnnotation(_ uiView: MKMapView){
+        var pashirin_id: String = ""
         
         //MARK: -ロケーションを便宜上練馬に設定してあるのでパシリの現在地にする
         var newLocation = CLLocationCoordinate2D(latitude: 35.737841, longitude: 139.653912)
@@ -135,68 +138,82 @@ struct MapView: UIViewRepresentable {
         goalAnnotation.title = "Namaken place"
         uiView.addAnnotation(goalAnnotation)
         
-        
-        //MARK:- ここ直して
-        db.collection("users").document("c9adiSfxI3SF5eUbSCQp0xj0f5y1").addSnapshotListener { (documentSnapshot, error) in
-            guard let document = documentSnapshot else {
-                print("No documents")
-                return
-            }
-            guard let data = document.data() else {
-                print("Document data was empty.")
-                return
-            }
-           
-            let location = (data["location"])! as! GeoPoint
-            newLocation = CLLocationCoordinate2D(latitude: location.latitude.truncate(places: truncate), longitude: location.longitude.truncate(places: truncate))
-//            uiView.setRegion(MKCoordinateRegion(center: newLocation, latitudinalMeters: 200, longitudinalMeters: 200), animated: true)
-            
-            //MARK: -経路の情報を取得
-            let req = MKDirections.Request()
-            req.source = MKMapItem(placemark: MKPlacemark(coordinate: newLocation))
-            req.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
-            let direction = MKDirections(request: req)
-            direction.calculate { (dir, err) in
-                if err != nil {
-                    print((err?.localizedDescription)!)
-                    return
+        //パシリんのidを取得しコールバックでその後の処理
+        Firestore.firestore().collection("transactions").document(UserDefaults.standard.string(forKey: "transactionId")!).getDocument{ (document, err) in
+            if let document = document, document.exists {
+                pashirin_id = document.get("pashiri_id")as! String
+                print("パシリんIDは----------", pashirin_id)
+                
+                db.collection("users").document(pashirin_id).addSnapshotListener { (documentSnapshot, error) in
+                    guard let document = documentSnapshot else {
+                        print("No documents")
+                        return
+                    }
+                    guard let data = document.data() else {
+                        print("Document data was empty.")
+                        return
+                    }
+                    
+                    let location = (data["location"])! as! GeoPoint
+                    newLocation = CLLocationCoordinate2D(latitude: location.latitude.truncate(places: truncate), longitude: location.longitude.truncate(places: truncate))
+                    //            uiView.setRegion(MKCoordinateRegion(center: newLocation, latitudinalMeters: 200, longitudinalMeters: 200), animated: true)
+                    
+                    
+                    //MARK: -経路の情報を取得
+                    let req = MKDirections.Request()
+                    req.transportType = .walking
+                    req.source = MKMapItem(placemark: MKPlacemark(coordinate: newLocation))
+                    req.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
+                    let direction = MKDirections(request: req)
+                    direction.calculate { (dir, err) in
+                        if err != nil {
+                            print((err?.localizedDescription)!)
+                            return
+                        }
+                        let polyline = dir?.routes[0].polyline
+                        
+                        let dis = dir?.routes[0].distance as! Double
+                        let distance = String(format: "%.1f", dis/1000)
+                        print("ゴールまでの距離は＿＿＿＿＿＿＿＿＿＿",distance)
+                        self.distanceToGoal = distance
+
+                        //時間
+                        let time = dir?.routes[0].expectedTravelTime as! Double
+                        let timeByHour = String(Int(round(time / 60)))
+                        self.timeToAlive = timeByHour
+                        print("あと \(timeByHour)分で到着")
+                        
+                        //線を描く
+                        uiView.removeOverlays(uiView.overlays)
+                        //新しいのを描く
+                        uiView.addOverlay(polyline!)
+                        //地図を上塗り
+                        //                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
+                        uiView.showAnnotations(uiView.annotations, animated: true)
+                    }
+                    
+                    let getAngle = self.angleFromCoordinate(firstCoordinate: oldLocation, secondCoordinate: newLocation)
+                    print("これが角度じゃ＝＝＝＝＝＝", getAngle)
+                    
+                    uiView.addAnnotation(pashirinAnnotation)
+                    
+                    UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
+                        print(pashirinAnnotation.coordinate,"これはnilではない")
+                        
+                        //MARK:-bag so comment temporalily
+                        
+                        //                let annotationView = uiView.view(for: pashirinAnnotation) as! AnnotationView
+                        
+                        //                annotationView.transform = CGAffineTransform(rotationAngle: CGFloat(2))
+                        //                annotationView.transform = CGAffineTransform.identity
+                    })
                 }
-                let polyline = dir?.routes[0].polyline
-                
-                let dis = dir?.routes[0].distance as! Double
-                let distance = String(format: "%.1f", dis/1000)
-                
-                //時間
-                let time = dir?.routes[0].expectedTravelTime as! Double
-                let timeByHour = String(Int(round(time / 60)))
-                self.timeToAlive = timeByHour
-                print("あと \(timeByHour)分で到着")
-                
-                //線を描く
-                uiView.removeOverlays(uiView.overlays)
-                //新しいのを描く
-                uiView.addOverlay(polyline!)
-                //地図を上塗り
-//                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
-                uiView.showAnnotations(uiView.annotations, animated: true)
+            } else {
+                print("Document does not exist")
             }
             
-            let getAngle = self.angleFromCoordinate(firstCoordinate: oldLocation, secondCoordinate: newLocation)
-            print("これが角度じゃ＝＝＝＝＝＝", getAngle)
-            
-            uiView.addAnnotation(pashirinAnnotation)
-            
-            UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
-                print(pashirinAnnotation.coordinate,"これはnilではない")
-
-//MARK:-bag so comment temporalily
-
-//                let annotationView = uiView.view(for: pashirinAnnotation) as! AnnotationView
-                
-//                annotationView.transform = CGAffineTransform(rotationAngle: CGFloat(2))
-//                annotationView.transform = CGAffineTransform.identity
-            })
         }
+        //MARK:- ここ直して
     }
     
     func angleFromCoordinate(firstCoordinate: CLLocationCoordinate2D, secondCoordinate: CLLocationCoordinate2D) -> Double {
