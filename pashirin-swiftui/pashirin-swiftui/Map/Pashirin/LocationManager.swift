@@ -22,7 +22,6 @@ class LocationManager: NSObject, ObservableObject {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
-        self.locationManager.startUpdatingLocation()
         self.locationManager.startMonitoringSignificantLocationChanges()
         self.locationManager.allowsBackgroundLocationUpdates = true
     }
@@ -74,12 +73,14 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.lastLocation = location
+        let pashirinId = UserDefaults.standard.string(forKey: "current_user_id")
         
+
         //fireStoreに情報を送信する
         let db = Firestore.firestore()
-        db.collection("users").document("r43zdHZpeyD4RRzmKT3Z").setData([
+        db.collection("users").document(pashirinId!).setData([
             "location": GeoPoint(latitude: self.lastLocation!.coordinate.latitude, longitude: self.lastLocation!.coordinate.longitude)
-        ])
+        ], merge: true)
         print("firebase に送ったよ。from locationmanager")
         
         //MARK: -保留　通知センター

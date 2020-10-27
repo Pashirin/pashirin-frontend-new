@@ -41,7 +41,6 @@ struct P3_Congrats: View {
                             print(self.transactionId)
                             Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
                             self.didStartTrip.toggle()
-                            let locationManager = LocationManager()
                         }) {
                             
                             Text("Begin Trip")

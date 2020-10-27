@@ -14,6 +14,11 @@
 		16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D51010253F5CA700A53198 /* GoogleService-Info.plist */; };
 		6BD7BE6F9548B9AF81E9BCAA /* Pods_pashirin_swiftuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */; };
 		8305600625383D0F0024537C /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305600525383D0F0024537C /* StatusViewModel.swift */; };
+		83157DCF2547C370008856DB /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83157DCE2547C370008856DB /* Double+Extension.swift */; };
+		83157DD52547C3C0008856DB /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83157DD42547C3C0008856DB /* extensions.swift */; };
+		83157DD92547C87E008856DB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83157DD82547C87E008856DB /* MapView.swift */; };
+		83157DDE2547C91C008856DB /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83157DDD2547C91C008856DB /* MapAnnotation.swift */; };
+		83157DE42547C96C008856DB /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83157DE32547C96C008856DB /* AnnotationView.swift */; };
 		8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326D5332539A9C1007CD60A /* U5_DetailView.swift */; };
 		8326D5382539B921007CD60A /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326D5372539B921007CD60A /* DataViewModel.swift */; };
 		833A7DE22546D8E800BCB3CA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A7DE12546D8E800BCB3CA /* LocationManager.swift */; };
@@ -90,6 +95,11 @@
 		37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		447E4EB5C41E7BE0043F43CB /* Pods-pashirin-swiftuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.debug.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8305600525383D0F0024537C /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		83157DCE2547C370008856DB /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		83157DD42547C3C0008856DB /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		83157DD82547C87E008856DB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		83157DDD2547C91C008856DB /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		83157DE32547C96C008856DB /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		8326D5332539A9C1007CD60A /* U5_DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U5_DetailView.swift; sourceTree = "<group>"; };
 		8326D5372539B921007CD60A /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		833A7DE12546D8E800BCB3CA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -175,6 +185,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83157DCB2547C170008856DB /* Pashirin */ = {
+			isa = PBXGroup;
+			children = (
+				833A7DE12546D8E800BCB3CA /* LocationManager.swift */,
+			);
+			path = Pashirin;
+			sourceTree = "<group>";
+		};
+		83157DCC2547C198008856DB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				83157DD82547C87E008856DB /* MapView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		83157DCD2547C351008856DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83157DCE2547C370008856DB /* Double+Extension.swift */,
+				83157DD42547C3C0008856DB /* extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		83157DDC2547C8CB008856DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83157DDD2547C91C008856DB /* MapAnnotation.swift */,
+				83157DE32547C96C008856DB /* AnnotationView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		831F55A7253A7E46003FC968 /* Pashirin */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +267,10 @@
 		833A7DE02546D84900BCB3CA /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				833A7DE12546D8E800BCB3CA /* LocationManager.swift */,
+				83157DDC2547C8CB008856DB /* Model */,
+				83157DCD2547C351008856DB /* Extensions */,
+				83157DCC2547C198008856DB /* User */,
+				83157DCB2547C170008856DB /* Pashirin */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -587,8 +634,10 @@
 				83DB995B2535F5330099CC75 /* ReqWant_and_AfterRequest.swift in Sources */,
 				83CB323225358B4200BCC491 /* MessageRow.swift in Sources */,
 				83CB324125358B4D00BCC491 /* Keyboard.swift in Sources */,
+				83157DD52547C3C0008856DB /* extensions.swift in Sources */,
 				8305600625383D0F0024537C /* StatusViewModel.swift in Sources */,
 				83FA1A43253C7A1400F001B9 /* MsgModel.swift in Sources */,
+				83157DD92547C87E008856DB /* MapView.swift in Sources */,
 				8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */,
 				83FA1A0A253C600500F001B9 /* P7-Deliver.swift in Sources */,
 				83CB323525358B4200BCC491 /* P3_DetailView.swift in Sources */,
@@ -599,6 +648,7 @@
 				E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */,
 				83FA1A33253C799B00F001B9 /* Home.swift in Sources */,
 				83CB321F25358B2C00BCC491 /* Login.swift in Sources */,
+				83157DE42547C96C008856DB /* AnnotationView.swift in Sources */,
 				83DB99572535F5250099CC75 /* reqParent.swift in Sources */,
 				83DB99532535F51B0099CC75 /* PWait.swift in Sources */,
 				83FA1A3B253C79E000F001B9 /* ChatBubble.swift in Sources */,
@@ -615,6 +665,7 @@
 				83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */,
 				83CB323125358B4200BCC491 /* MessageListView.swift in Sources */,
 				83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */,
+				83157DDE2547C91C008856DB /* MapAnnotation.swift in Sources */,
 				8326D5382539B921007CD60A /* DataViewModel.swift in Sources */,
 				83CB323325358B4200BCC491 /* MessageViewModel.swift in Sources */,
 				162AA58D25459B1200274453 /* EmailAndPassword.swift in Sources */,
@@ -622,6 +673,7 @@
 				83CB32B12535F22500BCC491 /* U4-Matched.swift in Sources */,
 				83FA1A3F253C79F800F001B9 /* ChatRow.swift in Sources */,
 				83CB323025358B4200BCC491 /* MessageLogin_ContentView.swift in Sources */,
+				83157DCF2547C370008856DB /* Double+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
