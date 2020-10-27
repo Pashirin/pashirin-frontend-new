@@ -44,7 +44,7 @@ struct U5_DetailView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
                 .edgesIgnoringSafeArea(.bottom)
                 
-                VStack(alignment:.center,spacing: 20){
+                VStack(alignment:.center,spacing: 40){
                     
                     Image("maps") // live tracking
                         

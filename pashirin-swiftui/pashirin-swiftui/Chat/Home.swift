@@ -157,7 +157,7 @@ struct Home: View {
                     
                     Button(action: homeData.writeMsg, label: {
                         
-                        Image(systemName: "paperplane.fill")
+                        Image(systemName: "paperplane.fill") // 送信ボタン
                             .font(.system(size: 22))
                             .foregroundColor(.white)
                             .frame(width: 45, height: 45)

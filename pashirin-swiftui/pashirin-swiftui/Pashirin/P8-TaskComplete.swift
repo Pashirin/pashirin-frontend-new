@@ -21,7 +21,7 @@ struct TaskComplete: View {
 
        
         
-            VStack(spacing: 150){
+            VStack(spacing: 100){
                 VStack(spacing: 30){
                     VStack(spacing: 5){
                         Text("Well Done!")
