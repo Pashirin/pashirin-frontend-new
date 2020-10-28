@@ -207,7 +207,7 @@ struct MapView: UIViewRepresentable {
                     
                     uiView.addAnnotation(pashirinAnnotation)
                     
-                    UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
+                    UIView.animate(withDuration: 10, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
                         print(pashirinAnnotation.coordinate,"これはnilではない")
                         
                         //MARK:-bag so comment temporalily

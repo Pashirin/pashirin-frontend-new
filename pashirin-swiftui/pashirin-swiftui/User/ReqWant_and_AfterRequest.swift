@@ -222,15 +222,6 @@ struct ReqWant_and_AfterRequest: View {
     }
     
     func postTask() {
-        //目的地と出発地点から座標を出す
-//        CLGeocoder().geocodeAddressString(self.whereIs){ placemarks, error in
-//            if let latitude = placemarks?.first?.location?.coordinate.latitude{
-//                print("緯度は　", latitude )
-//            }
-//            if let longtitude = placemarks?.first?.location?.coordinate.longitude {               print("経度は　", longtitude )
-//
-//            }
-//        }
         
         let taskInfo = [
             "status": 1,
