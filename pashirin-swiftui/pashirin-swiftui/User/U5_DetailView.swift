@@ -52,7 +52,7 @@ struct U5_DetailView: View {
                         VStack{
                             MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showedSheet: self.$showedSheet)
                                 .frame(height:400)
-                                .sheet(isPresented: self.$showSheet) {
+                                .sheet(isPresented: self.$showedSheet) {
                                     LottieView(filename: "fish")
                                         .frame(width: 200, height: 200)
                                     Text("Pashirin is arriving soon.")
@@ -77,6 +77,9 @@ struct U5_DetailView: View {
                                 Image(systemName: "face.smiling")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
+                                    .frame(width: 20 )
+                                    Spacer()
+                                        
                                     .sheet(isPresented: self.$showedSheet) {
                                         Button(action: {
                                             self.showedSheet.toggle()
