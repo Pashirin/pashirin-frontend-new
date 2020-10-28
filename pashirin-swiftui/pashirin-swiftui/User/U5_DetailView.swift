@@ -13,10 +13,10 @@ import CoreLocation
 
 struct U5_DetailView: View {
     //パシリの到着時間
-    @State var showed = true
-    @State var showSheet = false
+//    @State var showed = true
+    @State var showedSheet = false
     @State var timeToAlive: String = ""
-    @State var distanceToGoal: Double = 10.0
+    @State var distanceToGoal: String = ""
     //@ObservedObject var pashiriData = DataViewModel()
     @State var name: String = "Pashirin"
     @State var price: Int = 2000
@@ -54,11 +54,8 @@ struct U5_DetailView: View {
                 VStack(alignment:.center,spacing: 20){
                     if self.watingViewModel.status == 3 {
                         VStack{
-                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showSheet: self.$showSheet)
+                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showedSheet: self.$showedSheet)
                                 .frame(height:400)
-                                .sheet(isPresented: self.$showSheet) {
-                                    Text("まもなくパシリが到着します")
-                                }
                                 
                             
                             HStack{
@@ -78,6 +75,16 @@ struct U5_DetailView: View {
                                 Image(systemName: "face.smiling")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
+                                    .sheet(isPresented: self.$showedSheet) {
+                                        Button(action: {
+                                            self.showedSheet.toggle()
+                                        }){
+                                            Text("close")
+                                        }
+                                        Text("まもなくパシリが到着します")
+                                        
+                                    }
+                                    
                                 Text("\(self.name as! String)")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20, weight: .bold))
