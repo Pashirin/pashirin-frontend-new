@@ -12,7 +12,7 @@ import Lottie
 
 struct U5_Congrats: View {
     //var transactionId: String
-    @Binding var showCongrats: Bool
+    @Binding var showCongrats: Bool  
     var body: some View{
         ZStack {
             VStack{
