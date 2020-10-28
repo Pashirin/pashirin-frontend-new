@@ -8,9 +8,15 @@
 
 import SwiftUI
 import FirebaseFirestore
+import MapKit
+import CoreLocation
 
 struct U5_DetailView: View {
-    //Pashiriの情報を取ってくる
+    //パシリの到着時間
+    @State var showed = true
+    @State var showSheet = false
+    @State var timeToAlive: String = ""
+    @State var distanceToGoal: Double = 10.0
     //@ObservedObject var pashiriData = DataViewModel()
     @State var name: String = "Pashirin"
     @State var price: Int = 2000
@@ -18,8 +24,8 @@ struct U5_DetailView: View {
     @State var startlocation: String = "不明"
     @State var delivery: Int = 50000
     @State var detail: String = ""
-    
     @State var item : String = ""
+    @ObservedObject var watingViewModel = WaitingViewModel()
     
     //保留 @ObservedObject var waitingViewModel = WaitingViewModel()
     
@@ -28,6 +34,7 @@ struct U5_DetailView: View {
     let db = Firestore.firestore()
     
     var body: some View {
+        
         if showCongrats {
             U5_Congrats(showCongrats: $showCongrats)
                 //                .navigationBarBackButtonHidden(true)
@@ -35,7 +42,7 @@ struct U5_DetailView: View {
                     print("This is U5_DetailView at line 32")
                 }
         } else {
-            
+           
             ZStack{
                 VStack{
                     Color(red: 9/255, green: 91/255, blue: 148/255)
@@ -45,8 +52,25 @@ struct U5_DetailView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(alignment:.center,spacing: 20){
-                    
-                    Image("map")
+                    if self.watingViewModel.status == 3 {
+                        VStack{
+                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showSheet: self.$showSheet)
+                                .frame(height:400)
+                                .sheet(isPresented: self.$showSheet) {
+                                    Text("まもなくパシリが到着します")
+                                }
+                                
+                            
+                            HStack{
+                                Text(" 目的地まであと \(self.distanceToGoal) Km")
+                                Text(" PASHIRIN \(self.timeToAlive) 分後に到着")
+                                
+                            }
+                        }
+                        
+                        
+                    }
+                    //Image("map")
                     VStack{
                         List{
                             
@@ -192,6 +216,7 @@ struct U5_DetailView: View {
                 //self.name
                 self.startlocation = document.get("startlocation")as! String
                 self.detail = document.get("detail")as! String
+                
             } else {
                 print("Document does not exist")
             }

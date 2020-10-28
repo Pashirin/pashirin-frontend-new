@@ -11,6 +11,8 @@ import FirebaseFirestore
 // to be overlayed on top of 
 struct Deliver: View {
     let db = Firestore.firestore()
+    var locationManager = LocationManager()
+
     var body: some View{
         ZStack {
             
