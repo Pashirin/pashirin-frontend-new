@@ -529,9 +529,12 @@
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				E712EBF92547FEC80044FA15 /* Assets.xcassets in Resources */,
 =======
 >>>>>>> d9142ed02c307a60109b9f8273c4a83b894cb91f
+=======
+>>>>>>> hong4
 				E734E19D254692CE004941B8 /* Airplane.json in Resources */,
 				E7586DAF2546975000DC14EE /* Ready.json in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,

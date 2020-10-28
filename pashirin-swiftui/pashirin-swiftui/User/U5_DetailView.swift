@@ -52,11 +52,14 @@ struct U5_DetailView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 VStack(alignment:.center,spacing: 40){
                     
                     Image("maps") // live tracking
                         
 =======
+=======
+>>>>>>> hong4
                 VStack(alignment:.center,spacing: 20){
                     if self.watingViewModel.status == 3 {
                         VStack{
@@ -77,7 +80,10 @@ struct U5_DetailView: View {
                         
                     }
                     //Image("map")
+<<<<<<< HEAD
 >>>>>>> d9142ed02c307a60109b9f8273c4a83b894cb91f
+=======
+>>>>>>> hong4
                     VStack{
                         List{
                             HStack(spacing: 10){
