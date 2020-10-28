@@ -11,6 +11,7 @@ import CoreLocation
 import Combine
 import Firebase
 import MapKit
+import FirebaseFirestore
 //クラスはどうやって同期しているのか
 class LocationManager: NSObject, ObservableObject {
     var notificationCount: Int = 0

@@ -17,8 +17,8 @@ import FirebaseFirestore
 
 struct MapView: UIViewRepresentable {
     @Binding var timeToAlive: String
-    @Binding var distanceToGoal: Double
-    @Binding var showSheet: Bool
+    @Binding var distanceToGoal: String
+    @Binding var showedSheet: Bool
 
     //var pashiriLocation: CLLocationCoordinate2D
     var mapView = MKMapView()
@@ -178,10 +178,9 @@ struct MapView: UIViewRepresentable {
                         
                         let distance = String(format: "%.1f", dis/1000)
                         print("ゴールまでの距離は＿＿＿＿＿＿＿＿＿＿",distance)
-                        self.distanceToGoal = Double(distance) as! Double
-                        if self.distanceToGoal < 0.03 {
-                            self.showSheet = true
-                            onceChecker = true
+                        self.distanceToGoal = distance
+                        if Double(distance)! < 0.03 && self.showedSheet == false {
+                            self.showedSheet = true
                         }
 
                         //時間
@@ -193,7 +192,11 @@ struct MapView: UIViewRepresentable {
                         //線を描く
                         uiView.removeOverlays(uiView.overlays)
                         //新しいのを描く
-                        uiView.addOverlay(polyline!)
+                        if !(Double(distance)! < 0.01 ){
+                            
+                            uiView.addOverlay(polyline!)
+                        }
+                        
                         //地図を上塗り
                         //                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
                         uiView.showAnnotations(uiView.annotations, animated: true)
@@ -204,7 +207,7 @@ struct MapView: UIViewRepresentable {
                     
                     uiView.addAnnotation(pashirinAnnotation)
                     
-                    UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
+                    UIView.animate(withDuration: 10, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
                         print(pashirinAnnotation.coordinate,"これはnilではない")
                         
                         //MARK:-bag so comment temporalily

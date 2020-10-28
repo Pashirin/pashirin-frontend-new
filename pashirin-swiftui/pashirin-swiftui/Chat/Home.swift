@@ -113,7 +113,7 @@ struct Home: View {
             }
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-            .background(Color(red: 0.97, green: 0.30, blue: 0.31))
+            .background(Color(red: 254/255, green: 163/255, blue: 93/255))
             
             //            ScrollViewReader{reader in
             
@@ -157,7 +157,7 @@ struct Home: View {
                     
                     Button(action: homeData.writeMsg, label: {
                         
-                        Image(systemName: "paperplane.fill")
+                        Image(systemName: "paperplane.fill") // 送信ボタン
                             .font(.system(size: 22))
                             .foregroundColor(.white)
                             .frame(width: 45, height: 45)

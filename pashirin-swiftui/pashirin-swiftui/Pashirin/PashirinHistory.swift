@@ -10,6 +10,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
+import FirebaseFirestore
 
 
 struct PashirinHistory: View {

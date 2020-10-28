@@ -31,8 +31,7 @@ struct UserPashirin : View{
                         .frame(width: 180, height: 150)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)) , radius: 7, x: 4, y: 4)
-                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)), radius: 7, x: -5, y: -5)
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         
                     }
                     .navigationBarBackButtonHidden(true)
@@ -55,8 +54,7 @@ struct UserPashirin : View{
                         .frame(width: 180, height: 150)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)) , radius: 7, x: 4, y: 4)
-                        .shadow(color:Color(#colorLiteral(red: 0.8873181228, green: 0.8873181228, blue: 0.8873181228, alpha: 1)), radius: 7, x: -5, y: -5)
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
 
                         
                     }
@@ -64,6 +62,7 @@ struct UserPashirin : View{
                     .edgesIgnoringSafeArea(.top)
                 }
                 .frame(minWidth: 0,  maxWidth: .infinity, minHeight:0,  maxHeight: .infinity, alignment: .center)
+                .edgesIgnoringSafeArea(.top)
 
             }
 

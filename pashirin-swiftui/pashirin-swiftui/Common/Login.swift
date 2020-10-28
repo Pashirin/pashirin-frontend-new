@@ -47,8 +47,7 @@ struct LoginView: View {
                     .padding(.leading,8)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
-                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5 ,x: -5, y: -5)
+                    .shadow(color:Color.black.opacity(0.25),  radius: 3, x: 3, y: 3)
                     
                 
                 SecureField("Password", text: $password)
@@ -56,10 +55,8 @@ struct LoginView: View {
                     .padding(.leading,8)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
-                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: -5, y: -5)
-                
-            
+                    .shadow(color:Color.black.opacity(0.25),  radius: 3, x: 3, y: 3)
+ 
             
                 Button(action: {
                     
@@ -85,9 +82,9 @@ struct LoginView: View {
                             .frame(width:150 ,height: 50)
                             .padding(.leading,5)
                             .background(Color(red: 254/255, green: 163/255, blue: 93/255))
-                            .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
-                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                            .shadow(color:Color.black.opacity(0.25),  radius: 3, x: 3, y: 3)
+         
                     
                 }
                 .alert(isPresented: $isShowAlert) {
