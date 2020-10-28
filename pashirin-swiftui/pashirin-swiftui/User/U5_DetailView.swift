@@ -51,15 +51,6 @@ struct U5_DetailView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
                 .edgesIgnoringSafeArea(.bottom)
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                VStack(alignment:.center,spacing: 40){
-                    
-                    Image("maps") // live tracking
-                        
-=======
-=======
->>>>>>> hong4
                 VStack(alignment:.center,spacing: 20){
                     if self.watingViewModel.status == 3 {
                         VStack{
@@ -80,20 +71,14 @@ struct U5_DetailView: View {
                         
                     }
                     //Image("map")
-<<<<<<< HEAD
->>>>>>> d9142ed02c307a60109b9f8273c4a83b894cb91f
-=======
->>>>>>> hong4
                     VStack{
                         List{
                             HStack(spacing: 10){
                                 Image(systemName: "face.smiling")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
-                                    .frame(width:  20)
-                                Spacer()
                                 Text("\(self.name as! String)")
-                                    .foregroundColor(Color(red: 80/255, green:  80/255, blue:  80/255))
+                                    .foregroundColor(.gray)
                                     .font(.system(size: 20, weight: .bold))
                             }
                             
@@ -101,8 +86,6 @@ struct U5_DetailView: View {
                                 Image(systemName: "yensign.square")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
-                                    .frame(width: 20)
-                                Spacer()
                                 Text("\(self.price as! Int)")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20, weight: .bold))

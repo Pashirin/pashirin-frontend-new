@@ -46,6 +46,7 @@
 		83E96C23252D6B4B00E1DB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */; };
 		83E96C25252D6B4B00E1DB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */; };
 		83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C26252D6B4B00E1DB64 /* ContentView.swift */; };
+		83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C28252D6B4B00E1DB64 /* Assets.xcassets */; };
 		83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */; };
 		83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E96C2D252D6B4B00E1DB64 /* LaunchScreen.storyboard */; };
 		83E96C3A252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E96C39252D6B4C00E1DB64 /* pashirin_swiftuiTests.swift */; };
@@ -131,6 +132,7 @@
 		83E96C22252D6B4B00E1DB64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E96C24252D6B4B00E1DB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83E96C26252D6B4B00E1DB64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		83E96C28252D6B4B00E1DB64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E96C2B252D6B4B00E1DB64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83E96C2E252D6B4B00E1DB64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83E96C30252D6B4B00E1DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -858,7 +860,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -880,7 +882,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.pashirin-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
