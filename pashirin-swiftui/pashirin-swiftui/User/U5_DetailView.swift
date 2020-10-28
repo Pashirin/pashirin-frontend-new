@@ -13,8 +13,10 @@ import CoreLocation
 
 struct U5_DetailView: View {
     //パシリの到着時間
+    @State var showed = true
+    @State var showSheet = false
     @State var timeToAlive: String = ""
-    @State var distanceToGoal: String = ""
+    @State var distanceToGoal: Double = 10.0
     //@ObservedObject var pashiriData = DataViewModel()
     @State var name: String = "Pashirin"
     @State var price: Int = 2000
@@ -52,14 +54,20 @@ struct U5_DetailView: View {
                 VStack(alignment:.center,spacing: 20){
                     if self.watingViewModel.status == 3 {
                         VStack{
-                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal)
+                            MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showSheet: self.$showSheet)
                                 .frame(height:400)
+                                .sheet(isPresented: self.$showSheet) {
+                                    Text("まもなくパシリが到着します")
+                                }
+                                
+                            
                             HStack{
                                 Text(" 目的地まであと \(self.distanceToGoal) Km")
                                 Text(" PASHIRIN \(self.timeToAlive) 分後に到着")
                                 
                             }
                         }
+                        
                         
                     }
                     //Image("map")

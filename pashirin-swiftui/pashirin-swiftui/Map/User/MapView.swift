@@ -17,7 +17,8 @@ import FirebaseFirestore
 
 struct MapView: UIViewRepresentable {
     @Binding var timeToAlive: String
-    @Binding var distanceToGoal: String
+    @Binding var distanceToGoal: Double
+    @Binding var showSheet: Bool
 
     //var pashiriLocation: CLLocationCoordinate2D
     var mapView = MKMapView()
@@ -122,6 +123,7 @@ struct MapView: UIViewRepresentable {
     //    class Coordinator : NSObject,MKMapViewDelegate,CLLocationManagerDelegate {
     //    }
     func updateAnnotation(_ uiView: MKMapView){
+        var onceChecker = false
         var pashirin_id: String = ""
         
         //MARK: -ロケーションを便宜上練馬に設定してあるのでパシリの現在地にする
@@ -132,7 +134,7 @@ struct MapView: UIViewRepresentable {
         var pashirinAnnotation = MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: 35.737841, longitude: 139.653912))
         //MARK:- destinationを取得する今は仮でコードクリサリス
         
-        let destination = CLLocationCoordinate2D(latitude: 35.7352923, longitude: 139.6447856)
+        let destination = CLLocationCoordinate2D(latitude: 35.6579702, longitude: 139.7276486)
         let goalAnnotation = MKPointAnnotation()
         goalAnnotation.coordinate = destination
         goalAnnotation.title = "Namaken place"
@@ -173,9 +175,14 @@ struct MapView: UIViewRepresentable {
                         let polyline = dir?.routes[0].polyline
                         
                         let dis = dir?.routes[0].distance as! Double
+                        
                         let distance = String(format: "%.1f", dis/1000)
                         print("ゴールまでの距離は＿＿＿＿＿＿＿＿＿＿",distance)
-                        self.distanceToGoal = distance
+                        self.distanceToGoal = Double(distance) as! Double
+                        if self.distanceToGoal < 0.03 {
+                            self.showSheet = true
+                            onceChecker = true
+                        }
 
                         //時間
                         let time = dir?.routes[0].expectedTravelTime as! Double

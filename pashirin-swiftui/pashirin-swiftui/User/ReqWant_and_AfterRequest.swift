@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
+import CoreLocation
 
 struct ReqWant_and_AfterRequest: View {
     @State private var what = ""
@@ -22,6 +23,8 @@ struct ReqWant_and_AfterRequest: View {
     @State private var errorMessage = ""
     @State private var status: Int = 1
     @State private var userId = ""
+    @State var location = ""
+    @State var StartLocation = ""
     //@Binding var transactionId: String
 //    @Binding var showWaitForP: Bool
 //    @Binding var status: Int
@@ -221,6 +224,16 @@ struct ReqWant_and_AfterRequest: View {
     }
     
     func postTask() {
+        //目的地と出発地点から座標を出す
+//        CLGeocoder().geocodeAddressString(self.whereIs){ placemarks, error in
+//            if let latitude = placemarks?.first?.location?.coordinate.latitude{
+//                print("緯度は　", latitude )
+//            }
+//            if let longtitude = placemarks?.first?.location?.coordinate.longitude {               print("経度は　", longtitude )
+//
+//            }
+//        }
+        
         let taskInfo = [
             "status": 1,
             "item": self.what,
