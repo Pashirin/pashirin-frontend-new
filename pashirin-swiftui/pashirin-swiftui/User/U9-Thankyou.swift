@@ -15,7 +15,7 @@ struct Thankyou: View {
             
             VStack(spacing: 20){
                LottieView(filename: "halloween2")
-                .frame(width: 300, height: 300)
+                .frame(width: 200, height: 200)
                 VStack{
                     Text("Task Completed!")
                         .fontWeight(.bold)

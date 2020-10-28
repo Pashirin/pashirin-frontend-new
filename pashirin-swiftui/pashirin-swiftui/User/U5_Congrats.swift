@@ -32,7 +32,7 @@ struct U5_Congrats: View {
                         .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
                     
                    LottieView(filename: "CongratsBirds")
-                    .frame(width: 200, height: 300)
+                    .frame(width: 300, height: 300)
                 }
                 
                 
@@ -49,7 +49,7 @@ struct U5_Congrats: View {
                         .fontWeight(.bold)
                         .frame(width: 275, height: 50)
                         .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                         .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         
                 }

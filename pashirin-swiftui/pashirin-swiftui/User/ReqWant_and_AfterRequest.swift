@@ -58,7 +58,7 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
                                 .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                                .shadow(color:Color.black.opacity(0.25),  radius: 5, y: 3)
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -79,8 +79,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                                .shadow(color:Color.black.opacity(0.25),  radius: 5, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -99,8 +99,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                                .shadow(color:Color.black.opacity(0.25),  radius: 5, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -120,8 +120,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                                .shadow(color:Color.black.opacity(0.25),  radius: 5, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             
                             
                         }
@@ -138,8 +138,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
-                                .shadow(color:Color.black.opacity(0.25),  radius: 5, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                                 
                                 .keyboardType(.decimalPad)
                             Text("*require")
@@ -187,6 +187,8 @@ struct ReqWant_and_AfterRequest: View {
                         }
                         .background(Color.white)
                         .edgesIgnoringSafeArea(.all)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
                         .padding(.bottom,20)
                         
                         .alert(isPresented: $confirm, content: {

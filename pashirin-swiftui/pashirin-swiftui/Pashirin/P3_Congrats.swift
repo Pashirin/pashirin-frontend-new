@@ -52,7 +52,7 @@ struct P3_Congrats: View {
                         }
                         .frame(width: 275, height: 50)
                         .background(Color(red: 254/255, green: 163/255, blue: 93/255))
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                         .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         .navigationBarBackButtonHidden(true)
                         
@@ -69,7 +69,7 @@ struct P3_Congrats: View {
                         }
                         .frame(width: 275, height: 50)
                         .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                         .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         .navigationBarBackButtonHidden(true)
                     }

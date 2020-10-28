@@ -49,7 +49,7 @@ struct P1_ListView: View {
                     }
                     
                 }
-                .frame(width: 350, height: 400, alignment: .top)
+                .frame(width: 350, height: 450, alignment: .top)
                 .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                 .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
             }

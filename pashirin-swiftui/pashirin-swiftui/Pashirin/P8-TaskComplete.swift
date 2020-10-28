@@ -21,7 +21,7 @@ struct TaskComplete: View {
 
        
         
-            VStack(spacing: 100){
+            VStack(spacing: 50){
                 VStack(spacing: 30){
                     VStack(spacing: 5){
                         Text("Well Done!")
@@ -47,7 +47,7 @@ struct TaskComplete: View {
                 .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
                 .frame(width: 200, height: 50)
                 .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                 .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                 .navigationBarBackButtonHidden(true)
                 
