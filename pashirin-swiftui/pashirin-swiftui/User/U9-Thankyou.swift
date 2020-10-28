@@ -13,9 +13,9 @@ struct Thankyou: View {
     var body: some View{
         ZStack {
             
-            VStack(spacing: 20){
-                Image("completed-1")
-                    
+            VStack(spacing: 30){
+               LottieView(filename: "halloween2")
+                .frame(width: 200, height: 200)
                 VStack{
                     Text("Task Completed!")
                         .fontWeight(.bold)
@@ -33,8 +33,8 @@ struct Thankyou: View {
                 }
                 .frame(width:200 ,height: 50)
                 .padding(.leading,5)
-                .background(Color(red: 254/255, green: 163/255, blue: 93/255))
-                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                .background(Color(red: 6/255, green: 91/255, blue: 148/255))
+                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                 .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 10, x: 5, y: 5)
                 .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 10, x: -5, y: -5)
                 .navigationBarTitle("")

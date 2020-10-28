@@ -12,17 +12,16 @@ import Lottie
 
 struct U5_Congrats: View {
     //var transactionId: String
-    @Binding var showCongrats: Bool
+    @Binding var showCongrats: Bool  
     var body: some View{
         ZStack {
             VStack{
                 Color(red: 9/255, green: 91/255, blue: 148/255)
-                .frame(width: 1000, height: 300)
+                .frame(width: 1000, height: 400)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
-            .edgesIgnoringSafeArea(.bottom)
     
-            VStack(spacing: 300){
+            VStack(spacing: 100){
                 VStack(spacing: 10){
                     Text("CONGRATULATIONS!")
                         .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
@@ -33,7 +32,7 @@ struct U5_Congrats: View {
                         .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
                     
                    LottieView(filename: "CongratsBirds")
-                    .frame(width: 200, height: 300)
+                    .frame(width: 300, height: 300)
                 }
                 
                 
@@ -50,10 +49,11 @@ struct U5_Congrats: View {
                         .fontWeight(.bold)
                         .frame(width: 275, height: 50)
                         .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.1899434371, green: 0.2814861356, blue: 0.5359386339, alpha: 1)) , radius: 5, x: 5, y: 5)
-                        .shadow(color:Color(#colorLiteral(red: 0.1899434371, green: 0.2814861356, blue: 0.5359386339, alpha: 1)), radius: 5, x: -5, y: -5)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
+                        
                 }
+                .padding(.bottom, 20)
             
             }
            

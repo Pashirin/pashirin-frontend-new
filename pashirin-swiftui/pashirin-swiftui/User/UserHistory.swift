@@ -10,6 +10,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
+import FirebaseFirestore
 
 struct UserHistory: View {
     @State private var db: Firestore!

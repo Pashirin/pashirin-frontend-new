@@ -24,83 +24,98 @@ struct P3_DetailView: View {
                 ContainerForStatus()
             } else {
             
-                    ZStack{
-                        VStack{
-                            Color(red: 254/255, green: 163/255, blue: 93/255)
-                            .frame(width: 1000, height: 450)
-                        }
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
-                        .edgesIgnoringSafeArea(.bottom)
+                    VStack{
+                        LottieView(filename: "Airplane")
+                            .frame(width: 300, height: 300,alignment: .center)
                         
-                       
-                        
-                        VStack(spacing:50){
-                           
-                            LottieView(filename: "Airplane")
-                                .frame(width: 300, height: 300,alignment: .top)
-                                .edgesIgnoringSafeArea(.top)
-                            
-                            VStack(spacing: 20){
-                                List{
-                                    HStack{
-                                        Image(systemName: "yensign.square")
-                                            .frame(width: 20, height: 20,alignment: .center)
-                                            .font(.system(size: 30))
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                        Text("¥\(contact.price)")
-                                            .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 20))
-                                            .onAppear {
-                                                print("This is P3_DetailView and tID is \(String(describing: self.transactionId))")
-                                            }
-                                    }
-                                    
-                                    HStack{
-                                        Image(systemName: "cart")
-                                            .frame(width: 20, height: 20,alignment: .center)
-                                            .font(.system(size: 30))
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                        Text("\(contact.item)")
-                                            .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 20))
-                                    }
-            
-                    
-                                    HStack{
-                                        Image(systemName: "mappin")
-                                            .frame(width: 20, height: 20,alignment: .center)
-                                            .font(.system(size: 30))
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                        Text(contact.startlocation)
-                                            .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
-                                            .fontWeight(.bold)
-                                            .font(.system(size:20))
-                                    }
-                                
 
-                                    HStack{
-                                        Image(systemName: "doc.text")
-                                            .frame(width: 20, height: 20,alignment: .center)
-                                            .font(.system(size: 30))
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                        Text(contact.detail)
-                                            .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 20))
-                                    }
+                        VStack(spacing: 20){
+                            List{
+                                HStack{
+                                    Image(systemName: "yensign.square")
+                                        .frame(width: 20, height: 20,alignment: .center)
+                                        .font(.system(size: 25))
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Text("¥\(contact.price)")
+                                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 20))
+                                        .onAppear {
+                                            print("This is P3_DetailView and tID is \(String(describing: self.transactionId))")
+                                        }
+                                }
+                                
+                                HStack{
+                                    Image(systemName: "cart")
+                                        .frame(width: 20, height: 20,alignment: .center)
+                                        .font(.system(size: 25))
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Text("\(contact.item)")
+                                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 20))
+                                }
+        
+                
+                                HStack{
+                                    Image(systemName: "mappin")
+                                        .frame(width: 20, height: 20,alignment: .center)
+                                        .font(.system(size: 25))
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Text(contact.startlocation)
+                                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                        .fontWeight(.bold)
+                                        .font(.system(size:20))
+                                }
+                            
+
+                                HStack{
+                                    Image(systemName: "doc.text")
+                                        .frame(width: 20, height: 20,alignment: .center)
+                                        .font(.system(size: 25))
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Text(contact.detail)
+                                        .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 20))
+                                }
+                                
+                            }
+                            .frame(width: 300, height: 200,alignment: .center)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                            .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
+                            .padding(20)
+                        
+                        
+                        
+                        
+                            Button (action : {
+                                print("これがstart Chat")
+                                
+                            }) {
+                                Button("Confirm to Deliver"){
+                                    print("transactionIdは　　　", self.transactionId)
+                                    print("pashiri_id は　　　", self.pashiri_id)
+                                    db.collection("transactions").document(contact.transactionId).setData(["status": 2], merge: true)
+                                    UserDefaults.standard.set(contact.transactionId, forKey: "transactionId")
+                                    print(UserDefaults.standard.string(forKey: "transactionId"))
+                                    
+                                    db.collection("transactions").document(contact.transactionId).setData(["pashiri_id": UserDefaults.standard.string(forKey:"current_user_id")], merge: true)
+                                    self.showCongrats.toggle()
                                     
                                 }
-                                .frame(width: 300, height: 200,alignment: .center)
+                                .font(.system(size: 18, weight: .bold, design: .default))
+                                .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
+                                .frame(width: 200, height: 50)
                                 .background(Color.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 5, x: 3, y: 3)
-                                .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 5, x: -3, y: -3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
+                                .navigationBarBackButtonHidden(true)
                                 
                             
                             
@@ -136,8 +151,10 @@ struct P3_DetailView: View {
                                 }
                             }
                         }
-                }
-               
+                        .padding(40)
+                        .background(Color(red: 254/255, green: 163/255, blue: 93/255))
+                    }
+                    .edgesIgnoringSafeArea(.bottom)
             }
 
     }

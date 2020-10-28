@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
+import CoreLocation
 import Stripe
 
 struct ReqWant_and_AfterRequest: View {
@@ -24,6 +25,15 @@ struct ReqWant_and_AfterRequest: View {
     @State private var errorMessage = ""
     @State private var status: Int = 1
     @State private var userId = ""
+    @State var location = ""
+    @State var StartLocation = ""
+    //@Binding var transactionId: String
+//    @Binding var showWaitForP: Bool
+//    @Binding var status: Int
+//    init() {
+//        getUserId()
+//        UserDefaults.standard.set(self.userId, forKey:"current_user_id")
+//    }
     
     //Stripe Payment related variable
     @ObservedObject var paymentContextDelegate = PaymentContextDelegate()
@@ -55,16 +65,12 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack{
-                VStack{
                     Color(red: 9/255, green: 91/255, blue: 148/255)
-                        .frame(width: 1000, height: 500)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
-                .edgesIgnoringSafeArea(.top)
-                
-                
+                        .edgesIgnoringSafeArea(.all)
                 
                 ScrollView(.vertical) {
+                    LottieView(filename: "notfound")
+                        .frame(width: 200, height: 200)
                     VStack(alignment: .center, spacing: 30) {
                         //                        Image("order")
                         VStack(alignment: .leading,spacing: 10){
@@ -79,8 +85,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 0, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -101,8 +107,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)) , radius: 3, x: 0, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -121,8 +127,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(red: 254/255, green: 163/255, blue: 93/255))
@@ -132,7 +138,7 @@ struct ReqWant_and_AfterRequest: View {
                         VStack(alignment:.leading,spacing: 10){
                             Text("More details")
                                 
-                                .foregroundColor(.gray)
+                                .foregroundColor(.white)
                                 .font(.system(size: 18))
                             //                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                             TextField("bring until 8pm", text: $moreInfo)
@@ -142,8 +148,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             
                             
                         }
@@ -151,7 +157,7 @@ struct ReqWant_and_AfterRequest: View {
                         
                         VStack(alignment:.leading,spacing: 10){
                             Text("How much?")
-                                .foregroundColor(.gray)
+                                .foregroundColor(.white)
                                 .font(.system(size: 18))
                             TextField("1000", text: $price)
                                 .padding(.vertical, 30)
@@ -160,8 +166,8 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                .shadow(color:Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)) , radius: 3, x: 0, y: 3)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                                 
                                 .keyboardType(.decimalPad)
                             Text("*require")
@@ -252,8 +258,12 @@ struct ReqWant_and_AfterRequest: View {
                                     .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 5, x: 0, y: 5)
                                     .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
                             }
-                            .background(Color.white)
                             .edgesIgnoringSafeArea(.all)
+                            .foregroundColor(Color(red: 6/255, green: 91/255, blue: 148/255))
+                            .frame(width: 200, height: 50)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                            .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
                             
                             .alert(isPresented: $confirm, content: {
                                 if self.isError {
@@ -268,6 +278,11 @@ struct ReqWant_and_AfterRequest: View {
                                 }
                             })
                         }
+                        .background(Color.white)
+                        .edgesIgnoringSafeArea(.all)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
+                        .padding(.bottom,20)
                         
                     }
                     .onAppear {

@@ -29,8 +29,8 @@ struct P3_Congrats: View {
                 VStack(spacing: 80){
                     VStack(spacing: 20){
                         Text("...Ready to begin!")
-                            .font(.system(size: 24, weight: .bold, design: .default))
-                            .foregroundColor(Color(red: 80/255, green: 80/255, blue: 80/255))
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .foregroundColor(Color(red: 111/255, green: 111/255, blue: 111/255))
                         
                         Image("lamp")
                     }
@@ -41,7 +41,6 @@ struct P3_Congrats: View {
                             print(self.transactionId)
                             Firestore.firestore().collection("transactions").document(self.transactionId).setData(["status": 3], merge: true)
                             self.didStartTrip.toggle()
-                
                         }) {
                             
                             Text("Begin Trip")
@@ -52,9 +51,8 @@ struct P3_Congrats: View {
                         }
                         .frame(width: 275, height: 50)
                         .background(Color(red: 254/255, green: 163/255, blue: 93/255))
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 10, x: 5, y: 5)
-                        .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 10, x: -5, y: -5)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         .navigationBarBackButtonHidden(true)
                         
                         Button (action: {
@@ -70,9 +68,8 @@ struct P3_Congrats: View {
                         }
                         .frame(width: 275, height: 50)
                         .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                        .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) , radius: 10, x: 5, y: 5)
-                        .shadow(color:Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 10, x: -5, y: -5)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
                         .navigationBarBackButtonHidden(true)
                     }
                    
