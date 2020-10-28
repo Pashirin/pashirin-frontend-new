@@ -36,18 +36,13 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack{
-                VStack{
                     Color(red: 9/255, green: 91/255, blue: 148/255)
-                    .frame(width: 1000, height: 500)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
-                .edgesIgnoringSafeArea(.top)
-
-           
-            
+                        .edgesIgnoringSafeArea(.all)
+                
                 ScrollView(.vertical) {
+                    LottieView(filename: "notfound")
+                        .frame(width: 200, height: 200)
                     VStack(alignment: .center, spacing: 30) {
-//                        Image("order")
                         VStack(alignment: .leading,spacing: 10){
                             Text("What would you like to ask?")
                                 .foregroundColor(.white)
@@ -60,7 +55,7 @@ struct ReqWant_and_AfterRequest: View {
                                 .cornerRadius(20)
                                 .foregroundColor(Color.black)
                                 .frame(width: 327, height: 58)
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style:.continuous))
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                                 .shadow(color:Color.black.opacity(0.25),  radius: 2, y: 3)
                             Text("*require")
                                 .font(.system(size: 12))
@@ -113,7 +108,7 @@ struct ReqWant_and_AfterRequest: View {
                         VStack(alignment:.leading,spacing: 10){
                             Text("More details")
                                 
-                                .foregroundColor(.gray)
+                                .foregroundColor(.white)
                                 .font(.system(size: 18))
                             //                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                             TextField("bring untill 8pm", text: $moreInfo)
@@ -132,7 +127,7 @@ struct ReqWant_and_AfterRequest: View {
                         
                         VStack(alignment:.leading,spacing: 10){
                             Text("How much?")
-                                .foregroundColor(.gray)
+                                .foregroundColor(.white)
                                 .font(.system(size: 18))
                             TextField("1000", text: $price)
                                 .padding(.vertical, 30)
@@ -181,9 +176,9 @@ struct ReqWant_and_AfterRequest: View {
                                     .fontWeight(.bold)
                                     .font(.system(size: 18))
                             
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color(red: 6/255, green: 91/255, blue: 148/255))
                             .frame(width: 200, height: 50)
-                            .background(Color(red: 6/255, green: 91/255, blue: 148/255))
+                            .background(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                             .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
                             

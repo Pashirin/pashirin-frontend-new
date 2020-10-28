@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class WaitingViewModel: ObservableObject{
     @Published var status: Int?=0

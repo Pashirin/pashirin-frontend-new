@@ -1,5 +1,6 @@
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 struct messageDataType: Identifiable {
     var id: String

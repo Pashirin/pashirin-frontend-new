@@ -44,39 +44,41 @@ struct U5_DetailView: View {
         } else {
            
             ZStack{
-                VStack{
-                    Color(red: 9/255, green: 91/255, blue: 148/255)
-                    .frame(width: 1000, height: 400)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .bottom)
-                .edgesIgnoringSafeArea(.bottom)
                 
+                    Color(red: 9/255, green: 91/255, blue: 148/255)
+                        .edgesIgnoringSafeArea(.all)
                 VStack(alignment:.center,spacing: 20){
                     if self.watingViewModel.status == 3 {
                         VStack{
                             MapView(timeToAlive: self.$timeToAlive, distanceToGoal: self.$distanceToGoal, showSheet: self.$showSheet)
                                 .frame(height:400)
                                 .sheet(isPresented: self.$showSheet) {
-                                    Text("まもなくパシリが到着します")
+                                    LottieView(filename: "fish")
+                                        .frame(width: 200, height: 200)
+                                    Text("Pashirin is arriving soon.")
                                 }
                                 
                             
                             HStack{
                                 Text(" 目的地まであと \(self.distanceToGoal) Km")
+                                    .foregroundColor(Color.white)
                                 Text(" PASHIRIN \(self.timeToAlive) 分後に到着")
+                                    .foregroundColor(Color.white)
                                 
                             }
                         }
                         
                         
                     }
-                    //Image("map")
+                 
                     VStack{
                         List{
                             HStack(spacing: 10){
                                 Image(systemName: "face.smiling")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
+                                    .frame(width: 20)
+                                Spacer()
                                 Text("\(self.name as! String)")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20, weight: .bold))
@@ -86,6 +88,7 @@ struct U5_DetailView: View {
                                 Image(systemName: "yensign.square")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20))
+                                Spacer()
                                 Text("\(self.price as! Int)")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 20, weight: .bold))
@@ -119,6 +122,7 @@ struct U5_DetailView: View {
                             HStack{
                               Image(systemName: "doc.plaintext")
                                 .foregroundColor(.gray)
+                                .font(.system(size: 20))
                                 .frame(width: 20)
                                 Spacer()
                                 Text("\(self.detail as! String) ")
@@ -150,6 +154,7 @@ struct U5_DetailView: View {
                     }
                     
                 }
+                .edgesIgnoringSafeArea(.top)
               
             }
             .onAppear{
