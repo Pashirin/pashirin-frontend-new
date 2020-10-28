@@ -18,38 +18,47 @@ struct P1_ListView: View {
     //後で消す
     
     var body: some View {
-            List(viewModel.contacts) { contact in
-                
-                //                HStack{
-                //                    Image("profile")
-                //                        .resizable()
-                //                        .frame(width: 60, height: 60)
-                //                        .clipped()
-                //                        .cornerRadius(50)
-                //                    }
-                NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
-                    
-                    VStack(alignment: .leading){
-                        Text(contact.name)
-                            .font(.system(size: 21, weight: .medium, design: .default))
-                        Text("Offer Price: ¥\(contact.price)")
-                            .font(.system(size: 21, weight: .medium, design: .default))
-                        Text("Rating: \(contact.rating)")
-                            .font(.subheadline)
+        ZStack{
+            Color(red: 254/255, green: 163/255, blue: 93/255).edgesIgnoringSafeArea(.all)
+            VStack(spacing: 10){
+                LottieView(filename: "light")
+                        .frame(width: 250, height: 250)
+                VStack(spacing: 10){
+                    List(viewModel.contacts) { contact in
+                        
+                        NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
+                            
+                            VStack(alignment: .leading){
+                                Text("Offer Price: ¥\(contact.price)")
+                                    .font(.system(size: 21, weight: .medium, design: .default))
+                                Text("Destination: \(contact.destination)")
+                                    .font(.system(size: 18))
+                                    .foregroundColor(.gray)
+                            }.padding(10)
+                        }
+                        .navigationBarTitle("PashiList")
+                        .navigationBarBackButtonHidden(true)
+
                     }
+                    .onAppear(){
+                        self.viewModel.fetchData()
+                        print("onAppearに入りました")
+                        getUserId()
+                        UserDefaults.standard.set(self.userId, forKey: "current_user_id")
+                        print(UserDefaults.standard.string(forKey: "current_user_id")!)
+                    }
+                    
                 }
-                .navigationBarTitle("PashiList")
-                .navigationBarBackButtonHidden(true)
-
+                .frame(width: 350, height: 450, alignment: .top)
+                .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                .shadow(color:Color.black.opacity(0.25),  radius: 5, x: 3, y: 3)
             }
-
-            .onAppear(){
-                self.viewModel.fetchData()
-                print("onAppearに入りました")
-                getUserId()
-                UserDefaults.standard.set(self.userId, forKey: "current_user_id")
-                print(UserDefaults.standard.string(forKey: "current_user_id")!)
-            }
+            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+            .edgesIgnoringSafeArea(.top)
+        }
+       
+        
+        
     }
     
     func getUserId() {

@@ -160,7 +160,7 @@ struct NickName : View {
     var body: some View{
         
         Text(String(name))
-            .font(.system(size: 15))
+            .font(.system(size: 10))
             .fontWeight(.heavy)
             .foregroundColor(.white)
             .frame(width: 50, height: 50)

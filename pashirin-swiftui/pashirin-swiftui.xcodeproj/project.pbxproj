@@ -73,6 +73,10 @@
 		E734E1AF254693F1004941B8 /* Shape.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1AE254693F1004941B8 /* Shape.json */; };
 		E734E1B52546941C004941B8 /* Wating.json in Resources */ = {isa = PBXBuildFile; fileRef = E734E1B42546941C004941B8 /* Wating.json */; };
 		E7586DAF2546975000DC14EE /* Ready.json in Resources */ = {isa = PBXBuildFile; fileRef = E7586DAE2546975000DC14EE /* Ready.json */; };
+		E760593525498421002E5753 /* halloween2.json in Resources */ = {isa = PBXBuildFile; fileRef = E760593425498421002E5753 /* halloween2.json */; };
+		E760593B2549843D002E5753 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = E760593A2549843D002E5753 /* light.json */; };
+		E760593F25498E32002E5753 /* fish.json in Resources */ = {isa = PBXBuildFile; fileRef = E760593E25498E32002E5753 /* fish.json */; };
+		E7605943254991DC002E5753 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = E7605942254991DC002E5753 /* notfound.json */; };
 		F182D755A39CBFEB7F184183 /* Pods_pashirin_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CDCFF443033AD018B567C0 /* Pods_pashirin_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +166,10 @@
 		E734E1AE254693F1004941B8 /* Shape.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shape.json; sourceTree = "<group>"; };
 		E734E1B42546941C004941B8 /* Wating.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Wating.json; sourceTree = "<group>"; };
 		E7586DAE2546975000DC14EE /* Ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ready.json; sourceTree = "<group>"; };
+		E760593425498421002E5753 /* halloween2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = halloween2.json; path = ../../../../Downloads/halloween2.json; sourceTree = "<group>"; };
+		E760593A2549843D002E5753 /* light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = light.json; path = ../../../../Downloads/light.json; sourceTree = "<group>"; };
+		E760593E25498E32002E5753 /* fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fish.json; sourceTree = "<group>"; };
+		E7605942254991DC002E5753 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
 		EF1C86DE085D0AFCDA8F4F06 /* Pods_pashirin_swiftuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pashirin_swiftuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -365,7 +373,11 @@
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
 				E734E1A8254693B8004941B8 /* Basket.json */,
+				E760593E25498E32002E5753 /* fish.json */,
+				E7605942254991DC002E5753 /* notfound.json */,
+				E760593A2549843D002E5753 /* light.json */,
 				E734E1B42546941C004941B8 /* Wating.json */,
+				E760593425498421002E5753 /* halloween2.json */,
 				E7586DAE2546975000DC14EE /* Ready.json */,
 				E734E17125447C0E004941B8 /* LottieView.swift */,
 				E734E1A225469329004941B8 /* CongratsBirds.json */,
@@ -514,14 +526,18 @@
 			files = (
 				E734E1B52546941C004941B8 /* Wating.json in Resources */,
 				E734E11D2540641B004941B8 /* animations in Resources */,
+				E760593525498421002E5753 /* halloween2.json in Resources */,
 				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
 				E734E19D254692CE004941B8 /* Airplane.json in Resources */,
 				E7586DAF2546975000DC14EE /* Ready.json in Resources */,
+				E7605943254991DC002E5753 /* notfound.json in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,
+				E760593F25498E32002E5753 /* fish.json in Resources */,
+				E760593B2549843D002E5753 /* light.json in Resources */,
 				E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */,
 				E734E1A9254693B8004941B8 /* Basket.json in Resources */,
 				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
@@ -832,7 +848,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = 3TN57Z484K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -854,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = 3TN57Z484K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
