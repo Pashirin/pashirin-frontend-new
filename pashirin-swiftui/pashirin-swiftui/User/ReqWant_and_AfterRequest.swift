@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
+import Stripe
 
 struct ReqWant_and_AfterRequest: View {
     @State private var what = ""
@@ -23,29 +24,49 @@ struct ReqWant_and_AfterRequest: View {
     @State private var errorMessage = ""
     @State private var status: Int = 1
     @State private var userId = ""
-    //@Binding var transactionId: String
-//    @Binding var showWaitForP: Bool
-//    @Binding var status: Int
-//    init() {
-//        getUserId()
-//        UserDefaults.standard.set(self.userId, forKey:"current_user_id")
-//    }
+    
+    //Stripe Payment related variable
+    @ObservedObject var paymentContextDelegate = PaymentContextDelegate()
+    let config = STPPaymentConfiguration.shared()
+    @State private var paymentContext: STPPaymentContext!
+    @State var showAlert = false
+    @State private var isPayed = false
+    
+    //        private let stripeCreditCartCut = 0.029
+    //        private let flatFeeCents = 30
+    //        var subtotal: Int {
+    //            var amount = 0
+    //            let priceToPennies = Int(price * 100)
+    //            amount += priceToPennies
+    //            return amount
+    //        }
+    //        var processingFees: Int {
+    //            if subtotal == 0 {
+    //                return 0
+    //            }
+    //            let sub = Double(subtotal)
+    //            let feesAndSubtotal = Int(sub * stripeCreditCartCut) + flatFeeCents
+    //            return feesAndSubtotal
+    //        }
+    //        var total: Int {
+    //            return subtotal + processingFees
+    //        }
     
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack{
                 VStack{
                     Color(red: 9/255, green: 91/255, blue: 148/255)
-                    .frame(width: 1000, height: 500)
+                        .frame(width: 1000, height: 500)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,maxHeight: .infinity,alignment: .topLeading)
                 .edgesIgnoringSafeArea(.top)
-
-           
-            
+                
+                
+                
                 ScrollView(.vertical) {
                     VStack(alignment: .center, spacing: 30) {
-//                        Image("order")
+                        //                        Image("order")
                         VStack(alignment: .leading,spacing: 10){
                             Text("What would you like to ask?")
                                 .foregroundColor(.white)
@@ -114,7 +135,7 @@ struct ReqWant_and_AfterRequest: View {
                                 .foregroundColor(.gray)
                                 .font(.system(size: 18))
                             //                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-                            TextField("bring untill 8pm", text: $moreInfo)
+                            TextField("bring until 8pm", text: $moreInfo)
                                 .padding(.vertical, 30)
                                 .padding(.leading, 10)
                                 .background(Color.white)
@@ -149,54 +170,114 @@ struct ReqWant_and_AfterRequest: View {
                         }
                         .padding(.bottom)
                         
-                        
-                        
-                        Button(action: {
-                            //Toggle submit button
-                            self.confirm.toggle()
-                            //Error message handle for each item
-                            self.errorMessage = ""
-                            if self.what.isEmpty {
-                                self.errorMessage = "Please enter your request"
-                                self.isError = true
-                                self.isShowAlert = true
-                            } else if self.whereTo.isEmpty {
-                                self.errorMessage = "Please enter destination"
-                                self.isError = true
-                                self.isShowAlert = true
-                            } else if self.price.isEmpty {
-                                self.errorMessage = "Please enter your desired price"
-                                self.isError = true
-                                self.isShowAlert = true
-                            } else {
-                                self.postTask()
-                                //self.showWaitForP.toggle()
-                                self.status = 1
+                        if !self.isPayed {
+                            Button(action: {
+                                self.confirm.toggle()
+                                self.errorMessage = ""
+                                if self.what.isEmpty {
+                                    self.errorMessage = "Please enter your request"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else if self.whereTo.isEmpty {
+                                    self.errorMessage = "Please enter destination"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else if self.price.isEmpty {
+                                    self.errorMessage = "Please enter your desired price"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else {
+                                    self.isPayed.toggle()
+                                    self.paymentContext.presentPaymentOptionsViewController()
+                                }
+                            }) {                            
+                                Text(self.paymentContextDelegate.paymentMethodButtonTitle)
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 18))
+                                    .foregroundColor(Color.white)
+                                    .frame(width: 200, height: 50)
+                                    .background(Color(red: 2/255, green: 65/255, blue: 100/255))
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                    .shadow(color:Color(red: 216/255, green: 187/255, blue: 45/255) , radius: 5, x: 0, y: 5)
+                                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
                             }
-                        }) {
-                
+                            .alert(isPresented: $confirm, content: {
+                                if self.isError {
+                                    return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
+                                } else {
+                                    return Alert(title: Text("Thank You!"),message:Text("The card will be charged once you are matched with a Pashirin"), dismissButton: .default(Text("OK")))
+                                }
+                            })
+                        }
+
+                        
+                        if self.isPayed {
+                            Button(action: {
+                                //Toggle submit button
+                                self.confirm.toggle()
+                                //Error message handle for each item
+                                self.errorMessage = ""
+//                                print("\(self.confirm)")
+//                                print("This is me! at line 192")
+                                if self.what.isEmpty {
+                                    self.errorMessage = "Please enter your request"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else if self.whereTo.isEmpty {
+                                    self.errorMessage = "Please enter destination"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else if self.price.isEmpty {
+                                    self.errorMessage = "Please enter your desired price"
+                                    self.isError = true
+                                    self.isShowAlert = true
+                                } else {
+                                    self.postTask()
+                                    self.showAlert.toggle()
+                                    self.status = 1
+     
+
+                                    //self.showWaitForP.toggle()
+                                    
+                                }
+                            }) {
+                                
                                 Text("Confirm")
                                     .fontWeight(.bold)
                                     .font(.system(size: 18))
-                            
-                            .foregroundColor(Color.white)
-                            .frame(width: 200, height: 50)
-                            .background(Color(red: 6/255, green: 91/255, blue: 148/255))
-                            .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                            .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 5, x: 0, y: 5)
-                            .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
-                        }
-                        .background(Color.white)
-                        .edgesIgnoringSafeArea(.all)
-                        
-                        .alert(isPresented: $confirm, content: {
-                            if self.isError {
-                                return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
-                            } else {
-                                return Alert(title: Text("Awesome! We'll start looking for a Pashiri!"), dismissButton: .default(Text("OK")))
+                                    .foregroundColor(Color.white)
+                                    .frame(width: 200, height: 50)
+                                    .background(Color(red: 6/255, green: 91/255, blue: 148/255))
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
+                                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 5, x: 0, y: 5)
+                                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
                             }
-                        })
+                            .background(Color.white)
+                            .edgesIgnoringSafeArea(.all)
+                            
+                            .alert(isPresented: $confirm, content: {
+                                if self.isError {
+                                    return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
+                                } else {
+                                    return Alert(title: Text("Thank You!"),message:Text("The card will be charged once you are matched with a Pashirin"), dismissButton: .default(Text("OK"), action: {
+                                        print("this is line 236")
+                                        //Toggle showAlert
+                                        self.showAlert.toggle()
+                                        self.status = 1
+                                    }))
+                                }
+                            })
+                        }
+                        
                     }
+                    .onAppear {
+                        self.paymentContextConfiguration()
+                    }
+//                    .alert(isPresented: self.$paymentContextDelegate.showAlert) {
+//                        Alert(title: Text(""), message: Text(self.paymentContextDelegate.message), dismissButton: .default(Text("OK")))
+//
+//                    }
+//                    .alert(isPresented: $showAlert, content: {self.alert})
                 }
                 
             }
@@ -208,18 +289,23 @@ struct ReqWant_and_AfterRequest: View {
             .onTapGesture {
                 self.hideKeyboard()
             }
-//            .navigationBarBackButtonHidden(true)
             
-//                .KeyboardResponsive()
-
+            //            .navigationBarBackButtonHidden(true)
+            
+            //                .KeyboardResponsive()
+            
             
             
         } else {
             AfterRequest()
-//                .navigationBarBackButtonHidden(true)
+            //                .navigationBarBackButtonHidden(true)
         }
         
     }
+//    var alert: Alert {
+//        Alert(title: Text("Thank You!"),message:Text("The card will be charged once you are matched with a Pashirin")
+//        )}
+    
     
     func postTask() {
         //Converting date format to string
@@ -238,7 +324,7 @@ struct ReqWant_and_AfterRequest: View {
             "user_id": UserDefaults.standard.string(forKey:"current_user_id") ?? "No namaken ID",
             "timestamp": date
         ] as [String : Any]
-
+        
         //transactionIdを生成する
         let transactionId = UUID().uuidString
         //self.transactionId = transactionId
@@ -273,6 +359,32 @@ struct ReqWant_and_AfterRequest: View {
         self.userId = Auth.auth().currentUser?.uid ?? "no User ID"
         print("Namaken UID is \(self.userId)")
     }
+    
+    func paymentContextConfiguration() {
+        let customerContext = STPCustomerContext(keyProvider: MyAPIClient())
+        // self.config.shippingType = .shipping
+        self.config.requiredBillingAddressFields = .full
+        
+        // self.config.requiredShippingAddressFields = [.postalAddress, .emailAddress]
+        
+        //self.config.companyName = "Testing"
+        
+        self.paymentContext = STPPaymentContext(customerContext: customerContext, configuration: self.config, theme: .default())
+        
+        self.paymentContext.delegate = self.paymentContextDelegate
+        
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        self.paymentContext.hostViewController = keyWindow?.rootViewController
+        //        self.paymentContext.paymentAmount = self.total
+        
+    }
+    
 }
 
 #if canImport(UIKit)

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		162AA58D25459B1200274453 /* EmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AA58C25459B1200274453 /* EmailAndPassword.swift */; };
+		1673B7772548453200E63E9F /* PaymentContextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1673B7762548453200E63E9F /* PaymentContextDelegate.swift */; };
+		1673B77B254845AD00E63E9F /* MyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1673B77A254845AD00E63E9F /* MyApiClient.swift */; };
+		1673B7D225498EAF00E63E9F /* Run.json in Resources */ = {isa = PBXBuildFile; fileRef = 1673B7D125498EAF00E63E9F /* Run.json */; };
+		1673B7D625498EC000E63E9F /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1673B7D525498EC000E63E9F /* RunningView.swift */; };
 		16BF1CB42541B21600B18DC2 /* P3_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */; };
 		16BF1CFD2543F87D00B18DC2 /* ListParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CFC2543F87D00B18DC2 /* ListParent.swift */; };
 		16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */; };
@@ -83,6 +87,10 @@
 
 /* Begin PBXFileReference section */
 		162AA58C25459B1200274453 /* EmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPassword.swift; sourceTree = "<group>"; };
+		1673B7762548453200E63E9F /* PaymentContextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentContextDelegate.swift; sourceTree = "<group>"; };
+		1673B77A254845AD00E63E9F /* MyApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiClient.swift; sourceTree = "<group>"; };
+		1673B7D125498EAF00E63E9F /* Run.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Run.json; sourceTree = "<group>"; };
+		1673B7D525498EC000E63E9F /* RunningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
 		16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Congrats.swift; sourceTree = "<group>"; };
 		16BF1CFC2543F87D00B18DC2 /* ListParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParent.swift; sourceTree = "<group>"; };
 		16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Interim.swift; sourceTree = "<group>"; };
@@ -175,6 +183,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160436772546D7360038FB34 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				1673B7852548477300E63E9F /* StripeApi */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		1673B7852548477300E63E9F /* StripeApi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StripeApi;
+			sourceTree = "<group>";
+		};
 		831F55A7253A7E46003FC968 /* Pashirin */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +219,8 @@
 			children = (
 				83DB99562535F5250099CC75 /* reqParent.swift */,
 				83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */,
+				1673B7762548453200E63E9F /* PaymentContextDelegate.swift */,
+				1673B77A254845AD00E63E9F /* MyApiClient.swift */,
 				83DB99522535F51A0099CC75 /* PWait.swift */,
 				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
 				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
@@ -210,6 +235,7 @@
 		831F55A9253A7EF2003FC968 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1673B7D525498EC000E63E9F /* RunningView.swift */,
 				83E96C26252D6B4B00E1DB64 /* ContentView.swift */,
 				83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */,
 				83CB321D25358B2C00BCC491 /* Login.swift */,
@@ -302,6 +328,7 @@
 				831F55A7253A7E46003FC968 /* Pashirin */,
 				831F55A8253A7E5A003FC968 /* User */,
 				83FA1A31253C794A00F001B9 /* Chat */,
+				160436772546D7360038FB34 /* Payment */,
 				83CB322325358B4200BCC491 /* notConnected */,
 				83E96C44252D992100E1DB64 /* TestGoogleMapsView.swift */,
 				83C89AC9252EDEA2000F72A4 /* TrackingPashiri.swift */,
@@ -309,6 +336,7 @@
 				83E96C30252D6B4B00E1DB64 /* Info.plist */,
 				83E96C28252D6B4B00E1DB64 /* Assets.xcassets */,
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
+				1673B7D125498EAF00E63E9F /* Run.json */,
 				E734E1A8254693B8004941B8 /* Basket.json */,
 				E734E1B42546941C004941B8 /* Wating.json */,
 				E7586DAE2546975000DC14EE /* Ready.json */,
@@ -476,6 +504,7 @@
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,
 				E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */,
+				1673B7D225498EAF00E63E9F /* Run.json in Resources */,
 				E734E1A9254693B8004941B8 /* Basket.json in Resources */,
 				16D51011253F5CA700A53198 /* GoogleService-Info.plist in Resources */,
 			);
@@ -595,8 +624,11 @@
 				83DB99802536EDBF0099CC75 /* WaitingViewModel.swift in Sources */,
 				16BF1CB42541B21600B18DC2 /* P3_Congrats.swift in Sources */,
 				83CB323925358B4200BCC491 /* Contact.swift in Sources */,
+				1673B7D625498EC000E63E9F /* RunningView.swift in Sources */,
 				E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */,
 				83FA1A33253C799B00F001B9 /* Home.swift in Sources */,
+				1673B77B254845AD00E63E9F /* MyApiClient.swift in Sources */,
+				1673B7772548453200E63E9F /* PaymentContextDelegate.swift in Sources */,
 				83CB321F25358B2C00BCC491 /* Login.swift in Sources */,
 				83DB99572535F5250099CC75 /* reqParent.swift in Sources */,
 				83DB99532535F51B0099CC75 /* PWait.swift in Sources */,

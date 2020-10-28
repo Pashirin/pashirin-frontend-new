@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyCcN_eYWMkF6zGAplQKXnj0dRdO7s1Leb0")
         GMSPlacesClient.provideAPIKey("AIzaSyCcN_eYWMkF6zGAplQKXnj0dRdO7s1Leb0")
         FirebaseApp.configure()
+        
+        #warning("Please user your own Stripe Publishable key below")
+        Stripe.setDefaultPublishableKey("pk_test_51HbKSjIyjaakxrkQjbjVJGs84Dgag2crDKYtFITADCe33ZsyTyd0HZeqhSb8ceXeYdyJid3bmxvN35uxQdIBoOWb00aoV3vTkr")
         return true
     }
 
