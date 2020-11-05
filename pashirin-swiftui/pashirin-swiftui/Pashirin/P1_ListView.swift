@@ -27,7 +27,7 @@ struct P1_ListView: View {
                 VStack(spacing: 10){
                     List(viewModel.contacts) { contact in
                         
-                        NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
+                        NavigationLink(destination:P3_Interim (contact: contact, pashirinFirstName: $pashirinFirstName).navigationBarBackButtonHidden(true)){
                             
                             VStack(alignment: .leading){
                                 Text("Offer Price: ¥\(contact.price)")

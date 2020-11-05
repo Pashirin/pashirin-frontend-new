@@ -192,22 +192,22 @@ struct MapView: UIViewRepresentable {
                         //線を描く
                         uiView.removeOverlays(uiView.overlays)
                         //新しいのを描く
-                        if !(Double(distance)! < 0.01 ){
+                        if !(Double(distance)! < 0.02 ){
                             
                             uiView.addOverlay(polyline!)
                         }
                         
                         //地図を上塗り
                         //                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
-                        uiView.showAnnotations(uiView.annotations, animated: true)
                     }
+                    uiView.showAnnotations(uiView.annotations, animated: true)
                     
                     let getAngle = self.angleFromCoordinate(firstCoordinate: oldLocation, secondCoordinate: newLocation)
                     print("これが角度じゃ＝＝＝＝＝＝", getAngle)
                     
                     uiView.addAnnotation(pashirinAnnotation)
                     
-                    UIView.animate(withDuration: 10, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
+                    UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: { pashirinAnnotation.coordinate = newLocation
                         print(pashirinAnnotation.coordinate,"これはnilではない")
                         
                         //MARK:-bag so comment temporalily

@@ -28,12 +28,12 @@ struct ReqWant_and_AfterRequest: View {
     @State var location = ""
     @State var StartLocation = ""
     //@Binding var transactionId: String
-//    @Binding var showWaitForP: Bool
-//    @Binding var status: Int
-//    init() {
-//        getUserId()
-//        UserDefaults.standard.set(self.userId, forKey:"current_user_id")
-//    }
+    //    @Binding var showWaitForP: Bool
+    //    @Binding var status: Int
+    //    init() {
+    //        getUserId()
+    //        UserDefaults.standard.set(self.userId, forKey:"current_user_id")
+    //    }
     
     //Stripe Payment related variable
     @ObservedObject var paymentContextDelegate = PaymentContextDelegate()
@@ -65,8 +65,8 @@ struct ReqWant_and_AfterRequest: View {
     var body: some View {
         if UserDefaults.standard.string(forKey: "transactionId") == nil {
             ZStack{
-                    Color(red: 9/255, green: 91/255, blue: 148/255)
-                        .edgesIgnoringSafeArea(.all)
+                Color(red: 9/255, green: 91/255, blue: 148/255)
+                    .edgesIgnoringSafeArea(.all)
                 
                 ScrollView(.vertical) {
                     LottieView(filename: "notfound")
@@ -200,13 +200,19 @@ struct ReqWant_and_AfterRequest: View {
                                 Text(self.paymentContextDelegate.paymentMethodButtonTitle)
                                     .fontWeight(.bold)
                                     .font(.system(size: 18))
-                                    .foregroundColor(Color.white)
+                                    
+                                    .foregroundColor(Color(red: 6/255, green: 91/255, blue: 148/255))
                                     .frame(width: 200, height: 50)
-                                    .background(Color(red: 2/255, green: 65/255, blue: 100/255))
-                                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                    .shadow(color:Color(red: 216/255, green: 187/255, blue: 45/255) , radius: 5, x: 0, y: 5)
-                                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
+                                    .background(Color.white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                    .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
                             }
+                            .background(Color.white)
+                            .edgesIgnoringSafeArea(.all)
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                            .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
+                            .padding(.bottom,20)
+                            
                             .alert(isPresented: $confirm, content: {
                                 if self.isError {
                                     return Alert(title: Text(""), message: Text(self.errorMessage), dismissButton: .destructive(Text("OK")))
@@ -215,7 +221,7 @@ struct ReqWant_and_AfterRequest: View {
                                 }
                             })
                         }
-
+                        
                         
                         if self.isPayed {
                             Button(action: {
@@ -223,8 +229,8 @@ struct ReqWant_and_AfterRequest: View {
                                 self.confirm.toggle()
                                 //Error message handle for each item
                                 self.errorMessage = ""
-//                                print("\(self.confirm)")
-//                                print("This is me! at line 192")
+                                //                                print("\(self.confirm)")
+                                //                                print("This is me! at line 192")
                                 if self.what.isEmpty {
                                     self.errorMessage = "Please enter your request"
                                     self.isError = true
@@ -241,8 +247,8 @@ struct ReqWant_and_AfterRequest: View {
                                     self.postTask()
                                     self.showAlert.toggle()
                                     self.status = 1
-     
-
+                                    
+                                    
                                     //self.showWaitForP.toggle()
                                     
                                 }
@@ -251,19 +257,19 @@ struct ReqWant_and_AfterRequest: View {
                                 Text("Confirm")
                                     .fontWeight(.bold)
                                     .font(.system(size: 18))
-                                    .foregroundColor(Color.white)
+                                    
+                                    .foregroundColor(Color(red: 6/255, green: 91/255, blue: 148/255))
                                     .frame(width: 200, height: 50)
-                                    .background(Color(red: 6/255, green: 91/255, blue: 148/255))
-                                    .clipShape(RoundedRectangle(cornerRadius: 20, style:.continuous))
-                                    .shadow(color:Color(red: 217/255, green: 217/255, blue: 217/255) , radius: 5, x: 0, y: 5)
-                                    .shadow(color:Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 5, x: 0, y: -5)
+                                    .background(Color.white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                                    .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
                             }
-                            .edgesIgnoringSafeArea(.all)
-                            .foregroundColor(Color(red: 6/255, green: 91/255, blue: 148/255))
-                            .frame(width: 200, height: 50)
                             .background(Color.white)
+                            .edgesIgnoringSafeArea(.all)
                             .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
                             .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
+                            .padding(.bottom,20)
+                            
                             
                             .alert(isPresented: $confirm, content: {
                                 if self.isError {
@@ -278,21 +284,21 @@ struct ReqWant_and_AfterRequest: View {
                                 }
                             })
                         }
-                        .background(Color.white)
-                        .edgesIgnoringSafeArea(.all)
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
-                        .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
-                        .padding(.bottom,20)
+                        //                        .background(Color.white)
+                        //                        .edgesIgnoringSafeArea(.all)
+                        //                        .clipShape(RoundedRectangle(cornerRadius: 15, style:.continuous))
+                        //                        .shadow(color:Color.black.opacity(0.25),  radius: 5,  y: 3)
+                        //                        .padding(.bottom,20)
                         
                     }
                     .onAppear {
                         self.paymentContextConfiguration()
                     }
-//                    .alert(isPresented: self.$paymentContextDelegate.showAlert) {
-//                        Alert(title: Text(""), message: Text(self.paymentContextDelegate.message), dismissButton: .default(Text("OK")))
-//
-//                    }
-//                    .alert(isPresented: $showAlert, content: {self.alert})
+                    //                    .alert(isPresented: self.$paymentContextDelegate.showAlert) {
+                    //                        Alert(title: Text(""), message: Text(self.paymentContextDelegate.message), dismissButton: .default(Text("OK")))
+                    //
+                    //                    }
+                    //                    .alert(isPresented: $showAlert, content: {self.alert})
                 }
                 
             }
@@ -317,9 +323,9 @@ struct ReqWant_and_AfterRequest: View {
         }
         
     }
-//    var alert: Alert {
-//        Alert(title: Text("Thank You!"),message:Text("The card will be charged once you are matched with a Pashirin")
-//        )}
+    //    var alert: Alert {
+    //        Alert(title: Text("Thank You!"),message:Text("The card will be charged once you are matched with a Pashirin")
+    //        )}
     
     
     func postTask() {
