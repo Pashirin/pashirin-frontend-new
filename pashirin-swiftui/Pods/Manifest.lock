@@ -212,6 +212,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (4.9.1)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -346,8 +347,10 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.11)
+  - Stripe (17.0.3)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
@@ -356,10 +359,12 @@ DEPENDENCIES:
   - GoogleMaps (= 3.10.0)
   - GooglePlaces (= 3.10.0)
   - lottie-ios
+  - Stripe
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -382,9 +387,11 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
+    - Stripe
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
@@ -407,7 +414,8 @@ SPEC CHECKSUMS:
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  Stripe: 30ba9a2ac7297e93de561fed695222ef980ee521
 
-PODFILE CHECKSUM: 8d12b594827f8afbf6b5943019db366a0cfc2b60
+PODFILE CHECKSUM: bd83e7edd96d00066e88f9d3e159df60a4b29527
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

@@ -14,8 +14,13 @@ import FirebaseFirestore
 
 struct UserHistory: View {
     @State private var db: Firestore!
-    var body: some View {
+//    @State private var date = ""
+//    @State private var pashiriName = ""
+//    @State private var price = ""
+//    @State private var item = ""
     
+    var body: some View {
+        
         ZStack{
             Color(red: 6/255, green: 91/255, blue:148/255).edgesIgnoringSafeArea(.all)
             VStack{
@@ -29,29 +34,56 @@ struct UserHistory: View {
         .onAppear(){
             let settings = FirestoreSettings()
             Firestore.firestore().settings = settings
-      
+            
             self.db = Firestore.firestore()
             
             let userId = UserDefaults.standard.string(forKey:"current_user_id")
             //transactionsからpashirn_id が一致する全てのデータを持ってくる
             let useInfo = db.collection("transactions").whereField("user_id", isEqualTo:userId ?? "PlaceHolderID")
-//            let useInfo = db.collection("transactions").whereField("pashiri_id", isEqualTo:この部分に現在ログインしてるユーザーのidが入る！)
+            //            let useInfo = db.collection("transactions").whereField("pashiri_id", isEqualTo:この部分に現在ログインしてるユーザーのidが入る！)
             useInfo.getDocuments() {
                 (querySnapshot,err) in
-
+                
                 if let err = err {
                     print("Error, \(err)")
-
+                    
                 } else {
-                print("\(querySnapshot!.documents)")
+                    print("\(querySnapshot!.documents)")
                     
                     for document in querySnapshot!.documents {
-                        
-                                   print("\(document.data())") //this is get all data from transaction that matches id
-                               }
+//                        let transactionData = document.data()
+//                        if let timestamp = transactionData["timestamp"] as? String {
+//                            self.date = timestamp
+//                        } else {
+//                            print("No timestamp")
+//                        }
+//                        if let pName = transactionData["pashirin_firstName"] as? String {
+//                            self.pashiriName = pName
+//                        } else {
+//                            print("No timestamp")
+//                        }
+//                        if let p = transactionData["price"] as? String {
+//                            self.price = p
+//                        } else {
+//                            print("No timestamp")
+//                        }
+//                        if let merch = transactionData["item"] as? String {
+//                            self.item = merch
+//                        } else {
+//                            print("No timestamp")
+//                        }
+//
+//
+//
+//
+//                        VStack(spacing: 20) {
+//                            Text(transactionData["pashirin"])
+//                        }
+                        print("This is Namaken history \(document.data())") //this is get all data from transaction that matches id
                     }
+                }
                 
-    
+                
             }
         }
     }

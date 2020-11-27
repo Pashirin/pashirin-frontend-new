@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		162AA58D25459B1200274453 /* EmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AA58C25459B1200274453 /* EmailAndPassword.swift */; };
+		1678F114254A4FF5008627F4 /* MyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1678F112254A4FF5008627F4 /* MyApiClient.swift */; };
+		1678F115254A4FF5008627F4 /* PaymentContextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1678F113254A4FF5008627F4 /* PaymentContextDelegate.swift */; };
+		1678F11A254A504D008627F4 /* halloween2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1678F118254A504D008627F4 /* halloween2.json */; };
+		1678F11B254A504D008627F4 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 1678F119254A504D008627F4 /* light.json */; };
+		1678F11F254A5155008627F4 /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1678F11E254A5155008627F4 /* RunningView.swift */; };
+		1678F123254A51B9008627F4 /* Run.json in Resources */ = {isa = PBXBuildFile; fileRef = 1678F122254A51B9008627F4 /* Run.json */; };
 		16BF1CB42541B21600B18DC2 /* P3_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */; };
 		16BF1CFD2543F87D00B18DC2 /* ListParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1CFC2543F87D00B18DC2 /* ListParent.swift */; };
 		16BF1D032543FF2E00B18DC2 /* P3_Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */; };
@@ -60,8 +66,6 @@
 		83FA1A3F253C79F800F001B9 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A3E253C79F800F001B9 /* ChatRow.swift */; };
 		83FA1A43253C7A1400F001B9 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A42253C7A1400F001B9 /* MsgModel.swift */; };
 		83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */; };
-		83FA86AD2549AD42002DC920 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FA86AC2549AD42002DC920 /* light.json */; };
-		83FA86B32549AD5B002DC920 /* halloween2.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FA86B22549AD5A002DC920 /* halloween2.json */; };
 		83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDBB7525389588007EB3E8 /* AfterRequest.swift */; };
 		E734E0E6253EF9FB004941B8 /* U5_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E0E5253EF9FB004941B8 /* U5_Congrats.swift */; };
 		E734E117254044DD004941B8 /* AccoutDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734E116254044DD004941B8 /* AccoutDetail.swift */; };
@@ -92,6 +96,12 @@
 
 /* Begin PBXFileReference section */
 		162AA58C25459B1200274453 /* EmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPassword.swift; sourceTree = "<group>"; };
+		1678F112254A4FF5008627F4 /* MyApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApiClient.swift; sourceTree = "<group>"; };
+		1678F113254A4FF5008627F4 /* PaymentContextDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextDelegate.swift; sourceTree = "<group>"; };
+		1678F118254A504D008627F4 /* halloween2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = halloween2.json; sourceTree = "<group>"; };
+		1678F119254A504D008627F4 /* light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = light.json; sourceTree = "<group>"; };
+		1678F11E254A5155008627F4 /* RunningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		1678F122254A51B9008627F4 /* Run.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Run.json; sourceTree = "<group>"; };
 		16BF1CB32541B21600B18DC2 /* P3_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Congrats.swift; sourceTree = "<group>"; };
 		16BF1CFC2543F87D00B18DC2 /* ListParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParent.swift; sourceTree = "<group>"; };
 		16BF1D022543FF2E00B18DC2 /* P3_Interim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_Interim.swift; sourceTree = "<group>"; };
@@ -149,8 +159,6 @@
 		83FA1A3E253C79F800F001B9 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		83FA1A42253C7A1400F001B9 /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
 		83FA1A68253CA9C800F001B9 /* ContainerForStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerForStatus.swift; sourceTree = "<group>"; };
-		83FA86AC2549AD42002DC920 /* light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = light.json; path = ../../../../../Downloads/light.json; sourceTree = "<group>"; };
-		83FA86B22549AD5A002DC920 /* halloween2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = halloween2.json; path = ../../../../../Downloads/halloween2.json; sourceTree = "<group>"; };
 		83FDBB7525389588007EB3E8 /* AfterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterRequest.swift; sourceTree = "<group>"; };
 		B116A2E298FAD887D258BA3D /* Pods-pashirin-swiftuiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftuiTests.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftuiTests/Pods-pashirin-swiftuiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BEC7FD2B6CF1929BC53C1A95 /* Pods-pashirin-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pashirin-swiftui.release.xcconfig"; path = "Target Support Files/Pods-pashirin-swiftui/Pods-pashirin-swiftui.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +256,8 @@
 			children = (
 				83DB99562535F5250099CC75 /* reqParent.swift */,
 				83DB995A2535F5330099CC75 /* ReqWant_and_AfterRequest.swift */,
+				1678F112254A4FF5008627F4 /* MyApiClient.swift */,
+				1678F113254A4FF5008627F4 /* PaymentContextDelegate.swift */,
 				83DB99522535F51A0099CC75 /* PWait.swift */,
 				83CB32B02535F22500BCC491 /* U4-Matched.swift */,
 				83FDBB7525389588007EB3E8 /* AfterRequest.swift */,
@@ -263,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				83E96C26252D6B4B00E1DB64 /* ContentView.swift */,
+				1678F11E254A5155008627F4 /* RunningView.swift */,
 				83CB323F25358B4D00BCC491 /* signUP_RegFormView.swift */,
 				83CB321D25358B2C00BCC491 /* Login.swift */,
 				83CB321E25358B2C00BCC491 /* U1SelectUserPashirin.swift */,
@@ -374,11 +385,12 @@
 				16D51010253F5CA700A53198 /* GoogleService-Info.plist */,
 				E734E1A8254693B8004941B8 /* Basket.json */,
 				E760593E25498E32002E5753 /* fish.json */,
+				1678F118254A504D008627F4 /* halloween2.json */,
+				1678F119254A504D008627F4 /* light.json */,
 				E7605942254991DC002E5753 /* notfound.json */,
-				83FA86AC2549AD42002DC920 /* light.json */,
 				E734E1B42546941C004941B8 /* Wating.json */,
-				83FA86B22549AD5A002DC920 /* halloween2.json */,
 				E7586DAE2546975000DC14EE /* Ready.json */,
+				1678F122254A51B9008627F4 /* Run.json */,
 				E734E17125447C0E004941B8 /* LottieView.swift */,
 				E734E1A225469329004941B8 /* CongratsBirds.json */,
 				E734E19C254692CE004941B8 /* Airplane.json */,
@@ -524,19 +536,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83FA86B32549AD5B002DC920 /* halloween2.json in Resources */,
+				1678F11A254A504D008627F4 /* halloween2.json in Resources */,
 				E734E1B52546941C004941B8 /* Wating.json in Resources */,
 				E734E11D2540641B004941B8 /* animations in Resources */,
-				83FA86AD2549AD42002DC920 /* light.json in Resources */,
 				83E96C2F252D6B4B00E1DB64 /* LaunchScreen.storyboard in Resources */,
 				83CB323625358B4200BCC491 /* pashirin.png in Resources */,
 				83E96C2C252D6B4B00E1DB64 /* Preview Assets.xcassets in Resources */,
 				83CB323725358B4200BCC491 /* profile.png in Resources */,
 				E734E19D254692CE004941B8 /* Airplane.json in Resources */,
 				E7586DAF2546975000DC14EE /* Ready.json in Resources */,
+				1678F123254A51B9008627F4 /* Run.json in Resources */,
 				E7605943254991DC002E5753 /* notfound.json in Resources */,
 				83E96C29252D6B4B00E1DB64 /* Assets.xcassets in Resources */,
 				E734E1AF254693F1004941B8 /* Shape.json in Resources */,
+				1678F11B254A504D008627F4 /* light.json in Resources */,
 				E760593F25498E32002E5753 /* fish.json in Resources */,
 				E734E1A32546932A004941B8 /* CongratsBirds.json in Resources */,
 				E734E1A9254693B8004941B8 /* Basket.json in Resources */,
@@ -645,6 +658,7 @@
 				E734E17225447C0F004941B8 /* LottieView.swift in Sources */,
 				83FA1A0E253C601000F001B9 /* P8-TaskComplete.swift in Sources */,
 				83FA1A37253C79CC00F001B9 /* HomeModel.swift in Sources */,
+				1678F115254A4FF5008627F4 /* PaymentContextDelegate.swift in Sources */,
 				83CB323825358B4200BCC491 /* P3_ContactsViewModel.swift in Sources */,
 				83CB32BD2535F26600BCC491 /* U9-Thankyou.swift in Sources */,
 				83DB995B2535F5330099CC75 /* ReqWant_and_AfterRequest.swift in Sources */,
@@ -654,6 +668,7 @@
 				8305600625383D0F0024537C /* StatusViewModel.swift in Sources */,
 				83FA1A43253C7A1400F001B9 /* MsgModel.swift in Sources */,
 				83157DD92547C87E008856DB /* MapView.swift in Sources */,
+				1678F11F254A5155008627F4 /* RunningView.swift in Sources */,
 				8326D5342539A9C1007CD60A /* U5_DetailView.swift in Sources */,
 				83FA1A0A253C600500F001B9 /* P7-Deliver.swift in Sources */,
 				83CB323525358B4200BCC491 /* P3_DetailView.swift in Sources */,
@@ -678,6 +693,7 @@
 				E734E12B2541857D004941B8 /* UserHistory.swift in Sources */,
 				83E96C45252D992100E1DB64 /* TestGoogleMapsView.swift in Sources */,
 				83FDBB7625389588007EB3E8 /* AfterRequest.swift in Sources */,
+				1678F114254A4FF5008627F4 /* MyApiClient.swift in Sources */,
 				83E96C27252D6B4B00E1DB64 /* ContentView.swift in Sources */,
 				83CB323125358B4200BCC491 /* MessageListView.swift in Sources */,
 				83FA1A69253CA9C800F001B9 /* ContainerForStatus.swift in Sources */,
@@ -848,7 +864,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3TN57Z484K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -870,7 +886,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pashirin-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3TN57Z484K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "pashirin-swiftui/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;

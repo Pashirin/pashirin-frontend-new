@@ -47,7 +47,7 @@ struct PashirinHistory: View {
                     
                     for document in querySnapshot!.documents {
                         
-                                   print("\(document.data())") //this is get all data from transaction that matches id
+                                   print("This is Pashirin history \(document.data())") //this is get all data from transaction that matches id
                                }
                     }
                 

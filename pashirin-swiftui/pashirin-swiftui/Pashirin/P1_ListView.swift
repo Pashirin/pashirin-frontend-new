@@ -15,6 +15,7 @@ struct P1_ListView: View {
     
     @ObservedObject private var viewModel = ContactsViewModel()
     @State private var userId = ""
+    @State private var pashirinFirstName = ""
     //後で消す
     
     var body: some View {
@@ -26,7 +27,7 @@ struct P1_ListView: View {
                 VStack(spacing: 10){
                     List(viewModel.contacts) { contact in
                         
-                        NavigationLink(destination:P3_Interim (contact: contact).navigationBarBackButtonHidden(true)){
+                        NavigationLink(destination:P3_Interim (contact: contact, pashirinFirstName: $pashirinFirstName).navigationBarBackButtonHidden(true)){
                             
                             VStack(alignment: .leading){
                                 Text("Offer Price: ¥\(contact.price)")
@@ -73,6 +74,26 @@ struct P1_ListView: View {
         print("Pashirin UID is \(self.userId)")
     }
     
+    func getPashirinFirstName() {
+        let db = Firestore.firestore()
+        var _: Void = db.collection("users").document(self.userId).getDocument() { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                // document.data --> [fistname:"name", lastname : "lastname"] Object with String
+                // Cheking type as String
+                if let firstname = dataDescription?["firstName"] as? String {
+                    self.pashirinFirstName = firstname
+                    print("this is \(self.pashirinFirstName)")
+                }
+                else {
+                    print("This not string.")
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
 }
 
 
@@ -83,3 +104,4 @@ struct P1_ListView_Previews: PreviewProvider {
         P1_ListView()
     }
 }
+
